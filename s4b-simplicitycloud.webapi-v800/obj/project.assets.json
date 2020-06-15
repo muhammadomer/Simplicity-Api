@@ -8342,11 +8342,11 @@
   "project": {
     "version": "7.1.0",
     "restore": {
-      "projectUniqueName": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v7\\s4b-simplicitycloud.webapi-v800\\s4b-simplicitycloud.webapi-v800.csproj",
+      "projectUniqueName": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v8\\s4b-simplicitycloud.webapi-v800\\s4b-simplicitycloud.webapi-v800.csproj",
       "projectName": "s4b-simplicitycloud.webapi-v800",
-      "projectPath": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v7\\s4b-simplicitycloud.webapi-v800\\s4b-simplicitycloud.webapi-v800.csproj",
+      "projectPath": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v8\\s4b-simplicitycloud.webapi-v800\\s4b-simplicitycloud.webapi-v800.csproj",
       "packagesPath": "C:\\Users\\Saima\\.nuget\\packages\\",
-      "outputPath": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v7\\s4b-simplicitycloud.webapi-v800\\obj\\",
+      "outputPath": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v8\\s4b-simplicitycloud.webapi-v800\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saima\\AppData\\Roaming\\NuGet\\NuGet.Config",
