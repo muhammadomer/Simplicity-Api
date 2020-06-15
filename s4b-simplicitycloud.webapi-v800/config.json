@@ -1,0 +1,79 @@
+﻿{
+  "AppSettings": {
+    //"ConnectionString": "Password=3400663;User ID=sa;Initial Catalog=EBS_WEB_SERVICE;Data Source=DEV001\\SQLEXPRESS2014;",
+    "ConnectionString": "Data Source=localhost\\sqlexpress;Initial Catalog=SimplicityDemo;Integrated Security=True;",
+    "ProjectIds": {
+      "DEMOMSSQL": "Configs\\DemoMSSQL.xml",
+      "DEMOSECURITY": "Configs\\SqlServer.xml",
+      "SQLSERVER": "Configs\\SqlServer.xml",
+      "SIMPLICITY": "Configs\\SIMPLICITY.xml",
+      "WESTGATE": "Configs\\WESTGATE.xml",
+      "IMMS": "Configs\\IMMS.xml",
+      "CBS": "Configs\\CBS.xml",
+      "CAPELPLANT": "Configs\\CapelPlant.xml"
+    },
+    //"EmailSettings": {
+    //   "host": "smtp.simplicityarchive.com",
+    //   "user": "support@simplicity4business.com",
+    //   "password": "s4b12",
+    //   "port": "25",
+    //   "enablessl": "false"
+    //},
+    "RossumSettings": [
+      {
+        "project_id": "DEMOMSSQL",
+        "user_id": 1,
+        "invoice_queue_id": 44516,
+        "receipt_queue_id": 44516,
+        "purchase_order_queue_id": 44516,
+        "delivery_note_queue_id": 44516,
+        "is_run_scheduler": true
+      },
+      {
+        "project_id": "DEMOSECURITY",
+        "user_id": 1,
+        "invoice_queue_id": 44516,
+        "receipt_queue_id": 44516,
+        "purchase_order_queue_id": 44516,
+        "delivery_note_queue_id": 44516,
+        "is_run_scheduler": false
+      }
+    ],
+
+
+    "EmailSettings": {
+      "host": "smtp.gmail.com",
+      "user": "support@simplicity4business.com",
+      "password": "2019S4b12",
+      "port": "587",
+      "enablessl": "true"
+    },
+    "DocsLogos": [
+      {
+        "ext": "",
+        "logourl": "http://localhost:5000/resources/Images/Thumbnails/question.png",
+        "isimgext": false
+      },
+      {
+        "ext": ".pdf",
+        "logourl": "http://localhost:5000/resources/Images/Thumbnails/pdf.png",
+        "isimgext": false
+      },
+      {
+        "ext": ".doc,.docx",
+        "logourl": "http://localhost:5000/resources/Images/Thumbnails/doc.png",
+        "isimgext": false
+      },
+      {
+        "ext": ".xls,.xlsx",
+        "logourl": "http://localhost:5000/resources/Images/Thumbnails/xls.gif",
+        "isimgext": false
+      },
+      {
+        "ext": ".jpg,.png,.gif",
+        "logourl": "",
+        "isimgext": true
+      }
+    ]
+  }
+}

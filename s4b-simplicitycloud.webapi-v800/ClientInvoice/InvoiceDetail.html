@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>[INVOICE_DETAIL_TITIE]</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #invoice-items-div {
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 30px;
+        }
+
+            #invoice-items-div table {
+                border: 0px;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+                #invoice-items-div table > thead > tr > td {
+                    border-bottom: 3px solid #0fa2df !important;
+                }
+
+                #invoice-items-div table > thead > tr > td {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 8px 8px 3px 8px;
+                    text-align: center;
+                    background-color: #27288D;
+                }
+
+                #invoice-items-div table > tbody > tr > td {
+                    border-bottom: 1px solid #27288D;
+                }
+
+                    #invoice-items-div table > tbody > tr > td:last-child {
+                        border-bottom: 0px;
+                    }
+
+                #invoice-items-div table > tbody > tr > td {
+                    font-size: 12px;
+                    padding: 8px 8px 3px 8px;
+                    font-weight: normal;
+                }
+
+                #invoice-items-div table > tfoot > tr, td {
+                    font-weight: bold;
+                }
+
+                    #invoice-items-div table > tfoot > tr > td {
+                        border-top: 1px solid #0FA2DF;
+                        background-color: #F7F8FB;
+                        text-align: right;
+                        font-size: 13px;
+                        padding: 5px 8px 5px 5px;
+                    }
+
+        #code-td {
+            width: 60px;
+        }
+
+        #description-td {
+            width: 200px;
+            text-align: left !important;
+        }
+
+        #unit-td {
+            width: 35px;
+        }
+
+        #qty-td {
+            width: 35px;
+        }
+
+        #item-amt-td {
+            width: 65px;
+        }
+
+        #total-amt-td {
+            width: 60px;
+        }
+
+        #inv-amt-td {
+            width: 60px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        #invoice-payment-div {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #invoice-payment-title {
+            font-size: 24px;
+            color: #2E3391;
+            padding-bottom: 10px;
+            font-weight: 500;
+            line-height: 20px;
+            width: 100%;
+        }
+
+        #invoice-payment-div table > thead > tr > td {
+            border-bottom: 3px solid #0fa2df !important;
+        }
+
+        #invoice-payment-div table > thead > tr > td {
+            color: #FFFFFF;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 8px 8px 3px 8px;
+            text-align: center;
+            background-color: #27288D;
+        }
+
+        #invoice-payment-div table > tbody > tr > td {
+            border-bottom: 1px solid #27288D;
+        }
+
+            #invoice-payment-div table > tbody > tr > td:last-child {
+                border-bottom: 0px;
+            }
+
+        #invoice-payment-div table > tbody > tr > td {
+            font-size: 12px;
+            padding: 8px 8px 3px 8px;
+            font-weight: normal;
+        }
+
+        #invoice-payment-div table > tfoot > tr, td {
+            font-weight: bold;
+        }
+
+            #invoice-payment-div table > tfoot > tr > td {
+                border-top: 1px solid #0FA2DF;
+                background-color: #F7F8FB;
+                text-align: right;
+                font-size: 13px;
+                padding: 8px 8px 3px 8px;
+                background-color: #F7F8FB;
+            }
+
+        #payment-date-td {
+            width: 70px;
+        }
+
+        #payment-type-td {
+            width: 60px;
+        }
+
+        #payment-reference-td {
+            width: 150px;
+        }
+
+        #payment-amount-td {
+            width: 50px;
+        }
+
+        .no-border {
+            border: 0px;
+        }              
+    </style>
+</head>
+<body style='font-family:Arial, Helvetica, sans-serif; font-size: 12px; margin-left: auto; margin-right: auto;'>
+    <div style='width:100%;font-size: 24px; color: #2E3391; padding-top: 0px; padding-bottom: 20px;font-weight: 500;'>[INVOICE_DETAIL_TITIE]</div>
+    <div style='clear: both'></div>
+    <!--<div style='padding-left: 20px; '>
+        <div style='width:50%;float:left;text-align: left;padding-top: 10px;'>
+            [CLIENT_COMPANY_ADDRESS]
+        </div>
+    </div>-->
+    <div style='width:100%;text-align: right;padding-top: 10px;padding-bottom: 25px;padding-right: 20px;'>
+        [COMPANY_ADDRESS]
+    </div>
+    <div style='clear: both'></div>
+    <div style='width:100%;font-size: 24px; color: #2E3391; padding-top: 0px; padding-bottom: 5px;font-weight: 500;text-align:center'>[INVOICE_TITIE]</div>
+    <div style='clear: both'></div>
+    <table style='width:100%;border-bottom:1px solid #001680;padding: 10px 15px 15px 10px;' cellpadding='0' cellspacing='0'>
+        <tr>
+            <td align='left' style="width:12%;text-align:left;color: #001680; font-weight: bold;font-size: 12px;padding-bottom:5px;">
+                Date Raised :
+            </td>
+            <td align='left' style="width:10%;text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-bottom:5px;">
+                [INVOICE_DATE]
+            </td>
+            <td align='right' style="width:62%;text-align:right;color: #001680; font-weight: bold;font-size: 12px;padding-bottom:5px;">
+                Invoice :
+            </td>
+            <td align='left' style="width:15%;text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-bottom:5px;">
+                &nbsp;[INVOICE_NO]
+            </td>
+        </tr>
+    </table>
+    <div style='clear: both'></div>
+    <table style='width:100%;padding-top: 10px;' cellpadding='0' cellspacing='0'>
+        <tr>
+            <td align='left' style="text-align:left;color: #001680; width:15%; font-weight: bold;font-size: 12px;padding-top:5px">
+                Job Address :
+            </td>
+            <td align='left' style="text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-top:5px">
+                [JOB_ADDRESS]
+            </td>
+        </tr>
+        <tr>
+            <td align='left' style='padding-top:5px; color: #001680;width:5%; font-weight: bold; font-size: 12px;'>
+                Client :
+            </td>
+            <td align='left' style='padding-top:5px;width:90%;font-weight: normal; font-size: 12px;'>
+                [CLIENT_CODE]
+            </td>
+        </tr>
+    </table>
+    <div style='clear: both'></div>
+    <table style='width:100%;' cellpadding='0' cellspacing='0'>
+        <tr>
+            <td align='left' width='15%' style="text-align:left;color: #001680; font-weight: bold;font-size: 12px;padding-top:5px;">
+                Job Reference :
+            </td>
+            <td align='left' style="text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-top:5px;">
+                [JOB_REF]
+            </td>
+            <td align='left' width='14%' style="text-align:left;color: #001680; font-weight: bold;font-size: 12px;padding-top:5px;padding-right:20px;">
+                Start Date :
+            </td>
+            <td align='left' width='10%' style="text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-top:5px;">
+                [START_DATE]
+            </td>
+        </tr>
+        <tr>
+            <td align='left' width='15%' style="text-align:left;color: #001680; font-weight: bold;font-size: 12px;padding-top:5px;">
+                Client Ref :
+            </td>
+            <td align='left' style="text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-top:5px;">
+                [YOUR_REF_CODE]
+            </td>
+            <td align='left' width='14%' style="text-align:left;color: #001680; font-weight: bold;font-size: 12px;padding-top:5px;padding-right:20px;">
+                Finish Date :
+            </td>
+            <td align='left' width='10%' style="text-align:left;color: #000000; font-weight: normal;font-size: 12px;padding-top:5px;">
+                [START_DATE][FINISH_DATE]
+            </td>
+        </tr>
+        <tr>
+            <td align='left' style="padding-top:10px;"></td>
+            <td align='left' style="padding-top:10px;"></td>
+            <td align='left' style="padding-top:10px;"></td>
+            <td align='left' style="padding-top:10px;"></td>
+        </tr>
+    </table>
+    <div style='clear: both'></div>
+    <div id='invoice-items-div'>
+        <table>
+            <thead>
+                <tr>
+                    <td nowrap='nowrap' id='code-td' class='text-left'>
+                        Code
+                    </td>
+                    <td nowrap='nowrap' id='description-td'>
+                        Description
+                    </td>
+                    <td nowrap='nowrap' id='unit-td' class='text-center'>
+                        Unit
+                    </td>
+                    <td nowrap='nowrap' id='qty-td' class='text-right'>
+                        Qty
+                    </td>
+                    <td nowrap='nowrap' id='item-amt-td' class='text-right'>
+                        Item Amt
+                    </td>
+                    <td nowrap='nowrap' id='total-amt-td' class='text-right'>
+                        Vat Amt
+                    </td>
+                    <td nowrap='nowrap' id='inv-amt-td' class='text-right'>
+                        Inv Amt
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                [INVOICE_DETAIL_ITEMS]                
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan='6' style='border-top: 2px solid #0FA2DF;' class='text-right'>
+                        Subtotal Scheduled Items :
+                    </td>
+                    <td style='border-top: 2px solid #0FA2DF;' class='text-right'>
+                        [SUBTOTAL_SCHEDULED_ITEMS]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6'>
+                        Invoice Amount :
+                    </td>
+                    <td>
+                        [INVOICE_AMOUNT]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6'>
+                        Discount :
+                    </td>
+                    <td align='right'>
+                        [DISCOUNT]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6'>
+                        Retention Total :
+                    </td>
+                    <td align='right'>
+                        [RETENTION_TOTAL]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6'>
+                        Subtotal :
+                    </td>
+                    <td align='right'>
+                        [SUB_TOTAL]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6'>
+                        VAT :
+                    </td>
+                    <td align='right'>
+                        [VAT]
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan='6' style='border-bottom: 2px solid #0FA2DF;'>
+                        Invoice Total :
+                    </td>
+                    <td align='right' style='border-bottom: 2px solid #0FA2DF;'>
+                        [INVOICE_TOTAL]
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!--<div style='position: relative;padding-right: 10px; padding-bottom: 20px;'>
+        <table style='width: 100%;margin-bottom: 25px;' cellpadding='0' cellspacing='0' border='0'>
+            <thead>
+                <tr valign='middle' style='height:25px;font-size:12px;font-weight: bold; '>
+                    <td align='left' nowrap='nowrap' style='width :150px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-left:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        Code
+                    </td>
+                    <td align='left' nowrap='nowrap' style='width :350px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 0px 8px 8px;text-align:left;'>
+                            Description
+                        </div>
+                    </td>
+                    <td align='right' nowrap='nowrap' style='width :70px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 0px 8px 8px;text-align:right;'>
+                            Unit
+                        </div>
+                    </td>
+                    <td align='right' nowrap='nowrap' style='width :70px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 0px 8px 8px;text-align:right;'>
+                            Qty
+                        </div>
+                    </td>
+                    <td align='right' nowrap='nowrap' style='width :100px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 0px 8px 8px;text-align:right;'>
+                            Item Amt
+                        </div>
+                    </td>
+                    <td align='right' nowrap='nowrap' style='width :100px;background-color:#27288D;color: #FFFFFF;border-top:1px solid #27288D;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 0px 8px 8px;text-align:right;'>Total Amt</div>
+                    </td>
+                    <td align='right' nowrap='nowrap' style='width :100px;background-color:#27288D;color: #FFFFFF;border-bottom: 3px solid #0FA2DF;'>
+                        <div style='padding:3px 8px 8px 8px;text-align:right;'>
+                            Inv Amt
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                [INVOICE_DETAIL_ITEMS]
+            </tbody>
+            <tfoot>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' style='border-top: 2px solid #0FA2DF;border-bottom:2px solid #0FA2DF;background-color: #F7F8FB;'>
+                        <div style='text-align:right;font-size: 13px; padding: 5px 0px 5px 0px;'>Subtotal Scheduled Items : </div>
+                    </td>
+                    <td align='right' style='border-top:2px solid #0FA2DF;border-bottom:2px solid #0FA2DF;background-color: #F7F8FB;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [SUBTOTAL_SCHEDULED_ITEMS]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='text-align:right;font-size: 13px; padding: 5px 0px 5px 0px;'>Invoice Amount : </div>
+                    </td>
+                    <td align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [INVOICE_AMOUNT]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='text-align:right;font-size: 13px; padding: 5px 0px 5px 0px;'>Discount : </div>
+                    </td>
+                    <td align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [DISCOUNT]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='text-align:right;font-size: 13px; padding: 5px 0px 5px 0px;'>Retention Total : </div>
+                    </td>
+                    <td align='right' style='background-color: #F7F8FB;border-bottom:2px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [RETENTION_TOTAL]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='background-color: #F7F8FB;border-bottom:1px solid #0FA2DF;'>
+                        <div style='text-align:right;font-size: 13px; padding: 5px 0px 5px 0px;'>Subtotal : </div>
+                    </td>
+                    <td align='right' style='background-color: #F7F8FB;border-bottom:1px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [SUB_TOTAL]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='background-color: #F7F8FB;border-bottom:3px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right; padding: 5px 0px 5px 0px;'>VAT : </div>
+                    </td>
+                    <td align='right' style='background-color: #F7F8FB;border-bottom:3px solid #0FA2DF;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [VAT]
+                        </div>
+                    </td>
+                </tr>
+                <tr style='font-weight:bold;background-color: #F7F8FB;'>
+                    <td colspan='6' align='right' style='border-bottom:3px solid #0FA2DF;background-color: #F7F8FB;'>
+                        <div style='font-size:13px;text-align:right; padding: 5px 0px 5px 0px;'>Invoice Total : </div>
+                    </td>
+                    <td align='right' style='border-bottom:3px solid #0FA2DF;background-color: #F7F8FB;'>
+                        <div style='font-size:13px;text-align:right;padding: 5px 8px 5px 0px;'>
+                            [INVOICE_TOTAL]
+                        </div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>-->
+    <div style="clear: both"></div>
+    <div style='margin-right: auto; margin-left: auto; position: relative;padding-right: 10px; padding-bottom: 20px; margin-top: 35px;'>
+        [INVOICE_NOTE]
+        <div style="clear: both"></div>
+        [PAYMENT_MODE_ITEMS]
+    </div>
+    <div style='clear: both'></div>
+    [BANK_DETAILS]
+    <div style='clear: both'></div>
+
+    <div style='clear: both'></div>
+    [FOOTER_INVOICE_NOTE]
+    <div style='clear: both'></div>
+</body>
+</html>

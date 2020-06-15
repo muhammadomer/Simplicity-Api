@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <ConnectionString value="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\db\Simplicity-cbs.mdb;Jet OLEDB:Database Password=V08D0611gAtE36fAiRy;" providerName="System.Data.OleDB" />
+  <DatabaseType value="MSACCESS" />
+  <!--<ConnectionString value="Data Source=.;Initial Catalog=SimplicityOnline;Integrated Security=True;" providerName="System.Data.OleDB" />-->
+  <Forms>
+    <Form name="Seal" id="601032884" asset="false"  supplier="false"/>
+  </Forms>
+  <logo value="images/SimplicityFP_Logo.jpg" />
+  <AndroidContentType value="text/csv" />
+  <AndroidEncoding value="UTF-8" />
+  <CSVFilePath value="C:\Software\eForms\Generic\Temp\KilnbridgeFP_Files\" />
+  <TagImageFilePath value="C:\s4b-simplicitycloud.2\src\SimplicityOnlineWebApi\wwwroot\resources\KilnbridgeFP_Files\" />
+  <TagImagebaseURL value="http://localhost:5000/resources/KilnbridgeFP_Files/" />
+  <Pages>
+    <Page index="0" caption="Appointments" url="OrderApps_UNC.aspx" />
+  </Pages>
+  <LinkServer value="" />
+  <HomePath value="C:\Personal\UNC\Projects\EBSWebService\Code\SimplicityEBSService\bin\" />
+  <AttFileOrdDocPath value="C:\temp\files\" />
+  <AttFileOrdDocLocationDB value="C:\temp\files\" />
+  <SessionExpiryHours value="2" />
+  <EmailAttachmentsPath value="C:\Work\Simplicity4Business\Projects\SimplicityOnline\src\SimplicityOnlineWebApi\wwwroot\resources\KilnbridgeFP_EmailFiles\" />
+  <AttachmentFolderMode value="GOOGLEDRIVE"/>
+  <!--GOOGLE DRIVE CONFIGURATION SECTION-->
+  <EmailAccount value="clienta@simplicitycloud-207707.iam.gserviceaccount.com"/>
+  <KeyFilePath value="E:\Work\Simplicity4Business\Projects\simplicitycloud-207707-40db408f4cec.p12"/>
+  <RootFolder value="SimplicityCloud"/>
+  <UploadDocumentFolderName value="FilingCabinetCloudOrderLabel"/>
+  <TempUploadFolderPath value="C:\Temp\"/>
+  <AdminEmailAddress value="rashid.awan@gmail.com"/>
+  <JobRefNumberLength value="8" />
+  <ManualCreateJobRefForCreateOrder value="true"/>
+  <FilingCabinetS4BFormsFolder value="S4BForms"/>
+  <S4BFormsRootFolderPath value="D:\Work\Simplicity4Business\Projects\SimplicityOnline\Project1\src\SimplicityOnlineWebApi\Resources\Templates\"/>
+  <S4BFormsSubmissionFolderPath value="C:\s4b-simplicitycloud.2\src\SimplicityOnlineWebApi\wwwroot\resources\S4BFormsSubmissions\"/>
+  <S4BFormsSubmissionRootFolderWWW value="http://localhost:5000/resources/S4BFormsSubmissions"/>
+  <S4BFormsSubmissionDefaultJobRef value="S4BFORMS"/>
+</settings>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <!--<ConnectionString value="Data Source=.;Initial Catalog=SimplicityMigration;Integrated security=SSPI;Provider=SQLOLEDB;" />
+  <DatabaseType value="SQLSERVER" />-->
+  <ConnectionString value="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\STL_Dharmesh_Project\\s4b\\DEMO_SECURITY.mdb; Jet OLEDB:Database Password=V08D0611gAtE36fAiRy" />
+  <DatabaseType value="MSACCESS" />
+  <!--<ConnectionString value="Data Source=.;Initial Catalog=SimplicityOnline;Integrated Security=True;" providerName="System.Data.OleDB" />-->
+  <Forms>
+    <Form name="Seal" id="601032884" asset="false"  supplier="false"/>
+  </Forms>
+  <logo value="images/SimplicityFP_Logo.jpg" />
+  <AndroidContentType value="text/csv" />
+  <AndroidEncoding value="UTF-8" />
+  <CSVFilePath value="C:\Software\eForms\Generic\Temp\KilnbridgeFP_Files\" />
+  <TagImageFilePath value="C:\Work\Simplicity4Business\Projects\SimplicityOnline\src\SimplicityOnlineWebApi\wwwroot\resources\KilnbridgeFP_Files\" />
+  <TagImagebaseURL value="http://localhost:5000/resources/KilnbridgeFP_Files/" />
+  <Pages>
+    <Page index="0" caption="Appointments" url="OrderApps_UNC.aspx" />
+  </Pages>
+  <LinkServer value="" />
+  <HomePath value="C:\Personal\UNC\Projects\EBSWebService\Code\SimplicityEBSService\bin\" />
+  <AttFileOrdDocPath value="C:\temp\files\" />
+  <AttFileOrdDocLocationDB value="C:\temp\files\" />
+  <SessionExpiryHours value="2" />
+  <EmailAttachmentsPath value="C:\Work\Simplicity4Business\Projects\SimplicityOnline\src\SimplicityOnlineWebApi\wwwroot\resources\KilnbridgeFP_EmailFiles\" />
+  <AttachmentFolderMode value="GOOGLEDRIVE"/>
+  <!--GOOGLE DRIVE CONFIGURATION SECTION-->
+  <EmailAccount value="simplicityserviceacc1-222@credible-acre-117121.iam.gserviceaccount.com"/>
+  <KeyFilePath value="C:\Work\Simplicity4Business\Projects\SimplicityOnline\Documents\Databases\Test Project-502cada522c0.p12"/>
+  <RootFolder value="SimplicityOnline"/>
+  <TempUploadFolderPath value="C:\Temp\"/>
+  <AdminEmailAddress value="ahmed.eteksol@gmail.com"/>
+  <JobRefNumberLength value="8" />
+  <ManualCreateJobRefForCreateOrder value="true"/>
+  <FilingCabinetS4BFormsFolder value="S4BForms"/>
+  <S4BFormsRootFolderPath value="F:\SOWLatest\src\SimplicityOnlineWebApi\Resources\S4BFormsTemplates\"/>
+  <S4BFormsSubmissionFolderPath value="F:\SOWLatest\src\SimplicityOnlineWebApi\Resources\S4BFormsSubmissions\"/>
+  <S4BFormsSubmissionRootFolderWWW value="http://localhost:5000/S4BFormsSubmissions/"/>
+</settings>

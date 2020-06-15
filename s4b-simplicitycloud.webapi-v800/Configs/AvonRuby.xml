@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <ConnectionString value="Jet OLEDB:Database Password=v09d1902GrEn73ViLlE;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\db\Simplicity_avonruby.mdb;Persist Security Info=False;" providerName="System.Data.OleDB" />
+  <DatabaseType value="MSACCESS" />
+  <Forms>
+    <Form name="Seal" id="601032884" asset="false"  supplier="false"/>
+  </Forms>
+  <logo value="images/SimplicityFP_Logo.jpg" />
+  <AndroidContentType value="text/csv" />
+  <AndroidEncoding value="UTF-8" />
+  <CSVFilePath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\AvonRuby\CSVFiles\" />
+  <EmailAttachmentsPath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\AvonRuby\EmailFiles\" />
+  <TagImageFilePath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\AvonRuby\LabelsFiles\" />
+  <TagImagebaseURL value="http://simplicity-cloud.com/resources/AvonRuby/LabelsFiles/" />
+  <EmailAccount value="avonruby@simplicitycloudweb-234918.iam.gserviceaccount.com"/>
+  <UserAccount value="admin@avon-simplicityfilingc.co.uk"/>
+  <KeyFilePath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\AVONRUBY\GoogleDrive\simplicitycloudweb-234918-b4bc5f8766e0.p12"/>
+  <S4BFormsRootFolderPath value="E:\Software\Live\SimplicityOnline\WebAPI\approot\src\SimplicityOnlineWebApi\Resources\AvonRuby\S4BFormsTemplates\"/>
+  <S4BFormsSubmissionFolderPath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\AvonRuby\S4BFormsSubmissions\"/>
+  <S4BFormsSubmissionRootFolderWWW value="http://simplicity-cloud.com/resources/AvonRuby/S4BFormsSubmissions/"/>
+  <Pages>
+    <Page index="0" caption="Appointments" url="OrderApps_UNC.aspx" />
+  </Pages>
+  <LinkServer value="" />
+  <HomePath value="\\192.168.100.84\Simplicity_Avon\" />
+  <AttFileOrdDocPath value="E:\temp\files\" />
+  <AttFileOrdDocLocationDB value="E:\temp\files\" />
+  <SessionExpiryHours value="2" />
+  <AttachmentFolderMode value="GOOGLEDRIVE"/>
+  <AutoCreateJobRef value="true"/>
+  <RootFolder value="SimplicityCloud"/>
+  <EnableUploadDocumentFolderName value="true"/>
+  <UploadDocumentFolderName value="Locations"/>
+  <TempUploadFolderPath value="E:\Temp\"/>
+  <AdminEmailAddress value="eforms@simplicity4business.com"/>
+  <JobRefNumberLength value="8" />
+  <ManualCreateJobRefForCreateOrder value="true"/>
+  <FilingCabinetS4BFormsFolder value="S4BForms"/>
+  <S4BFormsSubmissionDefaultJobRef value="OFFICE"/>
+</settings>

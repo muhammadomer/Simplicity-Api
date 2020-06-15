@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice Statements</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        #invoice-detail-div {
+            margin-right: auto;
+            margin-left: auto;
+            position: relative;
+            padding-left: 5px;
+            padding-top: 35px;
+            padding-right: 5px;
+            padding-bottom: 20px;
+        }
+
+        #title {
+            font-size: 24px;
+            color: #2E3391;
+            padding-top: 0px;
+            font-weight: 500;
+        }
+
+        #invoice-items-div {
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-bottom: 20px;
+        }
+
+            #invoice-items-div table {
+                border: 0px;
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+                #invoice-items-div table > thead > tr > td {
+                    border-bottom: 3px solid #0fa2df !important;
+                }
+
+                #invoice-items-div table > thead > tr > td {
+                    color: #FFFFFF;
+                    font-size: 14px;
+                    font-weight: bold;
+                    padding: 8px 8px 3px 8px;
+                    text-align: center;
+                    background-color: #27288D;
+                }
+
+                #invoice-items-div table > tbody > tr > td {
+                    border-bottom: 1px solid #27288D;
+                }
+
+                #invoice-items-div table > tbody > tr > td {
+                    font-size: 12px;
+                    padding: 8px 8px 3px 8px;
+                    font-weight: normal;
+                }
+
+                #invoice-items-div table > tfoot > tr, td {
+                    font-weight: bold;
+                }
+
+                    #invoice-items-div table > tfoot > tr > td {
+                        border-top: 1px solid #0FA2DF;
+                        background-color: #F7F8FB;
+                        text-align: right;
+                        font-size: 13px;
+                        padding: 8px 8px 3px 8px;
+                        background-color: #F7F8FB;
+                    }
+
+        #date-td {
+            width: 30px;
+        }
+
+        #invoice-type-td {
+            width: 38px;
+            text-align:center;
+        }
+
+        #ref-td {
+            width: 80px;
+            text-align: left !important;
+        }
+
+        #client-td {
+            width: 50px;
+            text-align: left !important;
+        }
+
+        #job-ref-td {
+            width: 65px;
+            text-align: left !important;
+        }
+
+        #amt-td {
+            width: 45px;
+            text-align: right !important;
+        }
+
+        #balance-td {
+            width: 40px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .blue-text {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div id="invoice-detail-div">
+        <div style='width:100%'>
+            <div id='title'>Invoice statements for [DATES_STR]</div>
+        </div>
+    </div>
+    <div style='clear: both'></div>
+    [STATEMENT_ITEMS]
+</body>
+</html>
