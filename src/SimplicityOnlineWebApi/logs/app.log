@@ -1,0 +1,1219 @@
+2020-03-27 13:05:23,348 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-03-27 13:05:50,403 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-03-27 13:05:50,403 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:3/27/2020 1:05:50 PM
+2020-03-27 13:05:50,403 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-03-27 13:05:50,403 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:3/27/2020 1:05:50 PM
+2020-03-27 13:05:50,427 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:3/27/2020 1:05:50 PM
+2020-03-27 13:05:50,430 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:3/27/2020 1:05:50 PM
+2020-03-27 13:05:50,960 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :3/27/2020 1:05:50 PM
+2020-03-27 13:05:50,961 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :3/27/2020 1:05:50 PM
+2020-03-27 13:07:29,071 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :3/27/2020 1:07:29 PM
+2020-03-27 13:24:18,607 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-03-27 14:04:08,833 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-03-27 14:08:58,485 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-03-27 16:41:12,918 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-07 18:16:42,215 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-07 18:18:45,338 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-07 18:18:45,338 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/7/2020 6:18:45 PM
+2020-04-07 18:18:45,338 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-07 18:18:45,338 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/7/2020 6:18:45 PM
+2020-04-07 18:18:45,584 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/7/2020 6:18:45 PM
+2020-04-07 18:18:45,585 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/7/2020 6:18:45 PM
+2020-04-07 18:18:46,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/7/2020 6:18:46 PM
+2020-04-07 18:18:46,325 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/7/2020 6:18:46 PM
+2020-04-07 18:18:57,100 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/7/2020 6:18:57 PM
+2020-04-08 11:14:21,764 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-08 14:26:10,138 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-09 13:57:05,176 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-09 16:39:56,230 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-09 16:40:32,532 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:32,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:32 PM
+2020-04-09 16:40:32,533 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:32,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:32 PM
+2020-04-09 16:40:32,790 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:32 PM
+2020-04-09 16:40:32,792 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:32 PM
+2020-04-09 16:40:33,176 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:33 PM
+2020-04-09 16:40:33,177 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:33 PM
+2020-04-09 16:40:37,954 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:37,954 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:37 PM
+2020-04-09 16:40:37,954 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:37,954 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:37 PM
+2020-04-09 16:40:37,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:37 PM
+2020-04-09 16:40:37,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:37 PM
+2020-04-09 16:40:38,015 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:38 PM
+2020-04-09 16:40:38,015 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:38 PM
+2020-04-09 16:40:41,266 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:41,266 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,266 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:41,266 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,291 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,291 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,354 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,354 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,828 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:41,828 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,828 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:41,828 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,880 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,880 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,947 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:41 PM
+2020-04-09 16:40:41,947 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:41 PM
+2020-04-09 16:40:44,466 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:44,466 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:44 PM
+2020-04-09 16:40:44,466 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:44,466 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:44 PM
+2020-04-09 16:40:44,486 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:44 PM
+2020-04-09 16:40:44,486 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:44 PM
+2020-04-09 16:40:44,562 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:44 PM
+2020-04-09 16:40:44,562 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:44 PM
+2020-04-09 16:40:45,513 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:45,513 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,513 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:45,513 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,564 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,564 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,838 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:45,838 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,838 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:40:45,838 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,986 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:40:45 PM
+2020-04-09 16:40:45,986 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:40:45 PM
+2020-04-09 16:44:04,429 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:44:04,429 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:44:04 PM
+2020-04-09 16:44:04,430 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:44:04,430 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:44:04 PM
+2020-04-09 16:44:04,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:44:04 PM
+2020-04-09 16:44:04,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:44:04 PM
+2020-04-09 16:44:04,620 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:44:04 PM
+2020-04-09 16:44:04,620 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:44:04 PM
+2020-04-09 16:45:52,175 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:45:52,175 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 4:45:52 PM
+2020-04-09 16:45:52,175 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 16:45:52,175 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 4:45:52 PM
+2020-04-09 16:45:52,193 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 4:45:52 PM
+2020-04-09 16:45:52,193 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 4:45:52 PM
+2020-04-09 16:45:52,242 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 4:45:52 PM
+2020-04-09 16:45:52,242 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 4:45:52 PM
+2020-04-09 17:18:17,372 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 5:18:17 PM
+2020-04-09 17:38:14,654 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 17:38:14,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/9/2020 5:38:14 PM
+2020-04-09 17:38:14,654 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-09 17:38:14,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/9/2020 5:38:14 PM
+2020-04-09 17:38:14,694 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/9/2020 5:38:14 PM
+2020-04-09 17:38:14,694 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/9/2020 5:38:14 PM
+2020-04-09 17:38:14,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/9/2020 5:38:14 PM
+2020-04-09 17:38:14,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/9/2020 5:38:14 PM
+2020-04-10 12:52:46,426 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-10 12:53:24,717 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 12:53:24,717 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/10/2020 12:53:24 PM
+2020-04-10 12:53:24,717 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 12:53:24,717 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/10/2020 12:53:24 PM
+2020-04-10 12:53:25,607 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/10/2020 12:53:25 PM
+2020-04-10 12:53:25,607 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/10/2020 12:53:25 PM
+2020-04-10 12:53:39,320 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/10/2020 12:53:39 PM
+2020-04-10 12:53:39,321 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/10/2020 12:53:39 PM
+2020-04-10 12:55:30,822 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-04-10 12:55:53,496 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-04-10 12:56:03,537 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:30
+2020-04-10 12:56:09,629 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:75
+2020-04-10 12:57:12,702 SimplicityOnlineWebApi.Commons.Utilities INFO - Notification has been sent to ids:dPbe1flyKX8:APA91bEaeDH4FL7u8ocvryVOX3b1gScwkUWirw-T5tGULTJgjdDVRIq73QIg1lXltVsyfFvjBn6CLnkvlu3oKCNhFXiHAP02SxYBsZRN2EakvLRfQmfQ5ZVBFySmdX285UlMWOHyP5hB,ckZKHucL5Mw:APA91bHayv823yruZKVBXzAlsi4kCQBn8N43g2GT88gJv3jz4loKo9GwQcD9k2aEQrNgeuB-YxeZ4I9bAOj2aCerd7ShMU3XPOLcyquxJZMUz9NxOXGhXCGAMPENUUjuN_EZnTF5lVoe,dMCKPr2jzoE:APA91bEhJ9Et8wlma6JCSFeJgCTNia4OkkfJxu7obkMimaCkvyQOmHUZPSdeicRljFF0nZ_C6xzNQdNBXRHoNzt3e5xLJN5pXZi3Jpvcqn72tNbZUT7FVGW8_JZlaixkN1VkfpHHElc_,cfaT3YohnRM:APA91bEKwXAB1AFf1zrERKEiJMemxNqLTNyIEmJQnbfiplLQ7-jmgM534mVdZ3c9zRNZ0KV-Ys9fa3BK_uqpbIXEV61p8vpABRdIgjy2tXVTMcGFiekoTS1BDRS-GLr5_9ArqcJrodra,eyfdTrI_0FA:APA91bFgNdt0pclcXBuB3xJseDgXEWSbA6CRX_h5tKtvfkeytFilkhZER1mLaROiMJjeaOQiIVjqy8e_V33Tz0Sa0hj9AgOqOJDHpmxj00R_fnALKn9udA0XiW6IMRH7PQkytkZMWxSS,e1HjtI2QPgs:APA91bEm3Y-eJGh6YcPqFUeSGqo66b9cCJVyx1_A1HRWTPfqa_6WQz2hMRyx6dXAxf6m4u20bFfxj6Qzuv0_VJLAa5F7A1EtwYJCbWPuXo4J4KxRfXSIcHOKn-D_k9_FYUndXwXWbiO5
+2020-04-10 12:57:45,499 SimplicityOnlineWebApi.Commons.Utilities INFO - Notification has been sent to ids:dPbe1flyKX8:APA91bEaeDH4FL7u8ocvryVOX3b1gScwkUWirw-T5tGULTJgjdDVRIq73QIg1lXltVsyfFvjBn6CLnkvlu3oKCNhFXiHAP02SxYBsZRN2EakvLRfQmfQ5ZVBFySmdX285UlMWOHyP5hB,ckZKHucL5Mw:APA91bHayv823yruZKVBXzAlsi4kCQBn8N43g2GT88gJv3jz4loKo9GwQcD9k2aEQrNgeuB-YxeZ4I9bAOj2aCerd7ShMU3XPOLcyquxJZMUz9NxOXGhXCGAMPENUUjuN_EZnTF5lVoe,dMCKPr2jzoE:APA91bEhJ9Et8wlma6JCSFeJgCTNia4OkkfJxu7obkMimaCkvyQOmHUZPSdeicRljFF0nZ_C6xzNQdNBXRHoNzt3e5xLJN5pXZi3Jpvcqn72tNbZUT7FVGW8_JZlaixkN1VkfpHHElc_,cfaT3YohnRM:APA91bEKwXAB1AFf1zrERKEiJMemxNqLTNyIEmJQnbfiplLQ7-jmgM534mVdZ3c9zRNZ0KV-Ys9fa3BK_uqpbIXEV61p8vpABRdIgjy2tXVTMcGFiekoTS1BDRS-GLr5_9ArqcJrodra,eyfdTrI_0FA:APA91bFgNdt0pclcXBuB3xJseDgXEWSbA6CRX_h5tKtvfkeytFilkhZER1mLaROiMJjeaOQiIVjqy8e_V33Tz0Sa0hj9AgOqOJDHpmxj00R_fnALKn9udA0XiW6IMRH7PQkytkZMWxSS,e1HjtI2QPgs:APA91bEm3Y-eJGh6YcPqFUeSGqo66b9cCJVyx1_A1HRWTPfqa_6WQz2hMRyx6dXAxf6m4u20bFfxj6Qzuv0_VJLAa5F7A1EtwYJCbWPuXo4J4KxRfXSIcHOKn-D_k9_FYUndXwXWbiO5
+2020-04-10 12:58:15,220 SimplicityOnlineWebApi.Commons.Utilities INFO - Notification has been sent to ids:dPbe1flyKX8:APA91bEaeDH4FL7u8ocvryVOX3b1gScwkUWirw-T5tGULTJgjdDVRIq73QIg1lXltVsyfFvjBn6CLnkvlu3oKCNhFXiHAP02SxYBsZRN2EakvLRfQmfQ5ZVBFySmdX285UlMWOHyP5hB,ckZKHucL5Mw:APA91bHayv823yruZKVBXzAlsi4kCQBn8N43g2GT88gJv3jz4loKo9GwQcD9k2aEQrNgeuB-YxeZ4I9bAOj2aCerd7ShMU3XPOLcyquxJZMUz9NxOXGhXCGAMPENUUjuN_EZnTF5lVoe,dMCKPr2jzoE:APA91bEhJ9Et8wlma6JCSFeJgCTNia4OkkfJxu7obkMimaCkvyQOmHUZPSdeicRljFF0nZ_C6xzNQdNBXRHoNzt3e5xLJN5pXZi3Jpvcqn72tNbZUT7FVGW8_JZlaixkN1VkfpHHElc_,cfaT3YohnRM:APA91bEKwXAB1AFf1zrERKEiJMemxNqLTNyIEmJQnbfiplLQ7-jmgM534mVdZ3c9zRNZ0KV-Ys9fa3BK_uqpbIXEV61p8vpABRdIgjy2tXVTMcGFiekoTS1BDRS-GLr5_9ArqcJrodra,eyfdTrI_0FA:APA91bFgNdt0pclcXBuB3xJseDgXEWSbA6CRX_h5tKtvfkeytFilkhZER1mLaROiMJjeaOQiIVjqy8e_V33Tz0Sa0hj9AgOqOJDHpmxj00R_fnALKn9udA0XiW6IMRH7PQkytkZMWxSS,e1HjtI2QPgs:APA91bEm3Y-eJGh6YcPqFUeSGqo66b9cCJVyx1_A1HRWTPfqa_6WQz2hMRyx6dXAxf6m4u20bFfxj6Qzuv0_VJLAa5F7A1EtwYJCbWPuXo4J4KxRfXSIcHOKn-D_k9_FYUndXwXWbiO5
+2020-04-10 13:08:53,304 SimplicityOnlineWebApi.Commons.Utilities INFO - Notification has been sent to ids:dPbe1flyKX8:APA91bEaeDH4FL7u8ocvryVOX3b1gScwkUWirw-T5tGULTJgjdDVRIq73QIg1lXltVsyfFvjBn6CLnkvlu3oKCNhFXiHAP02SxYBsZRN2EakvLRfQmfQ5ZVBFySmdX285UlMWOHyP5hB,ckZKHucL5Mw:APA91bHayv823yruZKVBXzAlsi4kCQBn8N43g2GT88gJv3jz4loKo9GwQcD9k2aEQrNgeuB-YxeZ4I9bAOj2aCerd7ShMU3XPOLcyquxJZMUz9NxOXGhXCGAMPENUUjuN_EZnTF5lVoe,dMCKPr2jzoE:APA91bEhJ9Et8wlma6JCSFeJgCTNia4OkkfJxu7obkMimaCkvyQOmHUZPSdeicRljFF0nZ_C6xzNQdNBXRHoNzt3e5xLJN5pXZi3Jpvcqn72tNbZUT7FVGW8_JZlaixkN1VkfpHHElc_,cfaT3YohnRM:APA91bEKwXAB1AFf1zrERKEiJMemxNqLTNyIEmJQnbfiplLQ7-jmgM534mVdZ3c9zRNZ0KV-Ys9fa3BK_uqpbIXEV61p8vpABRdIgjy2tXVTMcGFiekoTS1BDRS-GLr5_9ArqcJrodra,eyfdTrI_0FA:APA91bFgNdt0pclcXBuB3xJseDgXEWSbA6CRX_h5tKtvfkeytFilkhZER1mLaROiMJjeaOQiIVjqy8e_V33Tz0Sa0hj9AgOqOJDHpmxj00R_fnALKn9udA0XiW6IMRH7PQkytkZMWxSS,e1HjtI2QPgs:APA91bEm3Y-eJGh6YcPqFUeSGqo66b9cCJVyx1_A1HRWTPfqa_6WQz2hMRyx6dXAxf6m4u20bFfxj6Qzuv0_VJLAa5F7A1EtwYJCbWPuXo4J4KxRfXSIcHOKn-D_k9_FYUndXwXWbiO5
+2020-04-10 13:09:51,308 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 13:09:51,308 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/10/2020 1:09:51 PM
+2020-04-10 13:09:51,308 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 13:09:51,308 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/10/2020 1:09:51 PM
+2020-04-10 13:09:51,333 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/10/2020 1:09:51 PM
+2020-04-10 13:09:51,334 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/10/2020 1:09:51 PM
+2020-04-10 13:09:51,769 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/10/2020 1:09:51 PM
+2020-04-10 13:09:51,770 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/10/2020 1:09:51 PM
+2020-04-10 14:43:34,866 SimplicityOnlineWebApi.Commons.Utilities INFO - Exception Occured While Getting schedule items hierarchy. Query timeout expired 
+2020-04-10 16:37:07,545 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-10 16:38:56,242 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 16:38:56,242 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/10/2020 4:38:56 PM
+2020-04-10 16:38:56,242 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 16:38:56,243 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/10/2020 4:38:56 PM
+2020-04-10 16:38:56,264 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/10/2020 4:38:56 PM
+2020-04-10 16:38:56,264 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/10/2020 4:38:56 PM
+2020-04-10 16:38:56,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/10/2020 4:38:56 PM
+2020-04-10 16:38:56,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/10/2020 4:38:56 PM
+2020-04-10 17:17:23,776 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/10/2020 5:17:23 PM
+2020-04-10 17:47:45,701 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 17:47:45,702 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/10/2020 5:47:45 PM
+2020-04-10 17:47:45,702 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-10 17:47:45,702 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/10/2020 5:47:45 PM
+2020-04-10 17:47:46,081 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/10/2020 5:47:46 PM
+2020-04-10 17:47:46,081 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/10/2020 5:47:46 PM
+2020-04-10 17:47:48,995 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/10/2020 5:47:48 PM
+2020-04-10 17:47:48,995 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/10/2020 5:47:48 PM
+2020-04-10 17:47:56,435 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-04-10 17:48:05,392 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:30
+2020-04-10 17:48:05,425 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:15
+2020-04-14 11:27:09,198 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-14 11:35:21,456 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:35:21,456 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/14/2020 11:35:21 AM
+2020-04-14 11:35:21,456 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:35:21,456 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 11:35:21 AM
+2020-04-14 11:35:21,664 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/14/2020 11:35:21 AM
+2020-04-14 11:35:21,666 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 11:35:21 AM
+2020-04-14 11:35:24,315 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/14/2020 11:35:24 AM
+2020-04-14 11:35:24,316 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 11:35:24 AM
+2020-04-14 11:35:45,658 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:35:45,658 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/14/2020 11:35:45 AM
+2020-04-14 11:35:45,658 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:35:45,658 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 11:35:45 AM
+2020-04-14 11:35:45,683 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/14/2020 11:35:45 AM
+2020-04-14 11:35:45,683 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 11:35:45 AM
+2020-04-14 11:35:45,747 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/14/2020 11:35:45 AM
+2020-04-14 11:35:45,747 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 11:35:45 AM
+2020-04-14 11:56:41,365 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:56:41,365 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/14/2020 11:56:41 AM
+2020-04-14 11:56:41,365 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 11:56:41,365 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 11:56:41 AM
+2020-04-14 11:56:41,396 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/14/2020 11:56:41 AM
+2020-04-14 11:56:41,396 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 11:56:41 AM
+2020-04-14 11:56:41,441 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/14/2020 11:56:41 AM
+2020-04-14 11:56:41,441 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 11:56:41 AM
+2020-04-14 12:33:46,894 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:33:46,895 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllAgedDabutors start: 4/14/2020 12:33:46 PM
+2020-04-14 12:33:46,895 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:33:46,895 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings start : 4/14/2020 12:33:46 PM
+2020-04-14 12:33:47,020 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings start : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,020 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings end : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,020 SimplicityOnlineWebApi.Commons.Utilities INFO - Call GetAllAgedDabutors Method start:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,024 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AgedDabatorList of ClientInvoiceDB start : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,024 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On Of AgedDabatorList :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,024 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList itemcount start :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,024 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of AgedDabatorList start:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of AgedDabatorList start:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records Of AgedDabatorList are :13
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of AgedDabatorList end:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of AgedDabatorList end:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList itemcount end :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,267 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList items start :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,270 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of AgedDabatorList start  :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,270 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of AgedDabatorList end  :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,270 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of AgedDabatorList start :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,362 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of AgedDabatorList end :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,362 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of AgedDabatorList start:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,362 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of AgedDabatorList start:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5970 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5977 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5928 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5782 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 51 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 68 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 85 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 96 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 119 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 147 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 176 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,383 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 230 at : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of AgedDabatorList end:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList items end :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection Of AgedDabatorList end :4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AgedDabatorList of ClientInvoiceDB end : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Call GetAllAgedDabutors Method end:4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings end : 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllAgedDabutors end: 4/14/2020 12:33:47 PM
+2020-04-14 12:33:47,384 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:15,189 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:15,189 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,189 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:15,189 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,227 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,227 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,227 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,227 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 14
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,572 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,644 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,644 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,645 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of Unpaid items start:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3825 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3737 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3304 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3202 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3207 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2843 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2895 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2622 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2433 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 1871 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 983 at :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of Unpaid items end:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,728 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:34:15 PM
+2020-04-14 12:34:15,729 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:24,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:24,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Invoice Detail of 3737  : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:24,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,417 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,418 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Invoice Detail Method On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,422 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,422 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,422 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Common Data : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,424 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,424 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,606 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,606 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,606 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Common Data : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,610 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,620 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,620 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,621 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,621 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,686 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,686 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,686 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Get Invoice Detail Items : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,686 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Items : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,688 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,688 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,795 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,795 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,797 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,798 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Items : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,798 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Payment Items : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,798 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,798 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,901 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,901 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Payment Items : 4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,901 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:34:24 PM
+2020-04-14 12:34:24,901 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:34:24 PM
+2020-04-14 12:34:47,082 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:47,082 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,082 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:47,082 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,106 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 14
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of Unpaid items start:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3825 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3737 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3304 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3202 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3207 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2843 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2895 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2622 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2433 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 1871 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 983 at :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of Unpaid items end:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:34:47 PM
+2020-04-14 12:34:47,171 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:11,190 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:11,190 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,190 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:11,190 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,225 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 14
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,286 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of Unpaid items start:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 1142 at :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 726 at :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of Unpaid items end:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:35:11 PM
+2020-04-14 12:35:11,348 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:14,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:14,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:14,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,397 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 14
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of Unpaid items start:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3825 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3737 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3304 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3202 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3207 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,460 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2843 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2895 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2622 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2433 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 1871 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 983 at :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of Unpaid items end:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:35:14 PM
+2020-04-14 12:35:14,461 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:41,325 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:41,326 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Company AutoComplete List: 4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,326 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:41,326 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,350 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,350 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Company Autocomplete data Method On:4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,352 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,352 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,352 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Data : 4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,352 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,352 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,406 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,406 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,407 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill Records Comeplete On  : 4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,407 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:35:41 PM
+2020-04-14 12:35:41,407 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:35:41 PM
+2020-04-14 12:35:44,440 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:44,440 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Job Ref AutoComplete List: 4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,440 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:35:44,440 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,484 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,484 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Job Ref Autocomplete data Method On:4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,486 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,486 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,486 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Job Ref Data : 4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,487 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,487 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,562 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,562 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,563 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill Records Comeplete On  : 4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,563 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:35:44 PM
+2020-04-14 12:35:44,563 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:35:44 PM
+2020-04-14 12:36:04,010 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:04,010 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,010 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:04,010 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,049 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,050 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,177 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,177 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 0
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,178 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:36:04 PM
+2020-04-14 12:36:04,263 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:07,779 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:07,779 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items Start : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,779 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:07,779 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for Unpaid Items start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items start : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for Unpaid Items  end : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items  start : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for Unpaid Items end : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items start : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items start : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,820 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's start:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of Unpaid item's are : 14
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of Unpaid item's end:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of Unpaid item's itemcount end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid item's itemcount end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items start  :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of Unpaid items end  :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items start :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,962 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of Unpaid items end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,962 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items start:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,962 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of Unpaid items start:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,962 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3825 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3737 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3304 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3202 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 3207 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2843 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2895 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2622 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 2433 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 1871 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 983 at :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of Unpaid items end:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items end:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone start:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of Unpaid items Page respone end:4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching Unpaid items end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of Unpaid items end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for Unpaid items end : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for Unpaid Items end : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for Unpaid Items end :4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of Unpaid Items  End : 4/14/2020 12:36:07 PM
+2020-04-14 12:36:07,963 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,512 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,512 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,512 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,512 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,539 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,539 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,570 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,571 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,571 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,646 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:36:50,647 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,663 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,733 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,742 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:36:50 PM
+2020-04-14 12:36:50,743 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:53,262 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:53,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Invoice Detail of 4139  : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,262 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:36:53,262 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Invoice Detail Method On:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Common Data : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,284 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,417 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,417 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,417 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Common Data : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,417 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,418 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,418 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,418 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,418 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,439 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,470 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,470 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,470 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Get Invoice Detail Items : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,470 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Items : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,471 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,471 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Items : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Payment Items : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,537 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,598 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,598 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Payment Items : 4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,598 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:36:53 PM
+2020-04-14 12:36:53,598 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:36:53 PM
+2020-04-14 12:37:29,790 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:29,790 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,790 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:29,791 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,791 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:29,791 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,791 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:29,791 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,832 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,833 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,911 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,929 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,975 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:37:29 PM
+2020-04-14 12:37:29,976 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:37:30 PM
+2020-04-14 12:37:30,005 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:41,349 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:41,349 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Invoice Detail of 4174  : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,349 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:37:41,349 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Invoice Detail Method On:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Common Data : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,369 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Common Data : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,533 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Get Invoice Detail Items : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Items : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,554 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Items : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Payment Items : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,594 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Payment Items : 4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,654 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:37:41 PM
+2020-04-14 12:37:41,654 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:37:41 PM
+2020-04-14 12:38:02,241 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,242 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,242 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,242 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,270 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,270 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,270 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,270 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,271 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,305 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,331 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,331 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:38:02,331 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,331 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,332 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,332 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,332 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,332 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,332 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,348 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,373 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,374 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,375 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:38:02 PM
+2020-04-14 12:38:02,376 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:05,510 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:05,510 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: Get Invoice Detail of 4174  : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,510 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:05,510 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Call Get Invoice Detail Method On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Common Data : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,539 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,560 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,560 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,560 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Common Data : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,561 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,561 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,561 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,561 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,561 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Company Address Details Value : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,582 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Company Address Details Value : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Get Invoice Detail Items : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Items : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,619 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,638 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,638 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,638 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Items : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Invoice Detail Payment Items : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records on :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,658 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records on:4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,658 SimplicityOnlineWebApi.Commons.Utilities INFO - Complete Invoice Detail Payment Items : 4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,658 SimplicityOnlineWebApi.Commons.Utilities INFO - End DB Connection On :4/14/2020 12:38:05 PM
+2020-04-14 12:38:05,658 SimplicityOnlineWebApi.Commons.Utilities INFO - Return Object Result On:4/14/2020 12:38:05 PM
+2020-04-14 12:38:29,217 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,217 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,217 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,217 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,254 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,254 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items Start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,254 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,254 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices for  All Items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,257 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings of GetAllInvoices for  All Items  end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items  start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Get ClientInvoiceDB of GetAllInvoices for  All Items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items start : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,324 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,382 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,413 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,413 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records of  All item's are : 18
+2020-04-14 12:38:29,413 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of  All item's end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,413 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of  All item's itemcount end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,413 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All item's itemcount end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,414 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,414 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items start  :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,414 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of  All items end  :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,414 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items start :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,458 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,459 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,496 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of  All items start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4174 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4139 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4136 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4134 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4132 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4127 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4125 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4124 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4123 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4052 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4037 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method LoadInvoiceItemsFromDataRow of 4038 at :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of  All items end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone start:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of  All items Page respone end:4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection of  All items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,497 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AllAndUnPaidItemsList of ClientInvoiceDB for  All items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,498 SimplicityOnlineWebApi.Commons.Utilities INFO - Call AllAndUnPaidItemsList Method of ClientInvoiceDB  for  All Items end : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,498 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings of GetAllInvoices  for  All Items end :4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,498 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:38:29,498 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllInvoices of  All Items  End : 4/14/2020 12:38:29 PM
+2020-04-14 12:38:29,498 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:40:56,029 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:40:56,029 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/14/2020 12:40:56 PM
+2020-04-14 12:40:56,029 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:40:56,030 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:40:56 PM
+2020-04-14 12:40:56,064 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/14/2020 12:40:56 PM
+2020-04-14 12:40:56,064 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:40:56 PM
+2020-04-14 12:40:56,168 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/14/2020 12:40:56 PM
+2020-04-14 12:40:56,168 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:40:56 PM
+2020-04-14 12:41:22,244 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:22,244 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllAgedDabutors start: 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,244 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:22,244 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings start : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings start : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings end : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Call GetAllAgedDabutors Method start:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AgedDabatorList of ClientInvoiceDB start : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection On Of AgedDabatorList :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList itemcount start :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,263 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of AgedDabatorList start:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of AgedDabatorList start:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Total Return records Of AgedDabatorList are :13
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count records Of AgedDabatorList end:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Create Data Adapter For Couting Records Of AgedDabatorList end:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList itemcount end :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList items start :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of AgedDabatorList start  :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records Of AgedDabatorList end  :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,311 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of AgedDabatorList start :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Request to Fill records Of AgedDabatorList end :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill records Of AgedDabatorList start:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Enter in loop to process rows Of AgedDabatorList start:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5970 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5977 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5928 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 5782 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 51 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 68 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 85 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 96 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 119 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 147 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 176 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Add item which item id is 230 at : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Exit loop Of AgedDabatorList end:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Fetching AgedDabatorList items end :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Get DB Connection Of AgedDabatorList end :4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: AgedDabatorList of ClientInvoiceDB end : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Call GetAllAgedDabutors Method end:4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings end : 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetAllAgedDabutors end: 4/14/2020 12:41:22 PM
+2020-04-14 12:41:22,377 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:25,801 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:25,801 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/14/2020 12:41:25 PM
+2020-04-14 12:41:25,801 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-14 12:41:25,801 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/14/2020 12:41:25 PM
+2020-04-14 12:41:25,828 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/14/2020 12:41:25 PM
+2020-04-14 12:41:25,828 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/14/2020 12:41:25 PM
+2020-04-14 12:41:25,908 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/14/2020 12:41:25 PM
+2020-04-14 12:41:25,908 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/14/2020 12:41:25 PM
+2020-04-14 13:16:56,864 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-04-17 12:58:05,045 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 12:58:07,736 SimplicityOnlineWebApi.Commons.Utilities INFO - Error Occured While Opening Database Connection.Login failed for user 'sa'. 
+2020-04-17 12:58:07,789 SimplicityOnlineWebApi.Commons.Utilities INFO - Exception occur in accessing database:Login failed for user 'sa'.
+2020-04-17 12:58:07,830 SimplicityOnlineWebApi.Models.Repositories.UserDetailsRepository ERROR - Checking User: Admin
+2020-04-17 13:00:05,725 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 13:08:12,224 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:12,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 1:08:12 PM
+2020-04-17 13:08:12,224 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:12,224 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 1:08:12 PM
+2020-04-17 13:08:12,294 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 1:08:12 PM
+2020-04-17 13:08:12,295 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 1:08:12 PM
+2020-04-17 13:08:12,899 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 1:08:12 PM
+2020-04-17 13:08:12,900 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 1:08:12 PM
+2020-04-17 13:08:26,192 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:26,192 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 1:08:26 PM
+2020-04-17 13:08:26,192 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:26,192 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 1:08:26 PM
+2020-04-17 13:08:26,213 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 1:08:26 PM
+2020-04-17 13:08:26,213 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 1:08:26 PM
+2020-04-17 13:08:26,250 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 1:08:26 PM
+2020-04-17 13:08:26,250 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 1:08:26 PM
+2020-04-17 13:08:30,722 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:30,722 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 1:08:30 PM
+2020-04-17 13:08:30,722 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 13:08:30,722 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 1:08:30 PM
+2020-04-17 13:08:30,736 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 1:08:30 PM
+2020-04-17 13:08:30,736 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 1:08:30 PM
+2020-04-17 13:08:30,778 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 1:08:30 PM
+2020-04-17 13:08:30,778 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 1:08:30 PM
+2020-04-17 15:45:52,424 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 16:30:17,384 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 16:30:17,443 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 4:30:17 PM
+2020-04-17 16:30:17,443 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 16:30:17,443 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 4:30:17 PM
+2020-04-17 16:30:17,752 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 4:30:17 PM
+2020-04-17 16:30:17,753 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 4:30:17 PM
+2020-04-17 16:30:20,004 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 4:30:20 PM
+2020-04-17 16:30:20,005 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 4:30:20 PM
+2020-04-17 17:19:39,614 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 17:21:56,835 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 17:22:01,658 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 17:26:27,306 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 17:27:12,745 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:27:12,745 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 5:27:12 PM
+2020-04-17 17:27:12,745 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:27:12,745 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 5:27:12 PM
+2020-04-17 17:27:12,783 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 5:27:12 PM
+2020-04-17 17:27:12,783 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 5:27:12 PM
+2020-04-17 17:27:13,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 5:27:13 PM
+2020-04-17 17:27:13,146 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 5:27:13 PM
+2020-04-17 17:28:45,261 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:28:45,261 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 5:28:45 PM
+2020-04-17 17:28:45,261 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:28:45,261 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 5:28:45 PM
+2020-04-17 17:28:45,294 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 5:28:45 PM
+2020-04-17 17:28:45,294 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 5:28:45 PM
+2020-04-17 17:28:45,429 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 5:28:45 PM
+2020-04-17 17:28:45,429 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 5:28:45 PM
+2020-04-17 17:29:00,959 SimplicityOnlineWebApi.Controllers.UserDetailsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-04-17 17:29:01,639 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:29:01,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:4/17/2020 5:29:01 PM
+2020-04-17 17:29:01,639 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-04-17 17:29:01,639 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:4/17/2020 5:29:01 PM
+2020-04-17 17:29:01,676 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:4/17/2020 5:29:01 PM
+2020-04-17 17:29:01,676 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:4/17/2020 5:29:01 PM
+2020-04-17 17:29:01,745 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :4/17/2020 5:29:01 PM
+2020-04-17 17:29:01,762 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :4/17/2020 5:29:01 PM

@@ -1,0 +1,325 @@
+{
+  "version": 2,
+  "dgSpecHash": "zBjyIf4XCfo7wUUqjvFiQuvEztX5foD07/q8VEKiuEzx3BefJgugNYr/rngsEO4r4rqpgmOYCdr1VxiIyCCJgg==",
+  "success": true,
+  "projectFilePath": "D:\\Simplicity-Work\\work\\v7\\s4b-simplicitycloud.webapi-v7\\s4b-simplicitycloud.webapi-v800\\s4b-simplicitycloud.webapi-v800.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saima\\.nuget\\packages\\enterpriselibrary.common\\6.0.1304\\enterpriselibrary.common.6.0.1304.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\enterpriselibrary.exceptionhandling\\6.0.1304\\enterpriselibrary.exceptionhandling.6.0.1304.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\enterpriselibrary.exceptionhandling.logging\\6.0.1304\\enterpriselibrary.exceptionhandling.logging.6.0.1304.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\enterpriselibrary.logging\\6.0.1304\\enterpriselibrary.logging.6.0.1304.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\fluentscheduler\\5.3.0\\fluentscheduler.5.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\fluentvalidation\\8.6.2\\fluentvalidation.8.6.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\fluentvalidation.aspnetcore\\8.6.2\\fluentvalidation.aspnetcore.8.6.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\8.6.2\\fluentvalidation.dependencyinjectionextensions.8.6.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\gembox.document\\31.0.1156\\gembox.document.31.0.1156.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\google.apis\\1.44.1\\google.apis.1.44.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\google.apis.auth\\1.44.1\\google.apis.auth.1.44.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\google.apis.core\\1.44.1\\google.apis.core.1.44.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\google.apis.drive.v3\\1.44.1.1888\\google.apis.drive.v3.1.44.1.1888.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\htmlrenderer.core\\1.5.0.5\\htmlrenderer.core.1.5.0.5.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\htmlrenderer.pdfsharp\\1.5.0.6\\htmlrenderer.pdfsharp.1.5.0.6.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\log4net\\2.0.8\\log4net.2.0.8.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.http.extensions\\2.2.0\\microsoft.aspnetcore.http.extensions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.3\\microsoft.aspnetcore.jsonpatch.3.1.3.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.mvc.abstractions\\2.2.0\\microsoft.aspnetcore.mvc.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.mvc.core\\2.2.0\\microsoft.aspnetcore.mvc.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.mvc.cors\\2.2.0\\microsoft.aspnetcore.mvc.cors.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.3\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.3.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.responsecaching.abstractions\\2.2.0\\microsoft.aspnetcore.responsecaching.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\microsoft.aspnetcore.routing.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.routing.abstractions\\2.2.0\\microsoft.aspnetcore.routing.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.2\\microsoft.extensions.configuration.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.2\\microsoft.extensions.configuration.binder.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.2\\microsoft.extensions.dependencyinjection.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.2\\microsoft.extensions.dependencyinjection.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.1.0\\microsoft.extensions.dependencymodel.2.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\2.2.0\\microsoft.extensions.hosting.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.logging\\3.1.2\\microsoft.extensions.logging.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.2\\microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.logging.log4net.aspnetcore\\3.1.0\\microsoft.extensions.logging.log4net.aspnetcore.3.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.visualbasic\\10.3.0\\microsoft.visualbasic.10.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.win32.primitives\\4.0.1\\microsoft.win32.primitives.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\mimekit\\2.5.2\\mimekit.2.5.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\pdfsharp\\1.32.3057\\pdfsharp.1.32.3057.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\pdfsharpcore\\1.1.21\\pdfsharpcore.1.1.21.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\portable.bouncycastle\\1.8.5\\portable.bouncycastle.1.8.5.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\runtime.native.system.net.http\\4.0.1\\runtime.native.system.net.http.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\runtime.native.system.security.cryptography\\4.0.0\\runtime.native.system.security.cryptography.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\sharpziplib\\1.2.0\\sharpziplib.1.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\sixlabors.core\\1.0.0-beta0008\\sixlabors.core.1.0.0-beta0008.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\sixlabors.fonts\\1.0.0-beta0009\\sixlabors.fonts.1.0.0-beta0009.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\sixlabors.imagesharp\\1.0.0-beta0006\\sixlabors.imagesharp.1.0.0-beta0006.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.appcontext\\4.1.0\\system.appcontext.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.collections.concurrent\\4.0.12\\system.collections.concurrent.4.0.12.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.collections.immutable\\1.2.0\\system.collections.immutable.1.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.collections.nongeneric\\4.0.1\\system.collections.nongeneric.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.console\\4.0.0\\system.console.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.data.common\\4.3.0\\system.data.common.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.data.oledb\\4.7.0\\system.data.oledb.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.0\\system.diagnostics.diagnosticsource.4.5.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.performancecounter\\4.7.0\\system.diagnostics.performancecounter.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.process\\4.1.0\\system.diagnostics.process.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.stacktrace\\4.0.1\\system.diagnostics.stacktrace.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.tracesource\\4.0.0\\system.diagnostics.tracesource.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.diagnostics.tracing\\4.1.0\\system.diagnostics.tracing.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.globalization.calendars\\4.0.1\\system.globalization.calendars.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.globalization.extensions\\4.3.0\\system.globalization.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.io.filesystem.watcher\\4.0.0\\system.io.filesystem.watcher.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.linq.expressions\\4.1.0\\system.linq.expressions.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.http\\4.1.0\\system.net.http.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.nameresolution\\4.0.0\\system.net.nameresolution.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.primitives\\4.0.11\\system.net.primitives.4.0.11.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.requests\\4.0.11\\system.net.requests.4.0.11.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.sockets\\4.1.0\\system.net.sockets.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.net.webheadercollection\\4.0.1\\system.net.webheadercollection.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.objectmodel\\4.0.12\\system.objectmodel.4.0.12.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.emit.lightweight\\4.0.1\\system.reflection.emit.lightweight.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.extensions\\4.0.1\\system.reflection.extensions.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.metadata\\1.3.0\\system.reflection.metadata.1.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.0.0\\system.runtime.interopservices.runtimeinformation.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.numerics\\4.0.1\\system.runtime.numerics.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.serialization.formatters\\4.3.0\\system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.algorithms\\4.2.0\\system.security.cryptography.algorithms.4.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.cng\\4.2.0\\system.security.cryptography.cng.4.2.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.csp\\4.0.0\\system.security.cryptography.csp.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.encoding\\4.0.0\\system.security.cryptography.encoding.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.openssl\\4.0.0\\system.security.cryptography.openssl.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.primitives\\4.0.0\\system.security.cryptography.primitives.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.cryptography.x509certificates\\4.1.0\\system.security.cryptography.x509certificates.4.1.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.text.encoding.codepages\\4.3.0\\system.text.encoding.codepages.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.overlapped\\4.0.1\\system.threading.overlapped.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.1\\system.threading.tasks.extensions.4.5.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.thread\\4.0.0\\system.threading.thread.4.0.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.threadpool\\4.0.10\\system.threading.threadpool.4.0.10.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.xml.xpath\\4.3.0\\system.xml.xpath.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\system.xml.xpath.xdocument\\4.3.0\\system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\universal.common\\6.2.7\\universal.common.6.2.7.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\universal.common.net.http\\0.6.0\\universal.common.net.http.0.6.0.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\universal.common.reflection\\0.2.2.6\\universal.common.reflection.0.2.2.6.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\universal.common.serialization\\2.1.2.1\\universal.common.serialization.2.1.2.1.nupkg.sha512",
+    "C:\\Users\\Saima\\.nuget\\packages\\universal.rossum.client\\1.0.1\\universal.rossum.client.1.0.1.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "EnterpriseLibrary.ExceptionHandling 6.0.1304 depends on EnterpriseLibrary.Common (>= 6.0.0) but EnterpriseLibrary.Common 6.0.0 was not found. An approximate best match of EnterpriseLibrary.Common 6.0.1304 was resolved.",
+      "libraryId": "EnterpriseLibrary.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "EnterpriseLibrary.Logging 6.0.1304 depends on EnterpriseLibrary.Common (>= 6.0.0) but EnterpriseLibrary.Common 6.0.0 was not found. An approximate best match of EnterpriseLibrary.Common 6.0.1304 was resolved.",
+      "libraryId": "EnterpriseLibrary.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "EnterpriseLibrary.ExceptionHandling.Logging 6.0.1304 depends on EnterpriseLibrary.ExceptionHandling (>= 6.0.0) but EnterpriseLibrary.ExceptionHandling 6.0.0 was not found. An approximate best match of EnterpriseLibrary.ExceptionHandling 6.0.1304 was resolved.",
+      "libraryId": "EnterpriseLibrary.ExceptionHandling",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "EnterpriseLibrary.ExceptionHandling.Logging 6.0.1304 depends on EnterpriseLibrary.Logging (>= 6.0.0) but EnterpriseLibrary.Logging 6.0.0 was not found. An approximate best match of EnterpriseLibrary.Logging 6.0.1304 was resolved.",
+      "libraryId": "EnterpriseLibrary.Logging",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnterpriseLibrary.Common 6.0.1304' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EnterpriseLibrary.Common",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnterpriseLibrary.ExceptionHandling 6.0.1304' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EnterpriseLibrary.ExceptionHandling",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnterpriseLibrary.ExceptionHandling.Logging 6.0.1304' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EnterpriseLibrary.ExceptionHandling.Logging",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EnterpriseLibrary.Logging 6.0.1304' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "EnterpriseLibrary.Logging",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'HtmlRenderer.Core 1.5.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "HtmlRenderer.Core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'HtmlRenderer.PdfSharp 1.5.0.6' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "HtmlRenderer.PdfSharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'PDFsharp 1.32.3057' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "PDFsharp",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

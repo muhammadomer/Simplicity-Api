@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <ConnectionString value="Provider=SQLOLEDB.1;Password=admin;Persist Security Info=False;User ID=sa;Initial Catalog=SIMPLICITYDEMO;Data Source=DESKTOP-V7126SG\SQLEXPRESS;" providerName="System.Data.OleDB" />
+	<!-- <ConnectionString value="Provider=SQLOLEDB.1;Password=a;Persist Security Info=False;User ID=sa;Initial Catalog=SIMPLICITYDEMO;Data Source=(Local)\SQLEXPRESS;" providerName="System.Data.OleDB" /> -->
+   <!--<ConnectionString value="Provider=SQLOLEDB.1;Password=admin12#;Persist Security Info=False;User ID=sa;Initial Catalog=SIMPLICITY_DEMO_DB;Data Source=DESKTOP-HDCUSPN;" providerName="System.Data.OleDB" />-->
+  
+  <DatabaseType value="SQLSERVER" />
+  <Forms>
+    <Form name="HS" id="436813294" asset="false" supplier="false"/>
+  </Forms>
+  <logo value="images/SimplicityFP_Logo.jpg" />
+  <AndroidContentType value="text/csv" />
+  <AndroidEncoding value="UTF-8" />
+  <CSVFilePath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\FHODGE\EmailFiles\" />
+  <TagImageFilePath value="E:\Software\Live\SimplicityOnline\WebAPI\wwwroot\resources\FHODGE\OrdLabels\" />
+  <TagImagebaseURL value="http://www.simplicity-cloud.com/resources/FHODGE/OrdLabels/" />
+  <Pages>
+    <Page index="0" caption="Appointments" url="OrderApps_UNC.aspx" />
+  </Pages>
+  <LinkServer value="" />
+  <HomePath value="E:\Personal\UNC\Projects\EBSWebService\Code\SimplicityEBSService\bin\" />
+  <AttFileOrdDocPath value="E:\temp\files\" />
+  <AttFileOrdDocLocationDB value="E:\temp\files\" />
+  <SessionExpiryHours value="2" />
+  <FromEmailAddress value="support@simplicity4business.com" />
+  <EmailAttachmentsPath value="D:\Simplicity-Work\EmailFiles\" />
+  <AttachmentFolderMode value="GOOGLEDRIVE"/>
+  <AutoCreateJobRef value="true"/>
+  <!--GOOGLE DRIVE CONFIGURATION SECTION-->
+  <!-- Setting to upload File on Google Gsuite account-->
+  <!--
+    <UserAccount value="s4b@simplicity4business.com"/>
+    <EmailAccount value="clienta@simplicitycloud-207707.iam.gserviceaccount.com"></EmailAccount> 
+   -->
+  <!-- Setting to upload File on Normal google Drive Service account-->
+  <EmailAccount value="simplicityserviceaccount@simplicityonlineproject.iam.gserviceaccount.com"/>
+  <KeyFilePath value="C:\Work\Simplicity\Simplicity4Business\Projects\SimplicityOnline\Database\SimplicityOnlineProject-old.p12"/>
+  <RootFolder value="SimplicityOnline"/>
+  <UploadDocumentFolderName value="FilingCabinetCloudOrderLabel"/>
+  <TempUploadFolderPath value="C:\Temp\"/>
+  <AdminEmailAddress value="support@simplicity4business.com"/>
+  <JobRefNumberLength value="8" />
+  <ManualCreateJobRefForCreateOrder value="true"/>
+  <FilingCabinetS4BFormsFolder value="S4BForms"/>
+  <S4BFormsRootFolderPath value="D:\Simplicity-Work\work\v7\s4b-simplicitycloud.webapi-v7\src\SimplicityOnlineWebApi\Resources\Templates"/>
+  <S4BFormsSubmissionFolderPath value="D:\Simplicity-Work\work\v7\wwwroot\resources\S4BFormsSubmissions\"/>
+  <S4BFormsSubmissionRootFolderWWW value="http://www.simplicity-cloud.com/resources/FHODGE/S4BFormsSubmissions/"/>
+  <S4BFormsSubmissionDefaultJobRef value="00000001"/>
+</settings>

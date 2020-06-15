@@ -1,0 +1,174 @@
+2020-06-10 15:32:19,825 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-10 15:32:19,837 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/10/2020 3:32:19 PM
+2020-06-10 15:32:19,837 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-10 15:32:19,837 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/10/2020 3:32:19 PM
+2020-06-10 15:32:19,840 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/10/2020 3:32:19 PM
+2020-06-10 15:32:19,923 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/10/2020 3:32:19 PM
+2020-06-10 15:32:20,209 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/10/2020 3:32:20 PM
+2020-06-10 15:32:20,222 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/10/2020 3:32:20 PM
+2020-06-10 15:32:37,426 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-06-10 15:33:11,186 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:15
+2020-06-10 15:36:23,422 SimplicityOnlineWebApi.Commons.Utilities INFO - First Record number is:0
+2020-06-11 19:52:45,558 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-11 19:52:45,601 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/11/2020 7:52:45 PM
+2020-06-11 19:52:45,601 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-11 19:52:45,601 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/11/2020 7:52:45 PM
+2020-06-11 19:52:45,602 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/11/2020 7:52:45 PM
+2020-06-11 19:52:45,710 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/11/2020 7:52:45 PM
+2020-06-11 19:52:47,349 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/11/2020 7:52:47 PM
+2020-06-11 19:52:47,350 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/11/2020 7:52:47 PM
+2020-06-12 09:46:37,855 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 09:46:37,866 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 9:46:37 AM
+2020-06-12 09:46:37,866 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 09:46:37,866 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 9:46:37 AM
+2020-06-12 09:46:37,867 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 9:46:37 AM
+2020-06-12 09:46:37,869 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 9:46:37 AM
+2020-06-12 09:46:37,983 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 9:46:37 AM
+2020-06-12 09:46:37,983 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 9:46:37 AM
+2020-06-12 10:09:43,194 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:09:43,208 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 10:09:43 AM
+2020-06-12 10:09:43,208 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:09:43,208 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 10:09:43 AM
+2020-06-12 10:09:43,210 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 10:09:43 AM
+2020-06-12 10:09:43,406 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 10:09:43 AM
+2020-06-12 10:09:43,796 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 10:09:43 AM
+2020-06-12 10:09:43,798 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 10:09:43 AM
+2020-06-12 10:47:39,944 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:47:39,958 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 10:47:39 AM
+2020-06-12 10:47:39,959 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:47:39,959 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 10:47:39 AM
+2020-06-12 10:47:39,961 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 10:47:39 AM
+2020-06-12 10:47:39,964 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 10:47:39 AM
+2020-06-12 10:47:39,981 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 10:47:39 AM
+2020-06-12 10:47:39,982 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 10:47:39 AM
+2020-06-12 10:56:10,704 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:56:10,718 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 10:56:10 AM
+2020-06-12 10:56:10,718 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 10:56:10,718 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 10:56:10 AM
+2020-06-12 10:56:10,724 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 10:56:10 AM
+2020-06-12 10:56:10,730 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 10:56:10 AM
+2020-06-12 10:56:10,749 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 10:56:10 AM
+2020-06-12 10:56:10,750 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 10:56:10 AM
+2020-06-12 11:10:37,653 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 11:10:37,674 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 11:10:37 AM
+2020-06-12 11:10:37,674 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 11:10:37,674 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 11:10:37 AM
+2020-06-12 11:10:37,676 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 11:10:37 AM
+2020-06-12 11:10:37,679 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 11:10:37 AM
+2020-06-12 11:10:37,693 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 11:10:37 AM
+2020-06-12 11:10:37,694 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 11:10:37 AM
+2020-06-12 11:15:31,171 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 11:15:31,186 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 11:15:31 AM
+2020-06-12 11:15:31,186 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 11:15:31,186 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 11:15:31 AM
+2020-06-12 11:15:31,189 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 11:15:31 AM
+2020-06-12 11:15:31,195 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 11:15:31 AM
+2020-06-12 11:15:31,211 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 11:15:31 AM
+2020-06-12 11:15:31,211 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 11:15:31 AM
+2020-06-12 12:33:28,852 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager INFO - User profile is available. Using 'C:\Users\Saima\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-12 12:33:29,116 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/  
+2020-06-12 12:33:29,126 Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware WARN - Failed to determine the https port for redirect.
+2020-06-12 12:33:29,475 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SimplicityOnlineWebApi.Controllers.HomeController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:33:29,502 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executing ViewResult, running view Index.
+2020-06-12 12:33:29,649 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executed ViewResult - view Index executed in 154.4907ms.
+2020-06-12 12:33:29,655 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.HomeController.Index (s4b-simplicitycloud.webapi-v800) in 174.7002ms
+2020-06-12 12:33:29,688 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 555.2748ms 200 text/html; charset=utf-8
+2020-06-12 12:33:52,603 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserDetails/Login  
+2020-06-12 12:33:52,611 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:52,616 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 16.3055ms 204 
+2020-06-12 12:33:52,620 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 POST http://localhost:5000/api/UserDetails/Login application/json 65
+2020-06-12 12:33:52,622 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:52,655 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Login", controller = "UserDetails"}. Executing controller action with signature SimplicityOnlineBLL.Entities.UserDetails Login(SimplicityOnlineBLL.Entities.UserDetails) on controller SimplicityOnlineWebApi.Controllers.UserDetailsController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:33:52,754 SimplicityOnlineWebApi.Controllers.RefS4bFormsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-06-12 12:33:53,045 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.UserDetails'.
+2020-06-12 12:33:53,094 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.UserDetailsController.Login (s4b-simplicitycloud.webapi-v800) in 431.465ms
+2020-06-12 12:33:53,100 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 476.5472ms 200 application/json; charset=utf-8
+2020-06-12 12:33:53,182 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/CldSettings/GetAllAppSettings  
+2020-06-12 12:33:53,193 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,202 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 13.783ms 204 
+2020-06-12 12:33:53,211 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Orders/OrdersList  
+2020-06-12 12:33:53,212 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/api/CldSettings/GetAllAppSettings application/json 
+2020-06-12 12:33:53,214 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,217 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,228 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 14.109ms 204 
+2020-06-12 12:33:53,230 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 POST http://localhost:5000/api/Orders/OrdersList application/json 68
+2020-06-12 12:33:53,233 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "GetAllAppSettings", controller = "CldSettings"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAppSettings() on controller SimplicityOnlineWebApi.Controllers.CldSettingsController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:33:53,235 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,246 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "OrdersList", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult OrdersList(SimplicityOnlineBLL.Entities.ClientRequest) on controller SimplicityOnlineWebApi.Controllers.OrdersController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:33:53,278 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:33:53,280 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 12:33:53,280 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,280 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 12:33:53,280 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,285 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,288 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,297 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.CldSettingsController.GetAllAppSettings (s4b-simplicitycloud.webapi-v800) in 61.011ms
+2020-06-12 12:33:53,304 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 88.4782ms 200 application/json; charset=utf-8
+2020-06-12 12:33:53,314 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,316 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 12:33:53 PM
+2020-06-12 12:33:53,449 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:33:53,467 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.OrdersController.OrdersList (s4b-simplicitycloud.webapi-v800) in 218.7875ms
+2020-06-12 12:33:53,470 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 245.4029ms 200 application/json; charset=utf-8
+2020-06-12 12:33:53,626 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserNotification/GetUserNotificationList?isonlyNonReadNotification=true  
+2020-06-12 12:33:53,646 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,653 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 30.6284ms 204 
+2020-06-12 12:33:53,662 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/api/UserNotification/GetUserNotificationList?isonlyNonReadNotification=true application/json 
+2020-06-12 12:33:53,691 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:33:53,704 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "GetUserNotificationList", controller = "UserNotification"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserNotificationList(Boolean) on controller SimplicityOnlineWebApi.Controllers.UserNotificationController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:33:53,728 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:33:53,738 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.UserNotificationController.GetUserNotificationList (s4b-simplicitycloud.webapi-v800) in 28.6283ms
+2020-06-12 12:33:53,743 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 84.09ms 200 application/json; charset=utf-8
+2020-06-12 12:48:45,225 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager INFO - User profile is available. Using 'C:\Users\Saima\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-12 12:48:45,452 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/  
+2020-06-12 12:48:45,464 Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware WARN - Failed to determine the https port for redirect.
+2020-06-12 12:48:45,827 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SimplicityOnlineWebApi.Controllers.HomeController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:48:45,846 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executing ViewResult, running view Index.
+2020-06-12 12:48:45,961 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executed ViewResult - view Index executed in 118.9333ms.
+2020-06-12 12:48:45,972 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.HomeController.Index (s4b-simplicitycloud.webapi-v800) in 134.4918ms
+2020-06-12 12:48:46,012 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 551.43ms 200 text/html; charset=utf-8
+2020-06-12 12:48:58,986 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserDetails/Login  
+2020-06-12 12:48:59,000 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,006 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 18.8642ms 204 
+2020-06-12 12:48:59,010 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 POST http://localhost:5000/api/UserDetails/Login application/json 65
+2020-06-12 12:48:59,014 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,045 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Login", controller = "UserDetails"}. Executing controller action with signature SimplicityOnlineBLL.Entities.UserDetails Login(SimplicityOnlineBLL.Entities.UserDetails) on controller SimplicityOnlineWebApi.Controllers.UserDetailsController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:48:59,103 SimplicityOnlineWebApi.Controllers.RefS4bFormsController INFO - Admin is attempting to login using Project Id DEMOMSSQL
+2020-06-12 12:48:59,358 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.UserDetails'.
+2020-06-12 12:48:59,393 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.UserDetailsController.Login (s4b-simplicitycloud.webapi-v800) in 344.0907ms
+2020-06-12 12:48:59,399 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 386.6851ms 200 application/json; charset=utf-8
+2020-06-12 12:48:59,466 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/CldSettings/GetAllAppSettings  
+2020-06-12 12:48:59,469 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,473 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 8.525ms 204 
+2020-06-12 12:48:59,481 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/api/CldSettings/GetAllAppSettings application/json 
+2020-06-12 12:48:59,487 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,493 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/Orders/OrdersList  
+2020-06-12 12:48:59,497 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,500 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "GetAllAppSettings", controller = "CldSettings"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllAppSettings() on controller SimplicityOnlineWebApi.Controllers.CldSettingsController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:48:59,506 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 13.8556ms 204 
+2020-06-12 12:48:59,518 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 POST http://localhost:5000/api/Orders/OrdersList application/json 68
+2020-06-12 12:48:59,535 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:48:59,541 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "OrdersList", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult OrdersList(SimplicityOnlineBLL.Entities.ClientRequest) on controller SimplicityOnlineWebApi.Controllers.OrdersController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:48:59,569 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:48:59,594 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.CldSettingsController.GetAllAppSettings (s4b-simplicitycloud.webapi-v800) in 87.2053ms
+2020-06-12 12:48:59,599 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 120.6738ms 200 application/json; charset=utf-8
+2020-06-12 12:48:59,602 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 12:48:59,602 SimplicityOnlineWebApi.Commons.Utilities INFO - Method: GetOrdersList:Class:Orders:Date:6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,602 SimplicityOnlineWebApi.Commons.Utilities INFO - ******************************************
+2020-06-12 12:48:59,602 SimplicityOnlineWebApi.Commons.Utilities INFO - Get Project Settings On:6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,606 SimplicityOnlineWebApi.Commons.Utilities INFO - Get application Settings On:6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,609 SimplicityOnlineWebApi.Commons.Utilities INFO - Request for DB Connection On:6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,648 SimplicityOnlineWebApi.Commons.Utilities INFO - Fill count on :6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,649 SimplicityOnlineWebApi.Commons.Utilities INFO - Set Data Adapter For Selecting records :6/12/2020 12:48:59 PM
+2020-06-12 12:48:59,863 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:48:59,886 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.OrdersController.OrdersList (s4b-simplicitycloud.webapi-v800) in 340.8135ms
+2020-06-12 12:48:59,890 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 379.3819ms 200 application/json; charset=utf-8
+2020-06-12 12:49:00,066 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 OPTIONS http://localhost:5000/api/UserNotification/GetUserNotificationList?isonlyNonReadNotification=true  
+2020-06-12 12:49:00,071 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:49:00,076 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 14.6728ms 204 
+2020-06-12 12:49:00,137 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/api/UserNotification/GetUserNotificationList?isonlyNonReadNotification=true application/json 
+2020-06-12 12:49:00,142 Microsoft.AspNetCore.Cors.Infrastructure.CorsService INFO - CORS policy execution successful.
+2020-06-12 12:49:00,160 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "GetUserNotificationList", controller = "UserNotification"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetUserNotificationList(Boolean) on controller SimplicityOnlineWebApi.Controllers.UserNotificationController (s4b-simplicitycloud.webapi-v800).
+2020-06-12 12:49:00,199 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
+2020-06-12 12:49:00,211 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.UserNotificationController.GetUserNotificationList (s4b-simplicitycloud.webapi-v800) in 43.111ms
+2020-06-12 12:49:00,216 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 83.8458ms 200 application/json; charset=utf-8
+2020-06-12 12:59:46,707 Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware WARN - Failed to determine the https port for redirect.

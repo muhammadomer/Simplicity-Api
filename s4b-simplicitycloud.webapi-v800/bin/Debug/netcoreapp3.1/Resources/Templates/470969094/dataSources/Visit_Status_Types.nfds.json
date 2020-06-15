@@ -1,0 +1,15 @@
+{
+  "name": "Visit_Status_Types",
+  "type": "ValueList",
+  "values": [
+    "No - Not Attended",
+    "Yes - In Attendance",
+    "Yes - Completed",
+    "No - No Access",
+    "No - Brought Forward",
+    "No - Variation Order",
+    "No - Tenant`s Refusal",
+    "No - Parts Awaited"
+  ],
+  "isIndexed": false
+}
