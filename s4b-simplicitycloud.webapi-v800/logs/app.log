@@ -2313,3 +2313,25 @@ System.ArgumentNullException: Value cannot be null. (Parameter 'logger')
 2020-06-12 19:28:59,226 Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor INFO - Executing ObjectResult, writing value of type 'SimplicityOnlineBLL.Entities.ResponseModel'.
 2020-06-12 19:28:59,230 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.UserNotificationController.GetUserNotificationList (s4b-simplicitycloud.webapi-v800) in 258.6318ms
 2020-06-12 19:28:59,274 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 269.1698ms 200 application/json; charset=utf-8
+2020-06-15 12:52:05,555 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager INFO - User profile is available. Using 'C:\Users\Saima\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-15 12:52:06,047 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/  
+2020-06-15 12:52:06,055 Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware WARN - Failed to determine the https port for redirect.
+2020-06-15 12:52:06,920 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SimplicityOnlineWebApi.Controllers.HomeController (s4b-simplicitycloud.webapi-v800).
+2020-06-15 12:52:06,941 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executing ViewResult, running view Index.
+2020-06-15 12:52:07,172 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executed ViewResult - view Index executed in 234.5655ms.
+2020-06-15 12:52:07,179 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.HomeController.Index (s4b-simplicitycloud.webapi-v800) in 253.1039ms
+2020-06-15 12:52:07,210 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 1149.9105ms 200 text/html; charset=utf-8
+2020-06-15 12:52:07,222 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/css/site.css  
+2020-06-15 12:52:07,255 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.css  
+2020-06-15 12:52:07,342 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware INFO - The file /lib/bootstrap/dist/css/bootstrap.css was not modified
+2020-06-15 12:52:07,344 Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware INFO - The file /css/site.css was not modified
+2020-06-15 12:52:07,350 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 127.3644ms 304 text/css
+2020-06-15 12:52:07,352 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 94.5846ms 304 text/css
+2020-06-15 16:41:27,091 Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager INFO - User profile is available. Using 'C:\Users\Saima\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-06-15 16:41:28,145 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request starting HTTP/1.1 GET http://localhost:5000/  
+2020-06-15 16:41:28,155 Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware WARN - Failed to determine the https port for redirect.
+2020-06-15 16:41:29,825 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller SimplicityOnlineWebApi.Controllers.HomeController (s4b-simplicitycloud.webapi-v800).
+2020-06-15 16:41:29,899 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executing ViewResult, running view Index.
+2020-06-15 16:41:30,738 Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor INFO - Executed ViewResult - view Index executed in 859.0091ms.
+2020-06-15 16:41:30,777 Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker INFO - Executed action SimplicityOnlineWebApi.Controllers.HomeController.Index (s4b-simplicitycloud.webapi-v800) in 914.2303ms
+2020-06-15 16:41:30,852 Microsoft.AspNetCore.Hosting.Diagnostics INFO - Request finished in 2732.7433ms 200 text/html; charset=utf-8
