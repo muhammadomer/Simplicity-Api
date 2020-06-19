@@ -236,6 +236,34 @@ namespace SimplicityOnlineWebApi.Controllers
             return new ObjectResult(a);
         }
 
+        [HttpPost]
+        [ActionName("GetGrossData")]
+        [Route("[action]")]
+        public ContentResult GetGrossData()
+        {
+            string returnValue = "";
+            string streamText = "";
+            bool isUpdate= false;
+            using (StreamReader reader = new StreamReader(Request.Body))
+                streamText = reader.ReadToEndAsync().Result;
+            var resp = JsonConvert.DeserializeObject<IDictionary<string, string>>(streamText);
+            
+            //return new ObjectResult(returnValue);
+            if (resp["token"] == "$jsf(6jsAdfk2!dfkd^l5ksdjaSDJARzadf$")
+            {
+                RequestHeaderModel header = new RequestHeaderModel();
+                header = Utilities.prepareRequestModel(Request);
+                isUpdate = Convert.ToBoolean(resp["isUpdate"]);
+                returnValue = RossumRepository.GrossData(resp["data"], isUpdate, header);
+            }
+            else 
+            {
+                returnValue = "{'message':'invalid enable value'}";
+            }
+            return Content(returnValue, "application/json");
+            
+        }
+
         #endregion
 
         #region Connector Methods Rqgion

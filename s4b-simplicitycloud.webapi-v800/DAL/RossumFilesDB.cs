@@ -8,6 +8,7 @@ using SimplicityOnlineWebApi.BLL.Entities;
 using SimplicityOnlineWebApi.Models;
 using System.Linq;
 using System.Linq.Expressions;
+using Newtonsoft.Json;
 
 namespace SimplicityOnlineWebApi.DAL
 {
@@ -506,7 +507,61 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return;
         }
-     }
+
+        public string GrossData(string qry, bool isUpdate)
+        {
+            string returnValue = "";
+            try
+            {
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmd = new OleDbCommand(qry, conn))
+                    {
+                        if (isUpdate)
+                        {
+                            returnValue = objCmd.ExecuteNonQuery().ToString();
+                        }
+                        else
+                        {
+                            using (OleDbDataReader dr = objCmd.ExecuteReader())
+                            {
+                                if (dr.HasRows)
+                                {
+                                    var r = Serialize(dr);
+                                    returnValue = JsonConvert.SerializeObject(r, Formatting.Indented);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return returnValue;
+        }
+
+
+        private IEnumerable<Dictionary<string, object>> Serialize(OleDbDataReader reader)
+        {
+            var results = new List<Dictionary<string, object>>();
+            var cols = new List<string>();
+            for (var i = 0; i < reader.FieldCount; i++)
+                cols.Add(reader.GetName(i));
+
+            while (reader.Read())
+            {
+                var record = new Dictionary<string, object>();
+                foreach (var col in cols)
+                    record.Add(col, reader[col]);
+                results.Add(record);
+            }
+            return results;
+        }
+    }
+
+
 }
 #region Archive
 //internal bool UpdateFileStatus(RossWebHook hook)

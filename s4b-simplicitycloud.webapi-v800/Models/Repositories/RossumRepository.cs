@@ -981,6 +981,23 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             //}
             rossumDB.UpdateRemarks(rossFile);
         }
+        public string GrossData(string qry, bool isUpdate, RequestHeaderModel header)
+        {
+            string returnValue = "";
+            ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
+            if (settings == null)
+                throw new InvalidDataException("Error in GetQryData");
+            try
+            {
+                RossumFilesDB rossumDB = new RossumFilesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                returnValue = rossumDB.GrossData(qry, isUpdate);
+            }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog(ex.Message);
+            }
+            return returnValue;
+        }
     }
 
 
