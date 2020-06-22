@@ -1234,6 +1234,5 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             }
             return returnVal;
         }
-
     }
 }

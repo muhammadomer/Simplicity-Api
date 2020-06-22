@@ -343,6 +343,10 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 }
                 else
                 {
+                    EntityDetailsCoreDB edcDB = new EntityDetailsCoreDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                    EntityDetailsCore edc = edcDB.GetEdcCldCloudFields(invoice.Sequence);
+                    if(edc !=null && edc.EdcCloudFields!=null && !string.IsNullOrEmpty(edc.EdcCloudFields.RossumContactName))
+                        edcDB.SaveEdcCloudFields(edc);
                     returnValue.IsSucessfull = true;
                 }
             }
