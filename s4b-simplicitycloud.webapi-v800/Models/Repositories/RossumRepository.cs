@@ -791,110 +791,123 @@ namespace SimplicityOnlineWebApi.Models.Repositories
         public List<RossumDocumentType> GetDocumentTypes(RequestHeaderModel header)
         {
             List<RossumDocumentType> rossumDocTypeList = new List<RossumDocumentType>();
-
+            string errorMessage = "Project settings not available. Please contact customer support.";
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
             if (settings == null)
-            {
-                string message = "Project settings not available. Please contact customer support.";
-                Utilities.WriteLog(message);
-                throw new InvalidDataException(message);
-            }
+                throw new InvalidDataException();
             try
             {
                 RossumFilesDB rossumDB = new RossumFilesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId)); 
                 rossumDocTypeList = rossumDB.GetDocTypesAll();
+                errorMessage = "Rossum Doc Types not found.";
                 if (rossumDocTypeList.Count == 0)
-                    throw new InvalidDataException("Rossum Doc Types not found.");
+                    throw new InvalidDataException();
 
-                List<RossumDocumentType> docTypes = rossumDocTypeList.Where(x => string.IsNullOrEmpty(x.DocTypeFolderCabId) || string.IsNullOrEmpty(x.ReceivedFolderCabId) || string.IsNullOrEmpty(x.InReviewFolderCabId) || string.IsNullOrEmpty(x.SuccessFolderCabId) || string.IsNullOrEmpty(x.FailedFolderCabId)).ToList();
-                if (docTypes.Count() > 0)
-                {
-                    string supplierDocsFolder = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME ).SettingValue;
-                    string supplierDocsFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
+                CloudStorageRepository.UpdateAllFolderIds(header);
+                rossumDocTypeList = rossumDB.GetDocTypesAll();
 
-                    AttachmentFilesFolder supplierFolder = CloudStorageRepository.GetFolderContentById(supplierDocsFolderId,header);
-                    //string criteria = "";
-                    DriveRequest driveRequest = new DriveRequest();
-                    AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
-                    if (supplierFolder.Folders == null)
-                        supplierFolder.Folders = new List<AttachmentFilesFolder>();
+                //List<RossumDocumentType> docTypes = rossumDocTypeList.Where(x => string.IsNullOrEmpty(x.DocTypeFolderCabId) || string.IsNullOrEmpty(x.ReceivedFolderCabId) || string.IsNullOrEmpty(x.InReviewFolderCabId) || string.IsNullOrEmpty(x.SuccessFolderCabId) || string.IsNullOrEmpty(x.FailedFolderCabId)).ToList();
+                //if (docTypes.Count() > 0)
+                //{
+                //    string supplierDocsFolder = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME ).SettingValue;
+                //    string supplierDocsFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
+                //    errorMessage = "Supplier docs folder null or empty.";
+                //    if (string.IsNullOrEmpty(supplierDocsFolderId) || string.IsNullOrEmpty(supplierDocsFolder))
+                //        throw new InvalidDataException();
 
-                    foreach (RossumDocumentType item in rossumDocTypeList)
-                    {
-                        AttachmentFilesFolder doctype = supplierFolder.Folders.Where(x => x.Name.ToUpper() == item.DocTypeFolderName.ToUpper()).FirstOrDefault();
-                        if (doctype == null)
-                        {
-                            doctype = new AttachmentFilesFolder();
-                            driveRequest.ParentFolderId = supplierFolder.Id;
-                            driveRequest.Name = item.DocTypeFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doctype.Id = newFolder.Id;
-                        }
-                        //criteria = "'" + doctype.Id + "' in parents and mimeType = 'application/vnd.google-apps.folder' ";
-                        AttachmentFilesFolder folderDetail = CloudStorageRepository.GetFolderContentById(doctype.Id, header);
-                        if (folderDetail == null)
-                        {
-                            folderDetail = new AttachmentFilesFolder();
-                            folderDetail.Folders = new List<AttachmentFilesFolder>();
-                        }
-                        RossumDocumentType doc = new RossumDocumentType();
-                        doc.DocTypeKey = item.DocTypeKey;
-                        doc.DocTypeFolderCabId = doctype.Id;
-                        //Received Folder
-                        AttachmentFilesFolder receivedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.ReceivedFolderName.ToLower()).FirstOrDefault();
-                        if (receivedFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.ReceivedFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.ReceivedFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.ReceivedFolderCabId = receivedFolder.Id;
+                //    AttachmentFilesFolder supplierFolder = CloudStorageRepository.GetFolderContentById(supplierDocsFolderId,header);
+                //    //string criteria = "";
+                //    if (supplierFolder == null)
+                //    {
+                //        supplierFolder = new AttachmentFilesFolder();
+                //    }
+                //    DriveRequest driveRequest = new DriveRequest();
+                //    AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
+                //    if (supplierFolder.Folders == null) supplierFolder.Folders = new List<AttachmentFilesFolder>();
 
-                        //failedFolder
-                        AttachmentFilesFolder failedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.FailedFolderName.ToLower()).FirstOrDefault();
-                        if (failedFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.FailedFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.FailedFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.FailedFolderCabId = failedFolder.Id;
+                //    errorMessage = "Exception occured in Document types iteration";
+                //    foreach (RossumDocumentType item in rossumDocTypeList)
+                //    {
+                //        AttachmentFilesFolder doctype = supplierFolder.Folders.Where(x => x.Name.ToUpper() == item.DocTypeFolderName.ToUpper()).FirstOrDefault();
+                //        if (doctype == null)
+                //        {
+                //            doctype = new AttachmentFilesFolder();
+                //            driveRequest.ParentFolderId = supplierDocsFolderId;
+                //            driveRequest.Name = item.DocTypeFolderName;
+                //            errorMessage = "Exception occured while adding doc type folder";
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doctype.Id = newFolder.Id;
+                //        }
+                //        //criteria = "'" + doctype.Id + "' in parents and mimeType = 'application/vnd.google-apps.folder' ";
+                //        errorMessage = "Exception occured while getting folder content of a doc type";
+                //        AttachmentFilesFolder folderDetail = CloudStorageRepository.GetFolderContentById(doctype.Id, header);
+                //        if (folderDetail == null)
+                //        {
+                //            folderDetail = new AttachmentFilesFolder();
+                //            folderDetail.Folders = new List<AttachmentFilesFolder>();
+                //        }
+                //        RossumDocumentType doc = new RossumDocumentType();
+                //        doc.DocTypeKey = item.DocTypeKey;
+                //        doc.DocTypeFolderCabId = doctype.Id;
+                //        //Received Folder
+                //        errorMessage = "Exception occured while processing Received folder";
+                //        AttachmentFilesFolder receivedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.ReceivedFolderName.ToLower()).FirstOrDefault();
+                //        if (receivedFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.ReceivedFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.ReceivedFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.ReceivedFolderCabId = receivedFolder.Id;
 
-                        //SuccessFolder
-                        AttachmentFilesFolder successFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.SuccessFolderName.ToLower()).FirstOrDefault();
-                        if (successFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.SuccessFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.SuccessFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.SuccessFolderCabId = successFolder.Id;
-                        //InReview Folder
-                        AttachmentFilesFolder inReviewFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.InReviewFolderName.ToLower()).FirstOrDefault();
-                        if (inReviewFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.InReviewFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.InReviewFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.InReviewFolderCabId = inReviewFolder.Id;
+                //        //failedFolder
+                //        errorMessage = "Exception occured while processing Failed folder";
+                //        AttachmentFilesFolder failedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.FailedFolderName.ToLower()).FirstOrDefault();
+                //        if (failedFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.FailedFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.FailedFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.FailedFolderCabId = failedFolder.Id;
 
-                        rossumDB.UpdateDocTypeCabIds(doc);
-                    }
-                    rossumDocTypeList = rossumDB.GetDocTypesAll();
-                }
+                //        //SuccessFolder
+                //        errorMessage = "Exception occured while processing Success folder";
+                //        AttachmentFilesFolder successFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.SuccessFolderName.ToLower()).FirstOrDefault();
+                //        if (successFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.SuccessFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.SuccessFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.SuccessFolderCabId = successFolder.Id;
+                //        //InReview Folder
+                //        errorMessage = "Exception occured while processing InReview folder";
+                //        AttachmentFilesFolder inReviewFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.InReviewFolderName.ToLower()).FirstOrDefault();
+                //        if (inReviewFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.InReviewFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.InReviewFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.InReviewFolderCabId = inReviewFolder.Id;
+
+                //        rossumDB.UpdateDocTypeCabIds(doc);
+                //    }
+                //    errorMessage = "Exception occured while fetching all doc types list";
+            
             }
             catch (Exception ex)
             {
-                Utilities.WriteLog("Exception Occured While Getting Getting Doc Types " + ex.Message);
+                Utilities.WriteLog(header.ProjectId + "Exception Occured While Getting Getting Doc Types " + errorMessage + " - " + ex.Message);
             }
             return rossumDocTypeList;
         }

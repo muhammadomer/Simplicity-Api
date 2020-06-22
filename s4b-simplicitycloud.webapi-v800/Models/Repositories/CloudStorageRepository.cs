@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Google.Apis.Drive.v3.Data;
+
+using Microsoft.AspNetCore.Http;
+using SimplicityOnlineWebApi.BLL.Entities;
 using SimplicityOnlineWebApi.Commons;
 using SimplicityOnlineWebApi.DAL;
 using SimplicityOnlineWebApi.Models.Interfaces;
@@ -88,12 +91,9 @@ namespace SimplicityOnlineBLL.Entities
 
         public void UpdateAllFolderIds(RequestHeaderModel header)
         {
+            string errorMessage = "Project settings not available.";
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
-            if (settings == null)
-            {
-                Utilities.WriteLog("Project settings not available. Please contact customer support.", "UpdateAllFolderIds");
-                return ;
-            }
+            if (settings == null) throw new Exception();
             try
             {
                 BaseDataSource baseDataSource = new BaseDataSource();
@@ -102,27 +102,157 @@ namespace SimplicityOnlineBLL.Entities
                 {
                     EmailAccount = settings.EmailAccount,
                     KeyFilePath = settings.KeyFilePath,
-                    RootFolder = settings.RootFolder
+                    RootFolder = settings.RootFolder,
                 };
-                // Updating App Root Folder ID
+                //Note: Updating App Root Folder ID
+                errorMessage = "Exception while updating App Root Folder Id";
+                AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
                 string appRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder).SettingValue;
-                string appRootfolderId = GetSimplicityRootFolderId(baseDataSource, driveRequest, appRootFolderName);
-                CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder, appRootfolderId);
+                string appRootfolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId).SettingValue;
+                driveRequest.FileId = "1KRx9cytcI9S2e8HOcceY5v0Xt2y6HOpH";
+                //ShareFile(driveRequest, header);
+                //DeleteFile(driveRequest, header);
+                if (appRootfolderId.ToLower() == "notset" || appRootfolderId.ToLower() == "not set")
+                {
+                    driveRequest.ParentFolderId = "root";
+                    driveRequest.Name = appRootFolderName;
+                    newFolder = AddFolder(driveRequest, header);
+                    //ShareFile(driveRequest, header);
+                    if (newFolder != null && newFolder.Folders != null && newFolder.FoldersCount > 0)
+                    {
+                        appRootfolderId = newFolder.Folders.FirstOrDefault().Id;
+                        CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId, appRootfolderId);
+                    }
+                }
 
-                // Updating Rossum Root Folder ID
-                string RossumRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME).SettingValue;
-                AttachmentFilesFolder folderMeta = GetFileOrFolderMeta_ByName(header, RossumRootFolderName, appRootfolderId);
-                if (folderMeta==null || folderMeta.FoldersCount==0)
-                    throw new DirectoryNotFoundException("Folder not found on Google Drive");
-                if (folderMeta.FoldersCount > 1)
-                    throw new DirectoryNotFoundException("Folder more than one folders");
-                string RossumRootFolderId = folderMeta.Folders.First().Id;
-                CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder, RossumRootFolderId);
-                // Create / Update All Rossum document type folder Ids
+                //NOTE:  Updating Rossum Root Folder ID
+                errorMessage = "Exception while updating Rossum Root Folder Id";
+                newFolder = null;
+                string rossumRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME).SettingValue;
+                string RossumRootFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
+                if (RossumRootFolderId.ToLower() == "notset" || RossumRootFolderId.ToLower() == "not set")
+                {
+                    driveRequest.ParentFolderId = appRootfolderId;
+                    driveRequest.Name = rossumRootFolderName;
+                    newFolder = AddFolder(driveRequest, header);
+                    //Sharing with admin email account.
+                    //driveRequest = new DriveRequest();
+                    //driveRequest.FileId = appRootfolderId;
+                    //ShareFile(driveRequest, header);
+
+                    if (newFolder != null && newFolder.Folders != null && newFolder.FoldersCount > 0)
+                    {
+                        RossumRootFolderId = newFolder.Folders.FirstOrDefault().Id;
+                        CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID, RossumRootFolderId);
+                    }
+                    else 
+                    {
+                        throw new Exception("Could not create Rossum Root Folder");
+                    }
+                }
+                // Note: Update All Rossum document type folder Ids
+                errorMessage = "Exception while creating/updating doc type folder";
+                List<RossumDocumentType> rossumDocTypeList = new List<RossumDocumentType>();
+
+                RossumFilesDB rossumDB = new RossumFilesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                rossumDocTypeList = rossumDB.GetDocTypesAll();
+                errorMessage = "Rossum Doc Types not found.";
+                if (rossumDocTypeList.Count == 0)
+                    throw new InvalidDataException();
+
+                List<RossumDocumentType> docTypes = rossumDocTypeList.Where(x => string.IsNullOrEmpty(x.DocTypeFolderCabId) || string.IsNullOrEmpty(x.ReceivedFolderCabId) || string.IsNullOrEmpty(x.InReviewFolderCabId) || string.IsNullOrEmpty(x.SuccessFolderCabId) || string.IsNullOrEmpty(x.FailedFolderCabId)).ToList();
+                if (docTypes.Count() == 0) 
+                    return;
+                
+                AttachmentFilesFolder rossumRootFolder = GetFolderContentById(RossumRootFolderId, header);
+                if (rossumRootFolder == null)
+                    rossumRootFolder = new AttachmentFilesFolder();
+
+                driveRequest = new DriveRequest();
+                newFolder = new AttachmentFilesFolder();
+                if (rossumRootFolder.Folders == null) rossumRootFolder.Folders = new List<AttachmentFilesFolder>();
+
+                errorMessage = "Exception occured in Document types iteration";
+                foreach (RossumDocumentType item in rossumDocTypeList)
+                {
+                    AttachmentFilesFolder doctype = rossumRootFolder.Folders.Where(x => x.Name.ToUpper() == item.DocTypeFolderName.ToUpper()).FirstOrDefault();
+                    if (doctype == null)
+                    {
+                        doctype = new AttachmentFilesFolder();
+                        driveRequest.ParentFolderId = RossumRootFolderId;
+                        driveRequest.Name = item.DocTypeFolderName;
+                        errorMessage = "Exception occured while adding doc type folder";
+                        newFolder = AddFolder(driveRequest, header);
+                        doctype.Id = newFolder.Id;
+                    }
+                    //criteria = "'" + doctype.Id + "' in parents and mimeType = 'application/vnd.google-apps.folder' ";
+                    errorMessage = "Exception occured while getting folder content of a doc type";
+                    AttachmentFilesFolder folderDetail = GetFolderContentById(doctype.Id, header);
+                    if (folderDetail == null)
+                    {
+                        folderDetail = new AttachmentFilesFolder();
+                        folderDetail.Folders = new List<AttachmentFilesFolder>();
+                    }
+                    RossumDocumentType doc = new RossumDocumentType();
+                    doc.DocTypeKey = item.DocTypeKey;
+                    doc.DocTypeFolderCabId = doctype.Id;
+                    //Received Folder
+                    errorMessage = "Exception occured while processing Received folder";
+                    AttachmentFilesFolder receivedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.ReceivedFolderName.ToLower()).FirstOrDefault();
+                    if (receivedFolder == null)
+                    {
+                        driveRequest.ParentFolderId = doctype.Id;
+                        driveRequest.Name = item.ReceivedFolderName;
+                        newFolder = AddFolder(driveRequest, header);
+                        doc.ReceivedFolderCabId = newFolder.Id;
+                    }
+                    else
+                        doc.ReceivedFolderCabId = receivedFolder.Id;
+
+                    //failedFolder
+                    errorMessage = "Exception occured while processing Failed folder";
+                    AttachmentFilesFolder failedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.FailedFolderName.ToLower()).FirstOrDefault();
+                    if (failedFolder == null)
+                    {
+                        driveRequest.ParentFolderId = doctype.Id;
+                        driveRequest.Name = item.FailedFolderName;
+                        newFolder = AddFolder(driveRequest, header);
+                        doc.FailedFolderCabId = newFolder.Id;
+                    }
+                    else
+                        doc.FailedFolderCabId = failedFolder.Id;
+
+                    //SuccessFolder
+                    errorMessage = "Exception occured while processing Success folder";
+                    AttachmentFilesFolder successFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.SuccessFolderName.ToLower()).FirstOrDefault();
+                    if (successFolder == null)
+                    {
+                        driveRequest.ParentFolderId = doctype.Id;
+                        driveRequest.Name = item.SuccessFolderName;
+                        newFolder = AddFolder(driveRequest, header);
+                        doc.SuccessFolderCabId = newFolder.Id;
+                    }
+                    else
+                        doc.SuccessFolderCabId = successFolder.Id;
+                    //InReview Folder
+                    errorMessage = "Exception occured while processing InReview folder";
+                    AttachmentFilesFolder inReviewFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.InReviewFolderName.ToLower()).FirstOrDefault();
+                    if (inReviewFolder == null)
+                    {
+                        driveRequest.ParentFolderId = doctype.Id;
+                        driveRequest.Name = item.InReviewFolderName;
+                        newFolder = AddFolder(driveRequest, header);
+                        doc.InReviewFolderCabId = newFolder.Id;
+                    }
+                    else
+                        doc.InReviewFolderCabId = inReviewFolder.Id;
+                    rossumDB.UpdateDocTypeCabIds(doc);
+                }
+                
             }
             catch (Exception ex)
             {
-                Utilities.WriteLog("Exception while updating Folder IDs");
+                Utilities.WriteLog("Exception while updating Folder IDs. Error Message: " + errorMessage);
             }
         }
         private string GetRossumRootFolderId(BaseDataSource baseDataSource, DriveRequest driveRequest, string appRootFolder)
@@ -165,7 +295,7 @@ namespace SimplicityOnlineBLL.Entities
                     {
                         EmailAccount = settings.EmailAccount,
                         KeyFilePath = settings.KeyFilePath,
-                        RootFolder = settings.RootFolder
+                        RootFolder = settings.RootFolder,
                     }, searchQuery);
                 }
             }
@@ -186,7 +316,7 @@ namespace SimplicityOnlineBLL.Entities
                 {
                     string searchQuery = string.Format("('{0}' in parents and trashed=false)", folderId);
                     BaseDataSource baseDataSource = new BaseDataSource();
-                    baseDataSource.SetDataSource(AttachmentFolderMode.GOOGLEDRIVE);                        
+                    baseDataSource.SetDataSource(AttachmentFolderMode.GOOGLEDRIVE);
                     returnValue = baseDataSource.Source.GetGFiles(new DriveRequest
                     {
                         EmailAccount = settings.EmailAccount,
@@ -197,6 +327,7 @@ namespace SimplicityOnlineBLL.Entities
             }
             catch (Exception ex)
             {
+                Utilities.WriteLog("Exception while getting Folder Content", "GetFolderContentById-Repository");
             }
             return returnValue;
 
@@ -807,16 +938,12 @@ namespace SimplicityOnlineBLL.Entities
                 //ProjectSettings settings = Configs.settings["KILNBRIDGE"];                
                 if (settings != null)
                 {
-                    var mode = (AttachmentFolderMode)Enum.Parse(typeof(AttachmentFolderMode), settings.AttachmentFolderMode);
-                    if (mode != AttachmentFolderMode.DATABASE)
-                    {
-                        BaseDataSource baseDataSource = new BaseDataSource();
-                        baseDataSource.SetDataSource(mode);
-                        driveRequest.EmailAccount = settings.EmailAccount;
-                        driveRequest.KeyFilePath = settings.KeyFilePath;
-                        returnValue = baseDataSource.Source.ShareFile(driveRequest);
-                    }
-
+                    BaseDataSource baseDataSource = new BaseDataSource();
+                    baseDataSource.SetDataSource(AttachmentFolderMode.GOOGLEDRIVE);
+                    driveRequest.EmailAccount = settings.EmailAccount;
+                    driveRequest.KeyFilePath = settings.KeyFilePath;
+                    driveRequest.UserAccount = settings.UserAccount;
+                    returnValue = baseDataSource.Source.ShareFile(driveRequest);
                 }
             }
             catch (Exception ex)
@@ -844,7 +971,7 @@ namespace SimplicityOnlineBLL.Entities
                             EmailAccount = settings.EmailAccount,
                             KeyFilePath = settings.KeyFilePath,
                             RootFolder = settings.RootFolder
-                        };
+                    };
 
                         string rootFolderId = GetSimplicityRootFolderId(baseDataSource, driveRequest, settings.RootFolder);
                         criteria = "mimeType = 'application/vnd.google-apps.folder' and name = '" + folderName + "'";
