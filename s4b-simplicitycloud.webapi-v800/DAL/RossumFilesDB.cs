@@ -274,18 +274,7 @@ namespace SimplicityOnlineWebApi.DAL
 
         internal List<RossumFile> GetAllUnConfirmed(DateTime? fromDate, DateTime? toDate)
         {
-            string qry = @"select top 100 F.*, doc_type_desc, u.user_name from un_rossum_files F " +
-                "inner join un_ref_rossum_doc_types t on f.doc_type = t.doc_type " +
-                "left outer  join un_user_details u on u.user_id = f.created_by " +
-                " where 1=1 and  (F.flg_deleted is null or F.flg_deleted=" + Utilities.GetBooleanForDML(this.DatabaseType, false) + ")";
-            if (!string.IsNullOrEmpty(fromDate.ToString()))
-                qry += " and F.date_created  >= '" + ((DateTime)fromDate).ToString("yyyy-MM-dd") + " 00:00:00'";
-            if (!string.IsNullOrEmpty(toDate.ToString()))
-                qry += " and F.date_created  <='" + ((DateTime)toDate).ToString("yyyy-MM-dd") + " 23:59:59'";
-            if (string.IsNullOrEmpty(fromDate.ToString()) && string.IsNullOrEmpty(toDate.ToString()))
-                qry += " and (F.date_doc_imported is null "+
-                    " or F.flg_failed="+ Utilities.GetBooleanForDML(this.DatabaseType, true)+")";
-            qry += " order by F.date_created desc";
+            string qry = RossumQueries.GetAllUnConfirmed(this.DatabaseType, fromDate, toDate);
             return QryToRossumFiles(qry);
         }
 

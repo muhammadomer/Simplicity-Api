@@ -9,6 +9,7 @@ namespace  SimplicityOnlineBLL.Entities
         public int StatusCode { get; set; }
         public ProjectSetting ProjectSetting { get; set; }
         public User User { get; set; }
+        public GoogleDriveAPIKeys GoogleDriveAPIKeyNew { get; set; }
         public GoogleDriveAPIKeys GoogleDriveAPIKey { get; set; }
         public GoogleDriveAPIKeys GoogleDriveAPIKeyOld { get; set; }
         public FirebaseAPIKeys FirebaseAPIKey { get; set; }
