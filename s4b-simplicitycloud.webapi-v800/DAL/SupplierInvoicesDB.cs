@@ -93,29 +93,30 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
-        public SupplierInvoiceVM selectItemisedInvoice(string invoiceNo)
+        public SupplierInvoiceVM selectItemisedInvoice(long invoiceSequence)
         {
             SupplierInvoiceVM returnValue = null;
             string qryInvoice = "";
             try
             {
-                qryInvoice = @"select IIF(trans_type='D' , 'supplier' ,IIF(trans_type ='C' ,
-	                (IIF((select count(*) from 
-	                (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1, 
-	                 'sub-contractor' , 'contractor' )),'')) as suppliertype, 
-                    * from un_invoice_itemised inv
-                    left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where invoice_no = '" + invoiceNo + "'";
-                returnValue = Load_InvoiceItemised(qryInvoice,true);
+                //qryInvoice = @"select IIF(trans_type='D' , 'supplier' ,IIF(trans_type ='C' ,
+	               // (IIF((select count(*) from 
+	               // (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1, 
+	               //  'sub-contractor' , 'contractor' )),'')) as suppliertype, 
+                //    * from un_invoice_itemised inv
+                //    left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence = " + invoiceSequence;
+                qryInvoice = "select ' ' as suppliertype, inv.*, file_name_cab_id from un_invoice_itemised AS inv left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence = " + invoiceSequence;
+                returnValue = Load_InvoiceItemised(qryInvoice, true);
                 if (returnValue != null)
                 {
                     qryInvoice = @"select cost.costcentre_desc,reg.vehicle_reg,items.*  from (un_invoice_itemised_items items 
-                                    left outer join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  )
+                                    left join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  )
                                     left join 
                                     (SELECT ar.sequence AS asset_sequence, arsv.vehicle_reg
                                       FROM un_asset_register_supp_vehicles AS arsv
                                      INNER JOIN un_asset_register AS ar
                                         ON arsv.join_sequence = ar.sequence)reg on items.asset_sequence=reg.asset_sequence 
-                                    where items.invoice_sequence=" + returnValue.Sequence + "";
+                                    where items.invoice_sequence=" + invoiceSequence;
                     returnValue.InvoiceLines = getInvoiceItemisedItems(qryInvoice,true);
                 }  
             }
@@ -223,10 +224,11 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 if (item.Sequence == 0)
                                 {
+                                    //SageViewModel sage = GetSageDetail(); //sage_nominal_code,sage_tax_code,
                                     qryInvoice = "insert into un_invoice_itemised_items(invoice_sequence,import_type,import_type_ref, item_date, " +
                                         "item_quantity, item_ref, stock_code, item_desc, item_unit," +
                                                   "item_amt,item_amt_labour, item_discount_percent,item_amt_discount,item_amt_subtotal,item_vat_percent,item_amt_vat,item_amt_total," +
-                                                  "created_by,date_created,item_type,tel_sequence,flg_job_seq_exclude,cost_centre_id,flg_checked,sage_nominal_code,sage_tax_code,asset_sequence)" +
+                                                  "created_by,date_created,item_type,tel_sequence,flg_job_seq_exclude,cost_centre_id,flg_checked,asset_sequence)" +
                                                 "VALUES ("+ 
                                                 invoice.Sequence + ", "+
                                                 item.ImportType+",'"+
@@ -251,9 +253,9 @@ namespace SimplicityOnlineWebApi.DAL
                                                 item.TelSequence+",'" +
                                                 Utilities.GetBooleanForDML(DatabaseType, item.FlgJobSeqExclude) +"','"+
                                                 Utilities.GetDBString(item.CostCentreId) + "','" +
-                                                Utilities.GetBooleanForDML(DatabaseType,item.FlgChecked) + "','"+
-                                                Utilities.GetDBString(item.SageNominalCode) + "','" +
-                                                Utilities.GetDBString(item.SageTaxCode) +"','"+
+                                                Utilities.GetBooleanForDML(DatabaseType,item.FlgChecked) + "','"+  
+                                                //sage.SageNominalCode + "','" +
+                                                //sage.SageTaxCode +"','"+
                                                 item.AssetSequence+"')";
                                 }
                                 else
@@ -508,7 +510,6 @@ namespace SimplicityOnlineWebApi.DAL
             return invoiceItem;
         }
 
-
         private List<SupplierInvoiceItemsVM> getInvoiceItemisedItems(string qryInvoice,bool isforList)
         {
             List<SupplierInvoiceItemsVM> InvoiceLines = new List<SupplierInvoiceItemsVM>();
@@ -605,16 +606,13 @@ namespace SimplicityOnlineWebApi.DAL
         }
         public SageViewModel GetSageDetail()
         {
-            SageViewModel returnValue = new SageViewModel();
-            string qry = @"select top(1) (select data from un_entity_details_supplementary where data_type='028' and entity_id=5928) tax_code,
-                        (select data nominalcode from un_entity_details_supplementary where data_type='027' and entity_id=5928) sage_nominal_code 
-                        from un_entity_details_supplementary ";
-            returnValue = Load_SageDetail(qry);
-            return returnValue;
-        }
-        private SageViewModel Load_SageDetail(string qry)
-        {
-            SageViewModel sage = null;
+            SageViewModel returnValue = null;
+            string qry = @"SELECT  DISTINCT (SELECT eds.data FROM un_entity_details_supplementary AS eds WHERE eds.data_type='028' 
+                            and eds.entity_id=eds3.entity_id) AS tax_code,
+                            (SELECT eds2.data FROM un_entity_details_supplementary AS eds2 WHERE eds2.data_type='027' 
+                            and eds2.entity_id=eds3.entity_id) AS sage_nominal_code  
+                        FROM un_entity_details_supplementary AS eds3 
+                        WHERE eds3.entity_id=5928 ";
             try
             {
                 using (OleDbConnection conn = this.getDbConnection())
@@ -627,9 +625,9 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 dr.Read();
                                 dr.GetValue(0);
-                                sage = new SageViewModel();
-                                sage.SageNominalCode = DBUtil.GetStringValue(dr, "sage_nominal_code");
-                                sage.SageTaxCode = DBUtil.GetStringValue(dr, "tax_code");
+                                returnValue = new SageViewModel();
+                                returnValue.SageNominalCode = DBUtil.GetStringValue(dr, "sage_nominal_code");
+                                returnValue.SageTaxCode = DBUtil.GetStringValue(dr, "tax_code");
                             }
                         }
                     }
@@ -640,7 +638,7 @@ namespace SimplicityOnlineWebApi.DAL
                 Utilities.WriteLog(ex.Message, "Load_InvoiceItemised()");
                 throw ex;
             }
-            return sage;
+            return returnValue;
         }
         private VehicleViewModel Load_Vehicle(DataRow dr)
         {

@@ -63,7 +63,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logger.LogError(ex.Message);
             }
             return returnValue;
         }
@@ -140,7 +140,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             }
             return returnValue;
         }
-        public ResponseModel GetItemisedInvoice(RequestHeaderModel header, string invoiceNo)
+        public ResponseModel GetItemisedInvoice(RequestHeaderModel header, long invoiceSequence)
         {
             ResponseModel returnValue = new ResponseModel();
             try
@@ -152,7 +152,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     if (settings != null)
                     {
                         SupplierInvoicesDB supplierInvoice = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
-                        SupplierInvoiceVM invoiceItemised = supplierInvoice.selectItemisedInvoice(invoiceNo);
+                        SupplierInvoiceVM invoiceItemised = supplierInvoice.selectItemisedInvoice(invoiceSequence);
                         //returnValue.TheObject = invoiceItemised;
                         if (invoiceItemised == null)
                         {

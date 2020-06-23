@@ -20,44 +20,44 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                     query = @"SELECT IIF((SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type = '021') = 'True', 'sub-contractor','contractor') AS trans_type,
                                    inv.invoice_no, inv.sequence,
                                    inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
-	                               rossum.file_name_cab_id,rossum_po_no,
+                                   rossum.file_name_cab_id,rossum_po_no,
                                    inv.date_created,
                                    edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
                                    edc.entity_id, inv.itemised_date,
                                    IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
                                    (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
-                                   (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id
-                            WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+                                   (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
 
                               FROM (un_invoice_itemised AS inv
-                             INNER JOIN un_entity_details_core AS edc
-                                ON inv.contact_id=edc.entity_id)
-	                            inner join un_rossum_files rossum on rossum.sequence=inv.rossum_sequence
+                              LEFT JOIN un_entity_details_core AS edc
+                                ON inv.contact_id = edc.entity_id)
+                             INNER JOIN un_rossum_files AS rossum
+                                ON inv.rossum_sequence = rossum.sequence
 
-                             WHERE inv.rossum_sequence IS not NULL
+                             WHERE inv.rossum_sequence IS NOT NULL
                                AND inv.trans_type = 'C'
                                AND inv.flg_invoice_created <> TRUE
 
                             UNION
 
                             SELECT 'supplier' AS trans_type,
-                                   inv.invoice_no, inv.sequence,
-                                   inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
-	                               rossum.file_name_cab_id,rossum_po_no,
-                                   inv.date_created,
-                                   edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
-                                   edc.entity_id, inv.itemised_date,
-                                   IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
-                                   (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
-                                   (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id
-                            WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+	                            inv.invoice_no, inv.sequence,
+                                    inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
+                                    rossum.file_name_cab_id,rossum_po_no,
+                                    inv.date_created,
+                                    edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
+                                    edc.entity_id, inv.itemised_date,
+                                    IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
+	                            (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
+	                            (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id  WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
 
                               FROM (un_invoice_itemised AS inv
-                             INNER JOIN un_entity_details_core AS edc
-                                ON inv.contact_id=edc.entity_id)
-	                            inner join un_rossum_files rossum on rossum.sequence=inv.rossum_sequence
+                              LEFT JOIN un_entity_details_core AS edc
+                                ON inv.contact_id = edc.entity_id)
+                             INNER JOIN un_rossum_files AS rossum
+                                ON inv.rossum_sequence = rossum.sequence
 
-                             WHERE inv.rossum_sequence IS not NULL
+                             WHERE inv.rossum_sequence IS NOT NULL
                                AND inv.trans_type = 'D'
                                AND inv.flg_invoice_created <> TRUE";
                     break;

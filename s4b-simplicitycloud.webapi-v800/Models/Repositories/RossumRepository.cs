@@ -203,20 +203,20 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 //Block: 1-Get files list from Cloud Storage and insert its entry in DB
                 #region Block1
                 RossumDocumentType invoice_type = rossumDB.GetDocType("invoice");
-                AttachmentFilesFolder folderContent  = CloudStorageRepository.GetFolderContentById(invoice_type.ReceivedFolderCabId , header);
-                List<RossumFile> filestoInsert = new List<RossumFile>();
-                if (folderContent!=null && folderContent.Files.Count() > 0)
-                {
-                    foreach (AttachmentFiles attachmentFile in folderContent.Files)
-                    {
-                        RossumFile fileToInsert = new RossumFile();
-                        fileToInsert.DocType = invoice_type.DocType;
-                        fileToInsert.FileName = attachmentFile.Name;
-                        fileToInsert.FileNameCabId = attachmentFile.Id;
-                        filestoInsert.Add(fileToInsert);
-                    }
-                    InsertRossumFiles(header, filestoInsert);
-                }
+                //AttachmentFilesFolder folderContent  = CloudStorageRepository.GetFolderContentById(invoice_type.ReceivedFolderCabId , header);
+                //List<RossumFile> filestoInsert = new List<RossumFile>();
+                //if (folderContent!=null && folderContent.Files.Count() > 0)
+                //{
+                //    foreach (AttachmentFiles attachmentFile in folderContent.Files)
+                //    {
+                //        RossumFile fileToInsert = new RossumFile();
+                //        fileToInsert.DocType = invoice_type.DocType;
+                //        fileToInsert.FileName = attachmentFile.Name;
+                //        fileToInsert.FileNameCabId = attachmentFile.Id;
+                //        filestoInsert.Add(fileToInsert);
+                //    }
+                //    InsertRossumFiles(header, filestoInsert);
+                //}
                 #endregion
                 //Block: 2-Get files => doc_date_uploaded=null -> Upload to Rossum + update date_doc_uploaded
                 List<RossumFile> rossFilesList = rossumDB.GetFilesToUploadOnRossum();
@@ -393,6 +393,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 invoice.InvoiceNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                 valueStr = sectionChildren.Find(x => x.schema_id == "po_no").content.value;
                 invoice.RossumPurchaseOrderoNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
+                valueStr = sectionChildren.Find(x => x.schema_id == "dn_no").content.value;
+                invoice.RossumDeliveryNotNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                 valueStr = sectionChildren.Find(x => x.schema_id == "date_issue").content.value;
                 // Validation checks for invoice header.
                 if (string.IsNullOrEmpty(valueStr))
@@ -439,7 +441,10 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     valueStr ="";
                     invoiceLines.InvoiceSequence = invoice.Sequence;
 
-                    //---------- QTY and Item Unit
+                    //---------- Item Code, QTY, Unit
+                    errorMessage = "Invalid LineItem Item Code";
+                    valueStr = tuple.children.Find(x => x.schema_id == "item_code").content.value;
+                    invoiceLines.StockCode = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                     errorMessage = "Invalid LineItem Quantity";
                     valueStr = tuple.children.Find(x => x.schema_id == "item_quantity").content.value;
                     invoiceLines.ItemQuantity = double.Parse(string.IsNullOrEmpty(valueStr) ? "1.0" : cleanNumberStr(valueStr, typeof(double)));
@@ -499,9 +504,14 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     valueStr = tuple.children.Find(x => x.schema_id == "item_tax").content.value;
                     invoiceLines.ItemAmtVAT = double.Parse(string.IsNullOrEmpty(valueStr) ? "0.0": cleanNumberStr(valueStr, typeof(double)));
                     if (invoiceLines.ItemAmtVAT > 0 && invoiceLines.ItemVATPercent == 0)
-                        invoiceLines.ItemVATPercent = Math.Round((invoiceLines.ItemAmtVAT / invoiceLines.ItemAmtSubTotal)*100, 2);
+                        invoiceLines.ItemVATPercent = Math.Round((invoiceLines.ItemAmtVAT / invoiceLines.ItemAmtSubTotal) * 100, 2);
                     else if (invoiceLines.ItemVATPercent > 0 && invoiceLines.ItemAmtVAT == 0)
                         invoiceLines.ItemAmtVAT = (invoiceLines.ItemVATPercent / 100) * invoiceLines.ItemAmtSubTotal;
+                    else if (invoiceLines.ItemAmtVAT == 0 && invoiceLines.ItemVATPercent == 0 && invoice.SumAmtVAT > 0)
+                    {
+                        invoiceLines.ItemVATPercent = 0.2;
+                        invoiceLines.ItemAmtVAT = invoiceLines.ItemVATPercent * invoiceLines.ItemAmtSubTotal;
+                    }
 
                     //---------- TOTAL
                     errorMessage = "Invalid LineItem Item Total Amount";

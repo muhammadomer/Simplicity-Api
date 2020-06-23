@@ -12,7 +12,7 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         ResponseModel GetUnfinalizedInvoices(RequestHeaderModel header, ClientRequest clientRequest);
         ResponseModel SaveInvoice(InvoiceItemised invoice, RequestHeaderModel header);
         SupplierInvoiceVM GetInvoiceByInvNo(string invoiceNo, RequestHeaderModel header);
-        ResponseModel GetItemisedInvoice(RequestHeaderModel header, string invoiceNo);
+        ResponseModel GetItemisedInvoice(RequestHeaderModel header, long invoiceSequence);
         ResponseModel GetVehicle(RequestHeaderModel header);
         ResponseModel GetItemTel(RequestHeaderModel header);
         ResponseModel GetCostCode(RequestHeaderModel header);

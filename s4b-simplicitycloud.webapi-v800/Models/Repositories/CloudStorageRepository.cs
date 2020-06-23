@@ -91,6 +91,7 @@ namespace SimplicityOnlineBLL.Entities
 
         public void UpdateAllFolderIds(RequestHeaderModel header)
         {
+            bool isUpdateAll = false;
             string errorMessage = "Project settings not available.";
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
             if (settings == null) throw new Exception();
@@ -104,35 +105,36 @@ namespace SimplicityOnlineBLL.Entities
                     KeyFilePath = settings.KeyFilePath,
                     RootFolder = settings.RootFolder,
                 };
-                //Note: Updating App Root Folder ID 
+                //Note: Updating Filling Cabinet Folder ID 
                 errorMessage = "Exception while updating App Root Folder Id";
                 AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
-                string appRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder).SettingValue;
-                string appRootfolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId).SettingValue;
-                driveRequest.FileId = "1KRx9cytcI9S2e8HOcceY5v0Xt2y6HOpH";
+                string FillingCabinetFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder).SettingValue;
+                string FillingCabinetfolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId).SettingValue;
+                //driveRequest.FileId = "1KRx9cytcI9S2e8HOcceY5v0Xt2y6HOpH";
                 //ShareFile(driveRequest, header);
                 //DeleteFile(driveRequest, header);
-                if (appRootfolderId.ToLower() == "notset" || appRootfolderId.ToLower() == "not set")
+                if (FillingCabinetfolderId.ToLower() == "notset" || FillingCabinetfolderId.ToLower() == "not set")
                 {
                     driveRequest.ParentFolderId = "root";
-                    driveRequest.Name = appRootFolderName;
+                    driveRequest.Name = FillingCabinetFolderName;
                     newFolder = AddFolder(driveRequest, header);
                     //ShareFile(driveRequest, header);
                     if (newFolder != null && newFolder.Folders != null && newFolder.FoldersCount > 0)
                     {
-                        appRootfolderId = newFolder.Folders.FirstOrDefault().Id;
-                        CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId, appRootfolderId);
+                        FillingCabinetfolderId = newFolder.Folders.FirstOrDefault().Id;
+                        CldSettingsRepository.UpdateSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolderId, FillingCabinetfolderId);
                     }
                 }
 
-                //NOTE:  Updating Rossum Root Folder ID
+                //NOTE:  Updating Rossum Root Folder ID / Considering Rossum Root folder is on Drive root
                 errorMessage = "Exception while updating Rossum Root Folder Id";
                 newFolder = null;
                 string rossumRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME).SettingValue;
                 string RossumRootFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
-                if (RossumRootFolderId.ToLower() == "notset" || RossumRootFolderId.ToLower() == "not set")
+                if (RossumRootFolderId.ToLower() == "notset" || RossumRootFolderId.ToLower() == "not set" || isUpdateAll == true)
                 {
-                    driveRequest.ParentFolderId = appRootfolderId;
+                    isUpdateAll = true;
+                    driveRequest.ParentFolderId = "root"; // Considering Rossum Root folder is on Drive root. on GDrive 'root' is actually used as drive root
                     driveRequest.Name = rossumRootFolderName;
                     newFolder = AddFolder(driveRequest, header);
                     //Sharing with admin email account.
