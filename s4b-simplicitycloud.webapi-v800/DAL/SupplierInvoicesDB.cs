@@ -99,23 +99,23 @@ namespace SimplicityOnlineWebApi.DAL
             string qryInvoice = "";
             try
             {
-                qryInvoice = @"select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
-	                (case when (select count(*) from 
-	                (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1 
-	                then 'sub-contractor' else 'contractor' end) else '' end) end suppliertype, 
+                qryInvoice = @"select IIF(trans_type='D' , 'supplier' ,IIF(trans_type ='C' ,
+	                (IIF((select count(*) from 
+	                (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1, 
+	                 'sub-contractor' , 'contractor' )),'')) as suppliertype, 
                     * from un_invoice_itemised inv
-                                left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where invoice_no = '" + invoiceNo + "'";
+                    left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where invoice_no = '" + invoiceNo + "'";
                 returnValue = Load_InvoiceItemised(qryInvoice,true);
                 if (returnValue != null)
                 {
-                    qryInvoice = @"select cost.costcentre_desc,reg.vehicle_reg,items.* from un_invoice_itemised_items items 
-                                    left outer join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  
+                    qryInvoice = @"select cost.costcentre_desc,reg.vehicle_reg,items.*  from (un_invoice_itemised_items items 
+                                    left outer join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  )
                                     left join 
                                     (SELECT ar.sequence AS asset_sequence, arsv.vehicle_reg
                                       FROM un_asset_register_supp_vehicles AS arsv
                                      INNER JOIN un_asset_register AS ar
                                         ON arsv.join_sequence = ar.sequence)reg on items.asset_sequence=reg.asset_sequence 
-                                    where items.invoice_sequence='" + returnValue.Sequence + "'";
+                                    where items.invoice_sequence=" + returnValue.Sequence + "";
                     returnValue.InvoiceLines = getInvoiceItemisedItems(qryInvoice,true);
                 }  
             }
@@ -184,7 +184,7 @@ namespace SimplicityOnlineWebApi.DAL
                       $"sum_amt_subtotal='{invoice.SumAmtSubTotal}', " +
                       $"sum_amt_vat='{invoice.SumAmtVAT}', " +
                       $"sum_amt_total='{invoice.SumAmtTotal}' " +
-                      $"last_amended_by='{invoice.LastAmendedBy}' " +
+                      $"last_amended_by='{invoice.LastAmendedBy}' ," +
                       $"date_last_amended='{invoice.DateLastAmended}' " +
                       $"where sequence = '{invoice.Sequence}'";
             }
