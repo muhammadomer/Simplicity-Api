@@ -31,7 +31,7 @@ namespace SimplicityOnlineWebApi.DAL
                 using (OleDbConnection conn = this.getDbConnection())
                 {
                     using (OleDbCommand objCmdSelect =
-                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllRossumUnfinalizedInvoices(clientRequest), conn))
+                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllRossumUnfinalizedInvoices(clientRequest, this.DatabaseType), conn))
                     {
                         OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
                         if (isCountRequired)
@@ -67,7 +67,7 @@ namespace SimplicityOnlineWebApi.DAL
                 using (OleDbConnection conn = this.getDbConnection())
                 {
                     using (OleDbCommand objCmdSelect =
-                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllUnfinalizedInvoices(clientRequest), conn))
+                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllUnfinalizedInvoices(clientRequest,this.DatabaseType), conn))
                     {
                         OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
                         if (isCountRequired)
