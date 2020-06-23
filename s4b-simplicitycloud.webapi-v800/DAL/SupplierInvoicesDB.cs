@@ -184,6 +184,8 @@ namespace SimplicityOnlineWebApi.DAL
                       $"sum_amt_subtotal='{invoice.SumAmtSubTotal}', " +
                       $"sum_amt_vat='{invoice.SumAmtVAT}', " +
                       $"sum_amt_total='{invoice.SumAmtTotal}' " +
+                      $"last_amended_by='{invoice.LastAmendedBy}' " +
+                      $"date_last_amended='{invoice.DateLastAmended}' " +
                       $"where sequence = '{invoice.Sequence}'";
             }
             try

@@ -373,10 +373,14 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 if (edc == null)
                 {
                     invoice.ContactId = -1;
-                    AddRossumFileRemarks(rossFile, "Vendor not found",RossumFileRemarksTypes.WARNING, rossumDB);
+                    AddRossumFileRemarks(rossFile, "Vendor not found", RossumFileRemarksTypes.WARNING, rossumDB);
                 }
                 else
+                {
                     invoice.ContactId = Convert.ToInt32(edc.EntityId);
+                    invoice.TransType = edc.TransType;
+
+                }
                 rossFile.SupplierName = vendorName;
                 rossumDB.UpdateContactName(rossFile);
                 //BLOCK: Saving Invoice Info Section
@@ -763,7 +767,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             FormUrlEncodedContent formContent = new FormUrlEncodedContent(new[]
             {               
                 new KeyValuePair<string, string>("return_url", host+"/home/CloseRossum"),
-                new KeyValuePair<string, string>("cancel_url", "http://localhost:4444/#/rossum-return")
+                new KeyValuePair<string, string>("cancel_url", host+"/home/CloseRossum")
             });
 
             HttpResponseMessage response = await client.PostAsync($"{ApiEndpoint}annotations/{annotationId}/start_embedded", formContent);

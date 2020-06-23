@@ -202,15 +202,12 @@ namespace SimplicityOnlineWebApi.DAL
         public EntityDetailsCore GetEntityByLongName(string longName)
         {
             EntityDetailsCore returnValue = null;
-            string qry = @"SELECT * FROM un_entity_details_core edc " +
-                        " left outer join un_cld_edc cld on edc.entity_id = cld.entity_id " +
-                        " WHERE Lower(name_long) = '" + longName.ToLower() +
-                        "' or Lower(cld.rossum_contact_name)='" + longName.ToLower() + "'";
             try
             {
                 using (OleDbConnection conn = this.getDbConnection())
                 {
-                    using (OleDbCommand objCmdSelect =new OleDbCommand(qry, conn))
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(Entity_Details_CoreQueries.GetEntityByLongName(this.DatabaseType,longName), conn))  
                     {
                         using (OleDbDataReader dr = objCmdSelect.ExecuteReader())
                         {
@@ -218,6 +215,7 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 dr.Read();
                                 returnValue = Load_Entity_Details_Core(dr);
+                                returnValue.TransType = DBUtil.GetStringValue(dr, "trans_type".ToString());
                             }
                         }
                     }
