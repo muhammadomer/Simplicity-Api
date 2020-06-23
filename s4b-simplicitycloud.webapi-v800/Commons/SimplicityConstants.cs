@@ -97,7 +97,7 @@
 
 
 
-        public const string CldSettingGoogleDriveAPINew = "GoogleDriveAPINew";
+        public const string CldSettingGoogleDriveAPINew = "GoogleDriveAPI_NEW";
         public const string CldSettingGoogleDriveAPI = "GoogleDriveAPI";
         public const string CldSettingFilingCabinetRootFolder = "FilingCabinetRootFolder";
         public const string CldSettingFilingCabinetRootFolderId = "FilingCabinetRootFolderId";

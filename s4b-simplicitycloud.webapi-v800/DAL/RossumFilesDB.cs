@@ -48,7 +48,7 @@ namespace SimplicityOnlineWebApi.DAL
                     ", doc_type = " + rossumFile.DocType +
                     ", rossum_queue_id = " + rossumFile.RossumQueueId +
                     ", date_doc_uploaded = " + Utilities.GetDateTimeForDML(this.DatabaseType, rossumFile.DateDocUploaded, true, true) +
-                    ", rossum_document_id = " + rossumFile.RossumDocumentId +
+                    ", rossum_doc_id = " + rossumFile.RossumDocId +
                     ", rossum_annotation_id = " + rossumFile.RossumAnnotationId +
                     ", date_doc_processed = " + Utilities.GetDateTimeForDML(this.DatabaseType, rossumFile.DateDocProcessed, true, true) +
                     ", flg_failed = " + Utilities.GetBooleanForDML(this.DatabaseType, rossumFile.FlgFailed) +
@@ -390,7 +390,7 @@ namespace SimplicityOnlineWebApi.DAL
                                     file.FileNameCabId = DBUtil.GetStringValue(dr, "file_name_cab_id");
                                     file.DocType = DBUtil.GetIntValue(dr, "doc_type");
                                     file.DocTypeDesc = DBUtil.GetStringValue(dr, "doc_type_desc");
-                                    file.RossumDocumentId = DBUtil.GetIntValue(dr, "rossum_document_id");
+                                    file.RossumDocId = DBUtil.GetIntValue(dr, "rossum_doc_id");
                                     file.RossumAnnotationId = DBUtil.GetIntValue(dr, "rossum_annotation_id");
                                     file.RossumQueueId = DBUtil.GetIntValue(dr, "rossum_queue_id");
                                     if (!string.IsNullOrEmpty(dr["date_doc_uploaded"].ToString())) 

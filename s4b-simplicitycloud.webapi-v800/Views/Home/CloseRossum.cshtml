@@ -3,6 +3,5 @@
     <p>Go back to the application by closing this panel on right side.</p>
 </div>
 <script type="text/javascript">
-    window.parent.postMessage("closePanel", targetOrigin, [transfer]);
-    parent.SampleFunction();
+    window.parent.postMessage({ message: "close" }, "http://localhost:4444");
 </script>

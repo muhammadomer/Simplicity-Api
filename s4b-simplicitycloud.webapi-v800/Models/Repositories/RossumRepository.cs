@@ -240,7 +240,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     {
                         Utilities.WriteLog("Doc upload success", "ScheduleUploadToRossumAsync");
                         fileToUpdate.RossumAnnotationId = Convert.ToInt32(res.Results[0].Annotation.Split('/').Last());
-                        fileToUpdate.RossumDocumentId = Convert.ToInt32(res.Results[0].Document.Split('/').Last());
+                        fileToUpdate.RossumDocId = Convert.ToInt32(res.Results[0].Document.Split('/').Last());
                         fileToUpdate.RossumQueueId = invoice_type.DocTypeQueueId;
                         fileToUpdate.DateDocUploaded = DateTime.Now;
                         fileToUpdate.DateLastAmended = DateTime.Now;
@@ -398,7 +398,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     throw new InvalidDataException(errorMessage);
                 }                   
                 else
-                    invoice.ItemisedDate =  Convert.ToDateTime(valueStr);
+                    invoice.ItemisedDate = DateTime.Parse(valueStr, new System.Globalization.CultureInfo("en-GB")); 
                 //TODO: Invoice should be validated supplier wise.
                 if (SupplierInvoiceRepository.GetInvoiceByInvNo(invoice.InvoiceNo, header) != null)
                 {

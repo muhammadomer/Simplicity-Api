@@ -104,7 +104,7 @@ namespace SimplicityOnlineBLL.Entities
                     KeyFilePath = settings.KeyFilePath,
                     RootFolder = settings.RootFolder,
                 };
-                //Note: Updating App Root Folder ID
+                //Note: Updating App Root Folder ID 
                 errorMessage = "Exception while updating App Root Folder Id";
                 AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
                 string appRootFolderName = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.CldSettingFilingCabinetRootFolder).SettingValue;

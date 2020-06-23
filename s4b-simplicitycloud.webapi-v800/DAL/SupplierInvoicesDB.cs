@@ -166,12 +166,12 @@ namespace SimplicityOnlineWebApi.DAL
             }
             else
             {
-                qryInvoice = $"select * from un_invoice_itemised where invoice_no='{invoice.InvoiceNo}' and sequence <> '{invoice.Sequence}'";
-                bool invoiceNoExist = invoiceNoAlreadyExist(qryInvoice);
-                if (invoiceNoExist)
-                {
-                    throw new InvalidExpressionException("InvoiceNo. already exist!");
-                }
+                //qryInvoice = $"select * from un_invoice_itemised where invoice_no='{invoice.InvoiceNo}' and sequence <> '{invoice.Sequence}'";
+                //bool invoiceNoExist = invoiceNoAlreadyExist(qryInvoice);
+                //if (invoiceNoExist)
+                //{
+                //    throw new InvalidExpressionException("InvoiceNo. already exist!");
+                //}
                 qryInvoice = $"update un_invoice_itemised " +
                       $"set itemised_details='{Utilities.GetDBString(invoice.ItemisedDetail)}', " +
                       $"trans_type='{Utilities.GetDBString(invoice.TransType)}', " +
@@ -221,7 +221,7 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 if (item.Sequence == 0)
                                 {
-                                    qryInvoice += "insert into un_invoice_itemised_items(invoice_sequence,import_type,import_type_ref, item_date, " +
+                                    qryInvoice = "insert into un_invoice_itemised_items(invoice_sequence,import_type,import_type_ref, item_date, " +
                                         "item_quantity, item_ref, stock_code, item_desc, item_unit," +
                                                   "item_amt,item_amt_labour, item_discount_percent,item_amt_discount,item_amt_subtotal,item_vat_percent,item_amt_vat,item_amt_total," +
                                                   "created_by,date_created,item_type,tel_sequence,flg_job_seq_exclude,cost_centre_id,flg_checked,sage_nominal_code,sage_tax_code,asset_sequence)" +
@@ -243,7 +243,8 @@ namespace SimplicityOnlineWebApi.DAL
                                                 item.ItemVATPercent + "," + 
                                                 item.ItemAmtVAT +"," + 
                                                 item.ItemAmtTotal +","+
-                                                item.CreatedBy + ",getdate(),"+
+                                                item.CreatedBy + "," + 
+                                                Utilities.GetDateTimeForDML(DatabaseType, DateTime.Now, true, true) + "," +
                                                 item.ItemType+"," +
                                                 item.TelSequence+",'" +
                                                 Utilities.GetBooleanForDML(DatabaseType, item.FlgJobSeqExclude) +"','"+
@@ -255,7 +256,7 @@ namespace SimplicityOnlineWebApi.DAL
                                 }
                                 else
                                 {
-                                    qryInvoice += $"update un_invoice_itemised_items set " +
+                                    qryInvoice = $"update un_invoice_itemised_items set " +
                                         $"item_date={Utilities.GetDateValueForDML(DatabaseType, item.ItemDate)}, " +
                                         $"item_quantity={item.ItemQuantity}, " +
                                         $"item_ref='{Utilities.GetDBString(item.ItemRef)}', " +
@@ -282,10 +283,9 @@ namespace SimplicityOnlineWebApi.DAL
                                         $"asset_sequence='{item.AssetSequence}' " +
                                         $"where sequence= {item.Sequence}";
                                 }
-
+                                objCmd.CommandText = qryInvoice; //NOTE: insert / update one by one. MS access doesn't support multiple insert statements in one go.
+                                result = objCmd.ExecuteNonQuery();
                             }
-                            objCmd.CommandText = qryInvoice;
-                            result = objCmd.ExecuteNonQuery();
                             returnValue = true;
                         }
                     }
