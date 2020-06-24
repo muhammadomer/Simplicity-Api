@@ -21,6 +21,9 @@ using System.Diagnostics;
 using Org.BouncyCastle.Asn1.Ocsp;
 using MimeKit;
 using System.Runtime.InteropServices.WindowsRuntime;
+using SimplicityOnlineWebApi.Models.ViewModels;
+using Universal.Common.Extensions;
+using System.IO.MemoryMappedFiles;
 
 namespace SimplicityOnlineWebApi.Models.Repositories
 {
@@ -314,6 +317,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             string streamText="";
             string valueStr = "";
             string errorMessage = "";
+            SageViewModel sageDetail;
+            long jobSequence = -1;
             #region Project settings check block
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
             if (settings == null)
@@ -411,6 +416,14 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     errorMessage = "Invoice No: "+ invoice.InvoiceNo + " already exist in the system";
                     throw new InvalidDataException(errorMessage);
                 }
+                //BLOCK: Getting Sage details and Job Ref from PO
+                sageDetail = SupplierInvoiceRepository.GetSageDetail(invoice.ContactId,header);
+                if (!string.IsNullOrEmpty(invoice.RossumPurchaseOrderoNo))
+                {
+                    string pOrderRef = "00000" + invoice.RossumPurchaseOrderoNo;
+                    pOrderRef = "PO_" + pOrderRef.Substring(pOrderRef.Length - 5);
+                    jobSequence = SupplierInvoiceRepository.GetJobSequenceByPORef(pOrderRef, header);
+                }
 
                 //BLOCK: Saving Amount Section
                 errorMessage = "Amount Section Not Found";
@@ -440,7 +453,9 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     InvoiceItemisedItems invoiceLines = new InvoiceItemisedItems();
                     valueStr ="";
                     invoiceLines.InvoiceSequence = invoice.Sequence;
-
+                    invoiceLines.JobSequence = Convert.ToInt32(jobSequence);
+                    invoiceLines.SageNominalCode = sageDetail.SageNominalCode;
+                    invoiceLines.SageTaxCode = sageDetail.SageTaxCode;
                     //---------- Item Code, QTY, Unit
                     errorMessage = "Invalid LineItem Item Code";
                     valueStr = tuple.children.Find(x => x.schema_id == "item_code").content.value;
@@ -573,8 +588,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     fileImportFailed(rossFile, rossumDB, errorMessage, header);
                 }
                 returnValue.IsSucessfull = false;
-                returnValue.Message = (errorMessage + "/n" + ex.Message);
-                Utilities.WriteLog(errorMessage+ "/n" + ex.Message); 
+                returnValue.Message = (errorMessage + "\n" + ex.Message);
+                Utilities.WriteLog(errorMessage+ "\n" + ex.Message); 
                 //this.Logger.LogError(ex.Message, ex);
             }
             return returnValue;
@@ -961,7 +976,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             rossumDB.SaveRossumFile(rossFile);
             AddRossumFileRemarks(rossFile, message, RossumFileRemarksTypes.CRITICAL, rossumDB);
             returnValue.Message = message;
-            Utilities.WriteLog(message, "SupplierInvoiceImport");
+            Utilities.WriteLog(message, "fileImportFailed");
 
             RossumDocumentType invoice_type = rossumDB.GetDocType("invoice");
             DriveRequest driveRequest = new DriveRequest();

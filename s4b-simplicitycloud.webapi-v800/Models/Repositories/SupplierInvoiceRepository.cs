@@ -381,22 +381,21 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             return result;
 
         }
-        public string GetJobRefByPO(long PONo, RequestHeaderModel header)
+        public long GetJobSequenceByPORef(string PONo, RequestHeaderModel header)
         {
-            string result = null;
+            long result=-1;
             try
             {
                 ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
                 if (settings != null)
                 {
                     SupplierInvoicesDB invoiceDB = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
-                    result = invoiceDB.selectJobRefByPO(PONo);
+                    result = invoiceDB.GetJobSequenceByPORef(PONo);
                 }
             }
             catch (Exception ex)
             {
                 Utilities.WriteLog(ex.Message, "GetJobRefByPO-Repository");
-                return result;
             }
             return result;
 

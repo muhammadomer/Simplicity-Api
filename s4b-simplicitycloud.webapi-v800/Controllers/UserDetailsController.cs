@@ -112,7 +112,7 @@ namespace SimplicityOnlineWebApi.Controllers
            {
                string passThroughDailyPassCode = decryptedPassThrough.Substring(0, 8);
                string dailyPassCode = Utilities.StrHash(Utilities.StrCreateEnabler());
-                Logger.LogDebug("Attempting to validate the Passthrough String '" + decryptedPassThrough + "' for Project Id: " + userModel.ProjectId + ". Daily Pass code is " + passThroughDailyPassCode);
+                Logger.LogInformation("Attempting to validate the Passthrough String '" + decryptedPassThrough + "' for Project Id: " + userModel.ProjectId + ". Daily Pass code is " + passThroughDailyPassCode);
                if (dailyPassCode.Equals(passThroughDailyPassCode))
                {
                    long sequence = 0;

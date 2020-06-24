@@ -708,17 +708,17 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return transType;
         }
-        public string selectJobRefByPO(long PONo)
+        public long GetJobSequenceByPORef(string PONo)
         {
             string qry = "";
-            string jobRef = "";
+            long jobSequence=-1;
             try
             {
                 qry = @"SELECT MAX(poi.job_sequence) AS last_job_sequence
                         FROM un_purchase_orders AS po
                         INNER JOIN un_purchase_order_items AS poi
                         ON po.order_id = poi.order_id
-                        WHERE po.order_id = "+PONo+@" 
+                        WHERE po.order_ref = '"+PONo+@"' 
                         GROUP BY po.order_id";
                 using (OleDbConnection conn = this.getDbConnection())
                 {
@@ -730,7 +730,7 @@ namespace SimplicityOnlineWebApi.DAL
                         da.Fill(dt);
                         if (dt.Rows != null && dt.Rows.Count > 0)
                         {
-                            jobRef = dt.Rows[0]["last_job_sequence"].ToString();
+                            jobSequence = DBUtil.GetLongValue(dt.Rows[0], "last_job_sequence");
                         }
                     }
                 }
@@ -739,7 +739,7 @@ namespace SimplicityOnlineWebApi.DAL
             {
                 throw ex;
             }
-            return jobRef;
+            return jobSequence;
         }
     }
 }
