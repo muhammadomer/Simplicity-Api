@@ -21,9 +21,9 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                         " left outer  join un_user_details u on u.user_id = f.created_by " +
                         " where F.flg_deleted=" + Utilities.GetBooleanForDML(databaseType, false);
                         if (!string.IsNullOrEmpty(fromDate.ToString()))
-                            returnValue += " and F.date_created  >= '" + ((DateTime)fromDate).ToString("yyyy-MM-dd") + " 00:00:00'";
+                            returnValue += " and F.date_created  >= " + Utilities.GetDateTimeForDML(databaseType, fromDate, true, true);
                         if (!string.IsNullOrEmpty(toDate.ToString()))
-                            returnValue += " and F.date_created  <='" + ((DateTime)toDate).ToString("yyyy-MM-dd") + " 23:59:59'";
+                            returnValue += " and F.date_created  <=" + Utilities.GetDateTimeForDML(databaseType, toDate, true, true);
                         if (string.IsNullOrEmpty(fromDate.ToString()) && string.IsNullOrEmpty(toDate.ToString()))
                             returnValue += " and (F.date_doc_imported is null " +
                                 " or F.flg_failed=" + Utilities.GetBooleanForDML(databaseType, true) + ")";
