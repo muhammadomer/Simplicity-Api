@@ -200,7 +200,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             return result;
 
         }         
-        public SageViewModel GetSageDetail(RequestHeaderModel header)
+        public SageViewModel GetSageDetail(long contactId,RequestHeaderModel header)
         {
             SageViewModel result = null;
             try
@@ -210,7 +210,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 {
                     result = new SageViewModel();
                     SupplierInvoicesDB invoiceDB = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
-                    result = invoiceDB.GetSageDetail();
+                    result = invoiceDB.GetSageDetail(contactId);
                 }
             }
             catch (Exception ex)

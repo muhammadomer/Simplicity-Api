@@ -178,16 +178,16 @@ namespace SimplicityOnlineWebApi.DAL
                       $"trans_type='{Utilities.GetDBString(invoice.TransType)}', " +
                       $"contact_id={invoice.ContactId}, " +
                       $"invoice_no='{Utilities.GetDBString(invoice.InvoiceNo)}', " +
-                      $"itemised_date={Utilities.GetDateValueForDML(DatabaseType, invoice.ItemisedDate)}, " +
+                      $"itemised_date={Utilities.GetDateTimeForDML(DatabaseType, invoice.ItemisedDate,true,true)}, " +
                       $"sum_amt_main={invoice.SumAmtMain}, " +
                       $"sum_amt_labour={invoice.SumAmtLabour}, " +
                       $"sum_amt_discount='{invoice.SumAmtDiscount}', " +
                       $"sum_amt_subtotal='{invoice.SumAmtSubTotal}', " +
                       $"sum_amt_vat='{invoice.SumAmtVAT}', " +
-                      $"sum_amt_total='{invoice.SumAmtTotal}' " +
-                      $"last_amended_by='{invoice.LastAmendedBy}' ," +
-                      $"date_last_amended='{invoice.DateLastAmended}' " +
-                      $"where sequence = '{invoice.Sequence}'";
+                      $"sum_amt_total='{invoice.SumAmtTotal}' ," +
+                      $"last_amended_by={invoice.LastAmendedBy??0} ," +
+                      $"date_last_amended={Utilities.GetDateTimeForDML(DatabaseType, invoice.DateLastAmended, true, true)} " +
+                      $"where sequence = {invoice.Sequence}";
             }
             try
             {
@@ -208,7 +208,7 @@ namespace SimplicityOnlineWebApi.DAL
                             else
                             {
                                 itemisedItems = new List<SupplierInvoiceItemsVM>();
-                                qryInvoice = @"select * from un_invoice_itemised_items where invoice_sequence='" + invoice.Sequence + "'";
+                                qryInvoice = @"select * from un_invoice_itemised_items where invoice_sequence=" + invoice.Sequence;
                                 itemisedItems = getInvoiceItemisedItems(qryInvoice,false);
                                 foreach (var existingChild in itemisedItems)
                                 {
@@ -608,7 +608,7 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
-        public SageViewModel GetSageDetail(long? contactId= 5928)
+        public SageViewModel GetSageDetail(long contactId)
         {
             SageViewModel returnValue = null;
             string qry = @"SELECT  DISTINCT (SELECT eds.data FROM un_entity_details_supplementary AS eds WHERE eds.data_type='028' 

@@ -16,7 +16,7 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         ResponseModel GetVehicle(RequestHeaderModel header);
         ResponseModel GetItemTel(RequestHeaderModel header);
         ResponseModel GetCostCode(RequestHeaderModel header);
-        SageViewModel GetSageDetail(RequestHeaderModel header);
+        SageViewModel GetSageDetail(long contactId, RequestHeaderModel header);
         ResponseModel UpdateInvoiceSupplier(InvoiceItemised invoice, RequestHeaderModel header);
         SupplierInvoiceVM GetInvoiceBySequenceNo(long sequenceNo, RequestHeaderModel header);
         string GetJobRefByPO(long PONo, RequestHeaderModel header);
