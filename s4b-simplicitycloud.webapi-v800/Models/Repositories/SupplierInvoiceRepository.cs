@@ -379,5 +379,25 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             return result;
 
         }
+        public string GetJobRefByPO(long PONo, RequestHeaderModel header)
+        {
+            string result = null;
+            try
+            {
+                ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
+                if (settings != null)
+                {
+                    SupplierInvoicesDB invoiceDB = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                    result = invoiceDB.selectJobRefByPO(PONo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog(ex.Message, "GetJobRefByPO-Repository");
+                return result;
+            }
+            return result;
+
+        }
     }
 }

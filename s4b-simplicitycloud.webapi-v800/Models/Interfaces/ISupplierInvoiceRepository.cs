@@ -19,5 +19,6 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         SageViewModel GetSageDetail(RequestHeaderModel header);
         ResponseModel UpdateInvoiceSupplier(InvoiceItemised invoice, RequestHeaderModel header);
         SupplierInvoiceVM GetInvoiceBySequenceNo(long sequenceNo, RequestHeaderModel header);
+        string GetJobRefByPO(long PONo, RequestHeaderModel header);
     }
 }

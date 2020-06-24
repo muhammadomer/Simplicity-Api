@@ -304,8 +304,12 @@ namespace SimplicityOnlineWebApi.DAL
         }
         public bool UpdateInvoiceSupplier(InvoiceItemised invoice)
         {
-            string qryInvoice = $"update un_invoice_itemised set contact_id={invoice.ContactId} where sequence = '{invoice.Sequence}'";
-            return updateInvoiceSupplier(qryInvoice);
+            string transType = selectSupplierType(invoice.ContactId);
+            string qryInvoice = $"update un_invoice_itemised set contact_id={invoice.ContactId}, trans_type='{transType}' where sequence = {invoice.Sequence}; ";
+            updateQueryStatement(qryInvoice); //supplier update
+            var sageDetail = GetSageDetail(invoice.ContactId);
+            qryInvoice = $"update un_invoice_itemised_items set sage_nominal_code='{sageDetail.SageNominalCode}', sage_tax_code='{sageDetail.SageTaxCode}' where invoice_sequence={invoice.Sequence}";
+            return updateQueryStatement(qryInvoice); // sage detail update
         }
         private bool invoiceNoAlreadyExist(string qry)
         {
@@ -322,7 +326,7 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return false;
         }  
-        private bool updateInvoiceSupplier(string qry)
+        private bool updateQueryStatement(string qry)
         {
             using (OleDbConnection conn = this.getDbConnection())
             {
@@ -604,7 +608,7 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
-        public SageViewModel GetSageDetail()
+        public SageViewModel GetSageDetail(long? contactId= 5928)
         {
             SageViewModel returnValue = null;
             string qry = @"SELECT  DISTINCT (SELECT eds.data FROM un_entity_details_supplementary AS eds WHERE eds.data_type='028' 
@@ -612,7 +616,7 @@ namespace SimplicityOnlineWebApi.DAL
                             (SELECT eds2.data FROM un_entity_details_supplementary AS eds2 WHERE eds2.data_type='027' 
                             and eds2.entity_id=eds3.entity_id) AS sage_nominal_code  
                         FROM un_entity_details_supplementary AS eds3 
-                        WHERE eds3.entity_id=5928 ";
+                        WHERE eds3.entity_id= "+ contactId;
             try
             {
                 using (OleDbConnection conn = this.getDbConnection())
@@ -675,6 +679,67 @@ namespace SimplicityOnlineWebApi.DAL
                 costCode.CostCentreDesc = DBUtil.GetStringValue(dr, "costcentre_desc");
             }
             return costCode;
+        }
+        public string selectSupplierType(int contactId)
+        {
+            string qry = ""; 
+            string transType = "";
+            try
+            {
+                qry = $"SELECT top 1 IIF((SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = {contactId} AND sup.data_type = '021') = 'True', 'D','C') AS trans_type from un_entity_details_supplementary";
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(qry, conn))
+                    {
+                        OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows != null && dt.Rows.Count > 0)
+                        {
+                            transType = dt.Rows[0]["trans_type"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return transType;
+        }
+        public string selectJobRefByPO(long PONo)
+        {
+            string qry = "";
+            string jobRef = "";
+            try
+            {
+                qry = @"SELECT MAX(poi.job_sequence) AS last_job_sequence
+                        FROM un_purchase_orders AS po
+                        INNER JOIN un_purchase_order_items AS poi
+                        ON po.order_id = poi.order_id
+                        WHERE po.order_id = "+PONo+@" 
+                        GROUP BY po.order_id";
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(qry, conn))
+                    {
+                        OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows != null && dt.Rows.Count > 0)
+                        {
+                            jobRef = dt.Rows[0]["last_job_sequence"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return jobRef;
         }
     }
 }

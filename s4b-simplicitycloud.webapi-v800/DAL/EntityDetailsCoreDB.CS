@@ -1198,10 +1198,9 @@ namespace SimplicityOnlineWebApi.DAL
         }
         public EntityDetailsCore GetEdcCldCloudFields(long sequence)
         {
-            string qryInvoice = @"
-                    select core.entity_id,rosum.rossum_contact_name,edc.contact_dn_cab_id,edc.contact_invoice_cab_id,edc.contact_po_cab_id from un_invoice_itemised inv
-                    left outer join un_entity_details_core core on inv.contact_id = core.entity_id
-                    left outer join un_cld_edc edc on edc.entity_id = core.entity_id
+            string qryInvoice = @"select core.entity_id,rosum.rossum_contact_name,edc.contact_dn_cab_id,edc.contact_invoice_cab_id,edc.contact_po_cab_id from ((un_invoice_itemised inv
+                    left outer join un_entity_details_core core on inv.contact_id = core.entity_id)
+                    left outer join un_cld_edc edc on edc.entity_id = core.entity_id)
                     inner join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence=" + sequence;
             return loadEdcCldFields(qryInvoice);
         }
