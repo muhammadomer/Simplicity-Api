@@ -1198,6 +1198,50 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
+        public EntityDetailsCore GetEdcCldCloudFields(long sequence)
+        {
+            string qryInvoice = @"
+                    select core.entity_id,rosum.rossum_contact_name,edc.contact_dn_cab_id,edc.contact_invoice_cab_id,edc.contact_po_cab_id from un_invoice_itemised inv
+                    left outer join un_entity_details_core core on inv.contact_id = core.entity_id
+                    left outer join un_cld_edc edc on edc.entity_id = core.entity_id
+                    inner join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence=" + sequence;
+            return loadEdcCldFields(qryInvoice);
+        }
+        private EntityDetailsCore loadEdcCldFields(string qry)
+        {
+            EntityDetailsCore edc = null;
+            try
+            {
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmdSelect = new OleDbCommand(qry, conn))
+                    {
+                        using (OleDbDataReader dr = objCmdSelect.ExecuteReader())
+                        {
+                            if (dr.HasRows)
+                            {
+                                edc = new EntityDetailsCore();
+                                edc.EdcCloudFields = new EdcCloud();
+                                dr.Read();
+                                dr.GetValue(0);
+                                edc.EntityId = DBUtil.GetIntValue(dr, "entity_id");
+                                edc.EdcCloudFields.RossumContactName = DBUtil.GetStringValue(dr, "rossum_contact_name");
+                                edc.EdcCloudFields.ContactDNCabId = DBUtil.GetStringValue(dr, "contact_dn_cab_id");
+                                edc.EdcCloudFields.ContactInvoiceCabId = DBUtil.GetStringValue(dr, "contact_invoice_cab_id");
+                                edc.EdcCloudFields.ContactPOCabId = DBUtil.GetStringValue(dr, "contact_po_cab_id");
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog(ex.Message, "Load_InvoiceItemised()");
+                throw ex;
+            }
+            return edc;
+        }
         //public bool updateJobAddress(EntityDetailsCore edc)
         //{
         //    bool returnValue = false;

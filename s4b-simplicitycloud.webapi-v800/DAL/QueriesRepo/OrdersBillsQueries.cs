@@ -294,7 +294,7 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                                       + ", " + Utilities.GetDateTimeForDML(databaseType, orderBill.RequestMadeDate, true, false) + ", " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgSetToProforma)
                                       + ", " + Utilities.GetDateTimeForDML(databaseType, orderBill.SetToProformaDate, true, false) + ", " + orderBill.SageId + ", " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgSetToInvoice)
                                       + ", " + Utilities.GetDateTimeForDML(databaseType, orderBill.SetToInvoiceDate, true, false)
-                                      + ", " + orderBill.InvoiceIndex + ",   " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgHasAVatInv) 
+                                      + ", '" + orderBill.InvoiceIndex + "',   " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgHasAVatInv) 
                                       + ", " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgIsVatInv) + ", " + orderBill.JoinBillSequence
                                       + ", " + orderBill.RciId + ",   " + orderBill.CreatedBy 
                                       + ", " + Utilities.GetDateTimeForDML(databaseType, orderBill.DateCreated, true, true)
@@ -346,7 +346,7 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                                  "        sage_id =  " + orderBill.SageId + ",  " +
                                  "        flg_set_to_invoice = " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgSetToInvoice) + ",  " +
                                  "        set_to_invoice_date =  " + Utilities.GetDateTimeForDML(databaseType, orderBill.SetToInvoiceDate, true, false) + ",  " +
-                                 "        invoice_index =  " + orderBill.InvoiceIndex + ",  " +
+                                 "        invoice_index =  '" + orderBill.InvoiceIndex + "',  " +
                                  "        flg_has_a_vat_inv = " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgHasAVatInv) + ",  " +
                                  "        flg_is_vat_inv = " + Utilities.GetBooleanForDML(databaseType, orderBill.FlgIsVatInv) + ",  " +
                                  "        join_bill_sequence =  " + orderBill.JoinBillSequence + ",  " +
