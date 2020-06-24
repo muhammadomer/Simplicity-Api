@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<settings>
+  <!-- <ConnectionString value="Jet OLEDB:Database Password=v09d1902GrEn73ViLlE;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\192.168.100.84\Simplicity_Lowry\Simplicity.mdb;Persist Security Info=False;" providerName="System.Data.OleDB" /> -->
+  <!-- <ConnectionString value="Jet OLEDB:Database Password=v09d1902GrEn73ViLlE;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\92.52.101.201\Simplicity_Lowry\Simplicity.mdb;Persist Security Info=False;" providerName="System.Data.OleDB" /> -->
+  <!--<ConnectionString value="Jet OLEDB:Database Password=v09d1902GrEn73ViLlE;Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\172.24.16.201\Simplicity_Lowry\Simplicity.mdb;Persist Security Info=False;" providerName="System.Data.OleDB" /> -->-->
+  <ConnectionString value="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Work\\Simplicity\\Resources\\Simplicity.mdb; Jet OLEDB:Database Password=V08D0611gAtE36fAiRy" />  
+  <DatabaseType value="MSACCESS" />
+  <Forms>
+    <Form name="HS" id="436813294" asset="false" supplier="false"/>
+  </Forms>
+  <logo value="images/SimplicityFP_Logo.jpg" />
+  <AndroidContentType value="text/csv" />
+  <AndroidEncoding value="UTF-8" />
+  <CSVFilePath value="D:\SimplicityApp\Live\SimplicityOnline\WebAPI\wwwroot\resources\Lowry\EmailFiles\" />
+  <TagImageFilePath value="D:\SimplicityApp\Live\SimplicityOnline\WebAPI\wwwroot\resources\Lowry\OrdLabels\" />
+  <TagImagebaseURL value="http://simplicity-cloud.com/resources/Lowry/OrdLabels/" />
+  <Pages>
+    <Page index="0" caption="Appointments" url="OrderApps_UNC.aspx" />
+  </Pages>
+  <LinkServer value="" />
+  <HomePath value="E:\Personal\UNC\Projects\EBSWebService\Code\SimplicityEBSService\bin\" />
+  <AttFileOrdDocPath value="E:\temp\files\" />
+  <AttFileOrdDocLocationDB value="E:\temp\files\" />
+  <SessionExpiryHours value="2" />
+   <FromEmailAddress value="support@simplicity4business.com" />
+  <EmailAttachmentsPath value="D:\SimplicityApp\Live\SimplicityOnline\WebAPI\wwwroot\resources\Lowry\EmailFiles\" />
+  <AttachmentFolderMode value="GOOGLEDRIVE"/>
+  <AutoCreateJobRef value="true"/>
+  <!--<UserAccount value="admin@lowry-simplicityfilingc.co.uk"/>-->
+<EmailAccount value="simplicityserviceaccount@simplicityonlineproject.iam.gserviceaccount.com"/>
+<KeyFilePath value="C:\Work\Simplicity\Resources\Simplicity-Demo-GDrive.p12"/>
+
+	<!--<EmailAccount value="simplicitycloudv8@simplicity-cloud-280820.iam.gserviceaccount.com"/>
+  <KeyFilePath value="C:\Work\Simplicity\Resources\lowry-simplicity-cloud.p12"/>-->
+  <RootFolder value="SimplicityCloud"/>
+  <EnableUploadDocumentFolderName value="true"/>
+  <UploadDocumentFolderName value="Locations"/>
+  <TempUploadFolderPath value="D:\Temp\"/>
+  <AdminEmailAddress value="eforms@lowrybuilding.co.uk"/>
+  <JobRefNumberLength value="8" />
+  <ManualCreateJobRefForCreateOrder value="true"/>
+  <FilingCabinetS4BFormsFolder value="S4BForms"/>
+  <S4BFormsRootFolderPath value="D:\SimplicityApp\Live\SimplicityOnline\WebAPI\approot\src\SimplicityOnlineWebApi\Resources\Lowry\S4BFormsTemplates\"/>
+  <S4BFormsSubmissionFolderPath value="D:\SimplicityApp\Live\SimplicityOnline\WebAPI\wwwroot\resources\Lowry\S4BFormsSubmissions\"/>
+  <S4BFormsSubmissionRootFolderWWW value="http://simplicity-cloud.com/resources/Lowry/S4BFormsSubmissions/"/>
+  <S4BFormsSubmissionDefaultJobRef value="00000001"/>
+</settings>
