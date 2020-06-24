@@ -12,9 +12,9 @@ namespace SimplicityOnlineWebApi.Controllers
     public class OrderHireController : Controller
     {
         private readonly IOrderHireRepository OrderHireRepository;
-        private readonly ILogger<OrdersController> Logger;
+        private readonly ILogger<OrderHireController> Logger;
 
-        public OrderHireController(IOrderHireRepository orderHireRepository , ILogger<OrdersController> logger)
+        public OrderHireController(IOrderHireRepository orderHireRepository , ILogger<OrderHireController> logger)
         {
             this.OrderHireRepository = orderHireRepository;
             this.Logger = logger;

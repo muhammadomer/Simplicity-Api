@@ -14,6 +14,31 @@ namespace SimplicityOnlineWebApi.Models.Repositories
         public bool IsSecondaryDatabase { get; set; }
         public string SecondaryDatabaseId { get; set; }
 
+		public ResponseModel GetHealthCheckAuditList(HttpRequest request, ClientRequest clientRequest, DateTime? fromDate, DateTime? toDate, long jobSequence)
+		{
+			ResponseModel returnValue = new ResponseModel();
+			try
+			{
+				ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(request.Headers["ProjectId"]);
+				if (settings != null)
+				{
+					int count = 0;
+					S4bCheckauditDB refDB = new S4bCheckauditDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+					returnValue.TheObject = refDB.selectAuditList(clientRequest,fromDate,toDate,jobSequence, out count,true);
+					
+					//-----
+					returnValue.IsSucessfull = true;
+				}
+
+				else
+					Message = SimplicityConstants.MESSAGE_INVALID_REQUEST_HEADER;
+			}
+			catch (Exception ex)
+			{
+				Message = Utilities.GenerateAndLogMessage("GetHealthCheckAuditList", "Error Occured while Getting GetHealthCheckAuditList.", ex);
+			}
+			return returnValue;
+		}
 		public ResponseModel GetQuestionList(HttpRequest request)
 		{
             ResponseModel returnValue = new ResponseModel();

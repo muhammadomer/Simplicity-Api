@@ -11,13 +11,29 @@ namespace SimplicityOnlineWebApi.Controllers
     [Route("api/[controller]")]
     public class HealthAndCheckController : Controller
     {
-        
-        private IHealthAndCheckRepository HealthAndCheckRepository { get; set; }
 
-       
-        private  ILogger<HealthAndCheckController> Logger { get; set; }
+		private readonly IHealthAndCheckRepository HealthAndCheckRepository;
+		private readonly ILogger<HealthAndCheckController> Logger;
+		public HealthAndCheckController(IHealthAndCheckRepository healthAndCheckRepository, ILogger<HealthAndCheckController> logger)
+		{
+			this.HealthAndCheckRepository = healthAndCheckRepository;
+			this.Logger = logger;
+		}
+		[HttpPost]
+		[ActionName("GetHealthCheckAuditList")]
+		[Route("[action]")]
+		[Produces("application/json")]
+		public IActionResult GetHealthCheckAuditList([FromBody]ClientRequest clientRequest, string fromDate, string toDate, long jobSequence)
+		{
+			DateTime? FromDate = null; DateTime? ToDate = null;
+			if (fromDate != null)
+				FromDate = Convert.ToDateTime(fromDate.Substring(0, 24));
+			if (toDate != null)
+				ToDate = Convert.ToDateTime(toDate.Substring(0, 24));
+			return new ObjectResult(HealthAndCheckRepository.GetHealthCheckAuditList(Request, clientRequest, FromDate, ToDate,jobSequence));
+		}
 
-        [HttpGet]
+		[HttpGet]
         [ActionName("GetQuestionList")]
         [Route("[action]")]
         [ValidateRequestState]
@@ -43,7 +59,6 @@ namespace SimplicityOnlineWebApi.Controllers
 		[ValidateRequestState]
 		public ResponseModel GetS4bCheckPaymentTypes()
 		{
-			ResponseModel response = new ResponseModel();
 			return HealthAndCheckRepository.GetS4bCheckPymtTypes(Request);
 		}
 

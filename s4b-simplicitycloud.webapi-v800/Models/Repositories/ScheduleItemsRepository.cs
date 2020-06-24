@@ -19,13 +19,11 @@ namespace SimplicityOnlineWebApi.Models.Repositories
         public bool IsSecondaryDatabase { get; set; }
         public string SecondaryDatabaseId { get; set; }
         
-        private ILogger<OrderItemsRepository> _logger;
+        private ILogger<ScheduleItemsRepository> _logger;
 
         public ScheduleItemsRepository()
         {
-            
         }
-
         public ResponseModel GetItemsGroupsHierarchy(HttpRequest request,int groupId)
         {
             ResponseModel returnValue = new ResponseModel();
@@ -63,7 +61,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             catch (Exception ex)
             {
                 returnValue.Message = "Exception Occured While Getting schedule items hierarchy. " + ex.Message + " " + ex.InnerException;
-                _logger.LogError(ex.Message, ex);
+                //_logger.LogError(ex.Message, ex);
             }
 
             return returnValue;

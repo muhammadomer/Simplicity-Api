@@ -18,4 +18,20 @@ namespace SimplicityOnlineBLL.Entities
         public DateTime? DateLastAmended { get; set; }
 		public List<S4bCheckAuditFails> S4bCheckAuditFails { get; set; }
 	}
+
+    public class S4bCheckAuditList
+    {
+        public long Sequence { get; set; }
+        public string UserName { get; set; }
+        public string CheckDesc { get; set; }
+        public DateTime? DateSelfIsolation { get; set; }
+        public string SelfIsolationNotes { get; set; }
+        public bool FlgPassed { get; set; }
+        public string Passed { get; set; }
+        public string JobRef { get; set; }
+        public string JobAddress { get; set; }
+        public string PostCode { get; set; }
+        public DateTime? DateCreated { get; set; }
+
+    }
 }
