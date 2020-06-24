@@ -63,7 +63,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             }
             catch (Exception ex)
             {
-                throw ex;
+                Logger.LogError(ex.Message);
             }
             return returnValue;
         }
@@ -140,7 +140,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             }
             return returnValue;
         }
-        public ResponseModel GetItemisedInvoice(RequestHeaderModel header, string invoiceNo)
+        public ResponseModel GetItemisedInvoice(RequestHeaderModel header, long invoiceSequence)
         {
             ResponseModel returnValue = new ResponseModel();
             try
@@ -152,7 +152,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     if (settings != null)
                     {
                         SupplierInvoicesDB supplierInvoice = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
-                        SupplierInvoiceVM invoiceItemised = supplierInvoice.selectItemisedInvoice(invoiceNo);
+                        SupplierInvoiceVM invoiceItemised = supplierInvoice.selectItemisedInvoice(invoiceSequence);
                         //returnValue.TheObject = invoiceItemised;
                         if (invoiceItemised == null)
                         {
@@ -160,10 +160,12 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                         }
                         else
                         {
-                            if (invoiceItemised.ContactId > 0)
+                            if (invoiceItemised.ContactId > 0) 
                             {
+                                // TODO: Replace the call with GetEntityByEntityId and don't fetch all the suppliers
                                 EntityDetailsCoreMin entityDetails = EntityDetailsCoreRepository.GetAllSuppliers(header, null).Where(x => x.EntityJoinId == invoiceItemised.ContactId).FirstOrDefault();
-                                invoiceItemised.SupplierName = entityDetails.NameLong;
+                                if (entityDetails!=null)
+                                    invoiceItemised.SupplierName = entityDetails.NameLong;
                             }
                             returnValue.TheObject = invoiceItemised;
                             returnValue.IsSucessfull = true;
@@ -198,7 +200,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             return result;
 
         }         
-        public SageViewModel GetSageDetail(RequestHeaderModel header)
+        public SageViewModel GetSageDetail(long contactId,RequestHeaderModel header)
         {
             SageViewModel result = null;
             try
@@ -208,7 +210,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 {
                     result = new SageViewModel();
                     SupplierInvoicesDB invoiceDB = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
-                    result = invoiceDB.GetSageDetail();
+                    result = invoiceDB.GetSageDetail(contactId);
                 }
             }
             catch (Exception ex)
@@ -375,6 +377,25 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             {
                 Utilities.WriteLog(ex.Message, "GetInvoiceBySeqNo-Repository");
                 return result;
+            }
+            return result;
+
+        }
+        public long GetJobSequenceByPORef(string PONo, RequestHeaderModel header)
+        {
+            long result=-1;
+            try
+            {
+                ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
+                if (settings != null)
+                {
+                    SupplierInvoicesDB invoiceDB = new SupplierInvoicesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                    result = invoiceDB.GetJobSequenceByPORef(PONo);
+                }
+            }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog(ex.Message, "GetJobRefByPO-Repository");
             }
             return result;
 

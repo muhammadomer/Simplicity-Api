@@ -98,12 +98,12 @@ namespace SimplicityOnlineWebApi.Controllers
         [HttpPost]
         [ActionName("GetItemisedInvoice")]
         [Route("[action]")]
-        public IActionResult GetItemisedInvoice([FromBody]string invoiceNo)
+        public IActionResult GetItemisedInvoice([FromBody] string invoiceSequence)
         {
             ResponseModel returnValue = new ResponseModel();
             RequestHeaderModel header = new RequestHeaderModel();
             header = Utilities.prepareRequestModel(Request);
-            return new ObjectResult(SupplierInvoiceRepository.GetItemisedInvoice(header, invoiceNo));
+            return new ObjectResult(SupplierInvoiceRepository.GetItemisedInvoice(header, long.Parse(invoiceSequence)));
         }      
         [HttpPost]
         [ActionName("GetVehicle")]
@@ -138,12 +138,12 @@ namespace SimplicityOnlineWebApi.Controllers
         [HttpPost]
         [ActionName("GetSageDetail")]
         [Route("[action]")]
-        public IActionResult GetSageDetail()
+        public IActionResult GetSageDetail(long contactId)
         {
             ResponseModel returnValue = new ResponseModel();
             RequestHeaderModel header = new RequestHeaderModel();
             header = Utilities.prepareRequestModel(Request);
-            return new ObjectResult(SupplierInvoiceRepository.GetSageDetail(header));
+            return new ObjectResult(SupplierInvoiceRepository.GetSageDetail(contactId, header));
         }
         [HttpPost]
         [ActionName("UpdateInvoiceSupplier")]

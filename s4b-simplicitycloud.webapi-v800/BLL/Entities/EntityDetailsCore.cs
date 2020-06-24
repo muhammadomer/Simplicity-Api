@@ -93,6 +93,7 @@ namespace SimplicityOnlineBLL.Entities
         public string Type { get; set; }
         public List<EntityDetailsNotes> EntityDetailNotes { get; set; }
         public EdcCloud EdcCloudFields { get; set; }
+        public string TransType { get; set; } // From un_entity_details_join table
     }
 
     public class EdcCloud

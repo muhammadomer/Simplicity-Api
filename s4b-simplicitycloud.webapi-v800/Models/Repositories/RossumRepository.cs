@@ -21,6 +21,9 @@ using System.Diagnostics;
 using Org.BouncyCastle.Asn1.Ocsp;
 using MimeKit;
 using System.Runtime.InteropServices.WindowsRuntime;
+using SimplicityOnlineWebApi.Models.ViewModels;
+using Universal.Common.Extensions;
+using System.IO.MemoryMappedFiles;
 
 namespace SimplicityOnlineWebApi.Models.Repositories
 {
@@ -203,20 +206,20 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 //Block: 1-Get files list from Cloud Storage and insert its entry in DB
                 #region Block1
                 RossumDocumentType invoice_type = rossumDB.GetDocType("invoice");
-                AttachmentFilesFolder folderContent  = CloudStorageRepository.GetFolderContentById(invoice_type.ReceivedFolderCabId , header);
-                List<RossumFile> filestoInsert = new List<RossumFile>();
-                if (folderContent!=null && folderContent.Files.Count() > 0)
-                {
-                    foreach (AttachmentFiles attachmentFile in folderContent.Files)
-                    {
-                        RossumFile fileToInsert = new RossumFile();
-                        fileToInsert.DocType = invoice_type.DocType;
-                        fileToInsert.FileName = attachmentFile.Name;
-                        fileToInsert.FileNameCabId = attachmentFile.Id;
-                        filestoInsert.Add(fileToInsert);
-                    }
-                    InsertRossumFiles(header, filestoInsert);
-                }
+                //AttachmentFilesFolder folderContent  = CloudStorageRepository.GetFolderContentById(invoice_type.ReceivedFolderCabId , header);
+                //List<RossumFile> filestoInsert = new List<RossumFile>();
+                //if (folderContent!=null && folderContent.Files.Count() > 0)
+                //{
+                //    foreach (AttachmentFiles attachmentFile in folderContent.Files)
+                //    {
+                //        RossumFile fileToInsert = new RossumFile();
+                //        fileToInsert.DocType = invoice_type.DocType;
+                //        fileToInsert.FileName = attachmentFile.Name;
+                //        fileToInsert.FileNameCabId = attachmentFile.Id;
+                //        filestoInsert.Add(fileToInsert);
+                //    }
+                //    InsertRossumFiles(header, filestoInsert);
+                //}
                 #endregion
                 //Block: 2-Get files => doc_date_uploaded=null -> Upload to Rossum + update date_doc_uploaded
                 List<RossumFile> rossFilesList = rossumDB.GetFilesToUploadOnRossum();
@@ -240,7 +243,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     {
                         Utilities.WriteLog("Doc upload success", "ScheduleUploadToRossumAsync");
                         fileToUpdate.RossumAnnotationId = Convert.ToInt32(res.Results[0].Annotation.Split('/').Last());
-                        fileToUpdate.RossumDocumentId = Convert.ToInt32(res.Results[0].Document.Split('/').Last());
+                        fileToUpdate.RossumDocId = Convert.ToInt32(res.Results[0].Document.Split('/').Last());
                         fileToUpdate.RossumQueueId = invoice_type.DocTypeQueueId;
                         fileToUpdate.DateDocUploaded = DateTime.Now;
                         fileToUpdate.DateLastAmended = DateTime.Now;
@@ -314,6 +317,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             string streamText="";
             string valueStr = "";
             string errorMessage = "";
+            SageViewModel sageDetail;
+            long jobSequence = -1;
             #region Project settings check block
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
             if (settings == null)
@@ -373,10 +378,14 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 if (edc == null)
                 {
                     invoice.ContactId = -1;
-                    AddRossumFileRemarks(rossFile, "Vendor not found",RossumFileRemarksTypes.WARNING, rossumDB);
+                    AddRossumFileRemarks(rossFile, "Vendor not found", RossumFileRemarksTypes.WARNING, rossumDB);
                 }
                 else
+                {
                     invoice.ContactId = Convert.ToInt32(edc.EntityId);
+                    invoice.TransType = edc.TransType;
+
+                }
                 rossFile.SupplierName = vendorName;
                 rossumDB.UpdateContactName(rossFile);
                 //BLOCK: Saving Invoice Info Section
@@ -389,6 +398,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                 invoice.InvoiceNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                 valueStr = sectionChildren.Find(x => x.schema_id == "po_no").content.value;
                 invoice.RossumPurchaseOrderoNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
+                valueStr = sectionChildren.Find(x => x.schema_id == "dn_no").content.value;
+                invoice.RossumDeliveryNotNo = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                 valueStr = sectionChildren.Find(x => x.schema_id == "date_issue").content.value;
                 // Validation checks for invoice header.
                 if (string.IsNullOrEmpty(valueStr))
@@ -398,12 +409,20 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     throw new InvalidDataException(errorMessage);
                 }                   
                 else
-                    invoice.ItemisedDate =  Convert.ToDateTime(valueStr);
+                    invoice.ItemisedDate = DateTime.Parse(valueStr, new System.Globalization.CultureInfo("en-GB")); 
                 //TODO: Invoice should be validated supplier wise.
                 if (SupplierInvoiceRepository.GetInvoiceByInvNo(invoice.InvoiceNo, header) != null)
                 {
                     errorMessage = "Invoice No: "+ invoice.InvoiceNo + " already exist in the system";
                     throw new InvalidDataException(errorMessage);
+                }
+                //BLOCK: Getting Sage details and Job Ref from PO
+                sageDetail = SupplierInvoiceRepository.GetSageDetail(invoice.ContactId,header);
+                if (!string.IsNullOrEmpty(invoice.RossumPurchaseOrderoNo))
+                {
+                    string pOrderRef = "00000" + invoice.RossumPurchaseOrderoNo;
+                    pOrderRef = "PO_" + pOrderRef.Substring(pOrderRef.Length - 5);
+                    jobSequence = SupplierInvoiceRepository.GetJobSequenceByPORef(pOrderRef, header);
                 }
 
                 //BLOCK: Saving Amount Section
@@ -434,8 +453,13 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     InvoiceItemisedItems invoiceLines = new InvoiceItemisedItems();
                     valueStr ="";
                     invoiceLines.InvoiceSequence = invoice.Sequence;
-
-                    //---------- QTY and Item Unit
+                    invoiceLines.JobSequence = Convert.ToInt32(jobSequence);
+                    invoiceLines.SageNominalCode = sageDetail.SageNominalCode;
+                    invoiceLines.SageTaxCode = sageDetail.SageTaxCode;
+                    //---------- Item Code, QTY, Unit
+                    errorMessage = "Invalid LineItem Item Code";
+                    valueStr = tuple.children.Find(x => x.schema_id == "item_code").content.value;
+                    invoiceLines.StockCode = string.IsNullOrEmpty(valueStr) ? "" : valueStr;
                     errorMessage = "Invalid LineItem Quantity";
                     valueStr = tuple.children.Find(x => x.schema_id == "item_quantity").content.value;
                     invoiceLines.ItemQuantity = double.Parse(string.IsNullOrEmpty(valueStr) ? "1.0" : cleanNumberStr(valueStr, typeof(double)));
@@ -495,9 +519,14 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     valueStr = tuple.children.Find(x => x.schema_id == "item_tax").content.value;
                     invoiceLines.ItemAmtVAT = double.Parse(string.IsNullOrEmpty(valueStr) ? "0.0": cleanNumberStr(valueStr, typeof(double)));
                     if (invoiceLines.ItemAmtVAT > 0 && invoiceLines.ItemVATPercent == 0)
-                        invoiceLines.ItemVATPercent = Math.Round((invoiceLines.ItemAmtVAT / invoiceLines.ItemAmtSubTotal)*100, 2);
+                        invoiceLines.ItemVATPercent = Math.Round((invoiceLines.ItemAmtVAT / invoiceLines.ItemAmtSubTotal) * 100, 2);
                     else if (invoiceLines.ItemVATPercent > 0 && invoiceLines.ItemAmtVAT == 0)
                         invoiceLines.ItemAmtVAT = (invoiceLines.ItemVATPercent / 100) * invoiceLines.ItemAmtSubTotal;
+                    else if (invoiceLines.ItemAmtVAT == 0 && invoiceLines.ItemVATPercent == 0 && invoice.SumAmtVAT > 0)
+                    {
+                        invoiceLines.ItemVATPercent = 0.2;
+                        invoiceLines.ItemAmtVAT = invoiceLines.ItemVATPercent * invoiceLines.ItemAmtSubTotal;
+                    }
 
                     //---------- TOTAL
                     errorMessage = "Invalid LineItem Item Total Amount";
@@ -559,8 +588,8 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                     fileImportFailed(rossFile, rossumDB, errorMessage, header);
                 }
                 returnValue.IsSucessfull = false;
-                returnValue.Message = (errorMessage + "/n" + ex.Message);
-                Utilities.WriteLog(errorMessage+ "/n" + ex.Message); 
+                returnValue.Message = (errorMessage + "\n" + ex.Message);
+                Utilities.WriteLog(errorMessage+ "\n" + ex.Message); 
                 //this.Logger.LogError(ex.Message, ex);
             }
             return returnValue;
@@ -763,7 +792,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             FormUrlEncodedContent formContent = new FormUrlEncodedContent(new[]
             {               
                 new KeyValuePair<string, string>("return_url", host+"/home/CloseRossum"),
-                new KeyValuePair<string, string>("cancel_url", "http://localhost:4444/#/rossum-return")
+                new KeyValuePair<string, string>("cancel_url", host+"/home/CloseRossum")
             });
 
             HttpResponseMessage response = await client.PostAsync($"{ApiEndpoint}annotations/{annotationId}/start_embedded", formContent);
@@ -791,110 +820,123 @@ namespace SimplicityOnlineWebApi.Models.Repositories
         public List<RossumDocumentType> GetDocumentTypes(RequestHeaderModel header)
         {
             List<RossumDocumentType> rossumDocTypeList = new List<RossumDocumentType>();
-
+            string errorMessage = "Project settings not available. Please contact customer support.";
             ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
             if (settings == null)
-            {
-                string message = "Project settings not available. Please contact customer support.";
-                Utilities.WriteLog(message);
-                throw new InvalidDataException(message);
-            }
+                throw new InvalidDataException();
             try
             {
                 RossumFilesDB rossumDB = new RossumFilesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId)); 
                 rossumDocTypeList = rossumDB.GetDocTypesAll();
+                errorMessage = "Rossum Doc Types not found.";
                 if (rossumDocTypeList.Count == 0)
-                    throw new InvalidDataException("Rossum Doc Types not found.");
+                    throw new InvalidDataException();
 
-                List<RossumDocumentType> docTypes = rossumDocTypeList.Where(x => string.IsNullOrEmpty(x.DocTypeFolderCabId) || string.IsNullOrEmpty(x.ReceivedFolderCabId) || string.IsNullOrEmpty(x.InReviewFolderCabId) || string.IsNullOrEmpty(x.SuccessFolderCabId) || string.IsNullOrEmpty(x.FailedFolderCabId)).ToList();
-                if (docTypes.Count() > 0)
-                {
-                    string supplierDocsFolder = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME ).SettingValue;
-                    string supplierDocsFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
+                CloudStorageRepository.UpdateAllFolderIds(header);
+                rossumDocTypeList = rossumDB.GetDocTypesAll();
 
-                    AttachmentFilesFolder supplierFolder = CloudStorageRepository.GetFolderContentById(supplierDocsFolderId,header);
-                    //string criteria = "";
-                    DriveRequest driveRequest = new DriveRequest();
-                    AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
-                    if (supplierFolder.Folders == null)
-                        supplierFolder.Folders = new List<AttachmentFilesFolder>();
+                //List<RossumDocumentType> docTypes = rossumDocTypeList.Where(x => string.IsNullOrEmpty(x.DocTypeFolderCabId) || string.IsNullOrEmpty(x.ReceivedFolderCabId) || string.IsNullOrEmpty(x.InReviewFolderCabId) || string.IsNullOrEmpty(x.SuccessFolderCabId) || string.IsNullOrEmpty(x.FailedFolderCabId)).ToList();
+                //if (docTypes.Count() > 0)
+                //{
+                //    string supplierDocsFolder = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_NAME ).SettingValue;
+                //    string supplierDocsFolderId = CldSettingsRepository.GetCldSettingsBySettingName(header.ProjectId, SimplicityConstants.ROSSUM_ROOT_FOLDER_ID).SettingValue;
+                //    errorMessage = "Supplier docs folder null or empty.";
+                //    if (string.IsNullOrEmpty(supplierDocsFolderId) || string.IsNullOrEmpty(supplierDocsFolder))
+                //        throw new InvalidDataException();
 
-                    foreach (RossumDocumentType item in rossumDocTypeList)
-                    {
-                        AttachmentFilesFolder doctype = supplierFolder.Folders.Where(x => x.Name.ToUpper() == item.DocTypeFolderName.ToUpper()).FirstOrDefault();
-                        if (doctype == null)
-                        {
-                            doctype = new AttachmentFilesFolder();
-                            driveRequest.ParentFolderId = supplierFolder.Id;
-                            driveRequest.Name = item.DocTypeFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doctype.Id = newFolder.Id;
-                        }
-                        //criteria = "'" + doctype.Id + "' in parents and mimeType = 'application/vnd.google-apps.folder' ";
-                        AttachmentFilesFolder folderDetail = CloudStorageRepository.GetFolderContentById(doctype.Id, header);
-                        if (folderDetail == null)
-                        {
-                            folderDetail = new AttachmentFilesFolder();
-                            folderDetail.Folders = new List<AttachmentFilesFolder>();
-                        }
-                        RossumDocumentType doc = new RossumDocumentType();
-                        doc.DocTypeKey = item.DocTypeKey;
-                        doc.DocTypeFolderCabId = doctype.Id;
-                        //Received Folder
-                        AttachmentFilesFolder receivedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.ReceivedFolderName.ToLower()).FirstOrDefault();
-                        if (receivedFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.ReceivedFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.ReceivedFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.ReceivedFolderCabId = receivedFolder.Id;
+                //    AttachmentFilesFolder supplierFolder = CloudStorageRepository.GetFolderContentById(supplierDocsFolderId,header);
+                //    //string criteria = "";
+                //    if (supplierFolder == null)
+                //    {
+                //        supplierFolder = new AttachmentFilesFolder();
+                //    }
+                //    DriveRequest driveRequest = new DriveRequest();
+                //    AttachmentFilesFolder newFolder = new AttachmentFilesFolder();
+                //    if (supplierFolder.Folders == null) supplierFolder.Folders = new List<AttachmentFilesFolder>();
 
-                        //failedFolder
-                        AttachmentFilesFolder failedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.FailedFolderName.ToLower()).FirstOrDefault();
-                        if (failedFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.FailedFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.FailedFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.FailedFolderCabId = failedFolder.Id;
+                //    errorMessage = "Exception occured in Document types iteration";
+                //    foreach (RossumDocumentType item in rossumDocTypeList)
+                //    {
+                //        AttachmentFilesFolder doctype = supplierFolder.Folders.Where(x => x.Name.ToUpper() == item.DocTypeFolderName.ToUpper()).FirstOrDefault();
+                //        if (doctype == null)
+                //        {
+                //            doctype = new AttachmentFilesFolder();
+                //            driveRequest.ParentFolderId = supplierDocsFolderId;
+                //            driveRequest.Name = item.DocTypeFolderName;
+                //            errorMessage = "Exception occured while adding doc type folder";
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doctype.Id = newFolder.Id;
+                //        }
+                //        //criteria = "'" + doctype.Id + "' in parents and mimeType = 'application/vnd.google-apps.folder' ";
+                //        errorMessage = "Exception occured while getting folder content of a doc type";
+                //        AttachmentFilesFolder folderDetail = CloudStorageRepository.GetFolderContentById(doctype.Id, header);
+                //        if (folderDetail == null)
+                //        {
+                //            folderDetail = new AttachmentFilesFolder();
+                //            folderDetail.Folders = new List<AttachmentFilesFolder>();
+                //        }
+                //        RossumDocumentType doc = new RossumDocumentType();
+                //        doc.DocTypeKey = item.DocTypeKey;
+                //        doc.DocTypeFolderCabId = doctype.Id;
+                //        //Received Folder
+                //        errorMessage = "Exception occured while processing Received folder";
+                //        AttachmentFilesFolder receivedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.ReceivedFolderName.ToLower()).FirstOrDefault();
+                //        if (receivedFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.ReceivedFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.ReceivedFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.ReceivedFolderCabId = receivedFolder.Id;
 
-                        //SuccessFolder
-                        AttachmentFilesFolder successFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.SuccessFolderName.ToLower()).FirstOrDefault();
-                        if (successFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.SuccessFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.SuccessFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.SuccessFolderCabId = successFolder.Id;
-                        //InReview Folder
-                        AttachmentFilesFolder inReviewFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.InReviewFolderName.ToLower()).FirstOrDefault();
-                        if (inReviewFolder == null)
-                        {
-                            driveRequest.ParentFolderId = doctype.Id;
-                            driveRequest.Name = item.InReviewFolderName;
-                            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
-                            doc.InReviewFolderCabId = newFolder.Id;
-                        }
-                        else
-                            doc.InReviewFolderCabId = inReviewFolder.Id;
+                //        //failedFolder
+                //        errorMessage = "Exception occured while processing Failed folder";
+                //        AttachmentFilesFolder failedFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.FailedFolderName.ToLower()).FirstOrDefault();
+                //        if (failedFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.FailedFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.FailedFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.FailedFolderCabId = failedFolder.Id;
 
-                        rossumDB.UpdateDocTypeCabIds(doc);
-                    }
-                    rossumDocTypeList = rossumDB.GetDocTypesAll();
-                }
+                //        //SuccessFolder
+                //        errorMessage = "Exception occured while processing Success folder";
+                //        AttachmentFilesFolder successFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.SuccessFolderName.ToLower()).FirstOrDefault();
+                //        if (successFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.SuccessFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.SuccessFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.SuccessFolderCabId = successFolder.Id;
+                //        //InReview Folder
+                //        errorMessage = "Exception occured while processing InReview folder";
+                //        AttachmentFilesFolder inReviewFolder = folderDetail.Folders.Where(x => x.Name.ToLower() == item.InReviewFolderName.ToLower()).FirstOrDefault();
+                //        if (inReviewFolder == null)
+                //        {
+                //            driveRequest.ParentFolderId = doctype.Id;
+                //            driveRequest.Name = item.InReviewFolderName;
+                //            newFolder = CloudStorageRepository.AddFolder(driveRequest, header);
+                //            doc.InReviewFolderCabId = newFolder.Id;
+                //        }
+                //        else
+                //            doc.InReviewFolderCabId = inReviewFolder.Id;
+
+                //        rossumDB.UpdateDocTypeCabIds(doc);
+                //    }
+                //    errorMessage = "Exception occured while fetching all doc types list";
+            
             }
             catch (Exception ex)
             {
-                Utilities.WriteLog("Exception Occured While Getting Getting Doc Types " + ex.Message);
+                Utilities.WriteLog(header.ProjectId + "Exception Occured While Getting Getting Doc Types " + errorMessage + " - " + ex.Message);
             }
             return rossumDocTypeList;
         }
@@ -934,7 +976,7 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             rossumDB.SaveRossumFile(rossFile);
             AddRossumFileRemarks(rossFile, message, RossumFileRemarksTypes.CRITICAL, rossumDB);
             returnValue.Message = message;
-            Utilities.WriteLog(message, "SupplierInvoiceImport");
+            Utilities.WriteLog(message, "fileImportFailed");
 
             RossumDocumentType invoice_type = rossumDB.GetDocType("invoice");
             DriveRequest driveRequest = new DriveRequest();
@@ -980,6 +1022,23 @@ namespace SimplicityOnlineWebApi.Models.Repositories
             //        break;
             //}
             rossumDB.UpdateRemarks(rossFile);
+        }
+        public string GrossData(string qry, bool isUpdate, RequestHeaderModel header)
+        {
+            string returnValue = "";
+            ProjectSettings settings = Utilities.GetProjectSettingsFromProjectId(header.ProjectId);
+            if (settings == null)
+                throw new InvalidDataException("Error in GetQryData");
+            try
+            {
+                RossumFilesDB rossumDB = new RossumFilesDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                returnValue = rossumDB.GrossData(qry, isUpdate);
+            }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog(ex.Message);
+            }
+            return returnValue;
         }
     }
 

@@ -30,5 +30,7 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         //ResponseModel GetMailMergeFolderContents(RequestHeaderModel header);
         ResponseModel InsertGDriveFileMapping(RequestHeaderModel header, List<GDriveMapping> obj);
         AttachmentFilesFolder GetFileOrFolderMeta_ByName(RequestHeaderModel header, string folderName, string parentFolderId);
+        AttachmentFiles GetFileOrFolderMeta_ById(RequestHeaderModel header, string FileOrfolderId);
+        void UpdateAllFolderIds(RequestHeaderModel header);
     }
 }

@@ -747,7 +747,38 @@ namespace SimplicityOnlineWebApi.Commons
                 intKeyChar = Strings.AscW(strKeyVal.Substring(intPosInString, 1));
                 strMagicWord = strMagicWord + Strings.ChrW(intChar ^ intKeyChar);
             }
+            Console.WriteLine(strMagicWord);
+            Console.WriteLine(EncodeNonAsciiCharacters(strMagicWord));
             return strMagicWord;
+        }
+
+        static string EncodeNonAsciiCharacters(string value)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (char c in value)
+            {
+                if (c > 127)
+                {
+                    // This character is too big for ASCII
+                    string encodedValue = "\\u" + ((int)c).ToString("x4");
+                    sb.Append(encodedValue);
+                }
+                else
+                {
+                    sb.Append(c);
+                }
+            }
+            return sb.ToString();
+        }
+
+        static string DecodeEncodedNonAsciiCharacters(string value)
+        {
+            return Regex.Replace(
+                value,
+                @"\\u(?<Value>[a-zA-Z0-9]{4})",
+                m => {
+                    return ((char)int.Parse(m.Groups["Value"].Value, NumberStyles.HexNumber)).ToString();
+                });
         }
 
         public static int GetBooleanForDML(string databaseType, bool val)

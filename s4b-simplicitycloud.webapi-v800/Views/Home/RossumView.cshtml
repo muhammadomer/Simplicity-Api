@@ -1,0 +1,124 @@
+﻿
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+<style>
+    html, body, table, .dataTables_wrapper {
+        font-family: Calibri;
+        font-size: 14px;
+    }
+
+    table, .dataTables_wrapper {
+        font-size: 11px;
+    }
+
+        table tbody tr:hover {
+            background-color: #b7e8eb !important;
+        }
+
+    .panel2 {
+        border-top: 2px solid #ccc;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    }
+</style>
+
+
+<script type="text/javascript">
+
+
+    function fnReloadTable() {
+
+        // destroying old setting
+        if ($.fn.DataTable.isDataTable('#myTable')) {
+            $('#myTable').DataTable().destroy();
+            $('#myTable').empty();
+        };
+        var urlParams = new URLSearchParams(window.location.search);
+        var data = {
+            data: $("#data").val(),
+            token: urlParams.get('token'),
+            isUpdate: $('#isUpdate').is(':checked')
+        }
+
+        //$("body").css("cursor", "progress");
+
+
+        $.ajax({
+            type: "POST",
+            url: '/api/Rossum/GetGrossData',
+            dataType: 'json',
+            data: JSON.stringify(data),
+            headers: {
+                'projectId': $("#pid").val(),
+                'UserId': $("#uid").val()
+            },
+            success: function (response, status, jqXHR) {
+
+                //$("body").css("cursor", "default");
+
+                var data = response; // you may need to modify according to your response
+
+                // preparing columns
+                var columns = [{ "title": "" }] // do not remove this line. Datatable need minimum one column to be rendered
+                if (data.length > 0) {
+                    var columns = []
+                    var row = data[0];
+                    $.each(row, function (name, value) {
+                        columns.push({
+                            title: name,
+                            data: name,
+                        });
+                    })
+                }
+
+                $('#myTable').DataTable({
+
+                    //dom: '<"datatable-header dt-buttons-right"fB><"datatable-scroll"tS><"datatable-footer"i>',
+                    lengthMenu: [[25, 50, 100, -1], [25, 50, 100, "All"]],
+                    select: { style: 'single' },
+                    ordering: false, // sorting
+                    columns: columns,
+                    data: data
+                });
+            },
+
+            error: function (jqXHR, textStatus, errorThrown) {
+                $("body").css("cursor", "default");
+                alert("error in ajax call");
+            }
+        });
+    }
+</script>
+<p>
+    <span>PId</span>
+    <input id="pid" name="pid" width="100" value="DEMOMSSQL" />
+    <span>UId</span>
+    <input id="uid" name="uid" width="100" value="1" />
+    <span>Update</span>
+    <input type="checkbox" id="isUpdate" name="isUpdate" />
+</p>
+<span>Demo Data</span>
+<br />
+<textarea id="data" rows="10" cols="200"></textarea>
+<textarea id="notepad" rows="3" cols="200"></textarea>
+<div class="panel1">
+    <br />
+    <button onclick="fnReloadTable()"> Refresh </button>
+</div>
+<div class="panel2">
+    <table id="myTable" class="display table table-striped cell-border" cellspacing="0"></table>
+</div>
+

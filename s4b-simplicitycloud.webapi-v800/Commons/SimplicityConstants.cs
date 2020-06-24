@@ -95,8 +95,9 @@
         public const string CldSettingEmailFooterContent = "EmailFooterContent";
         public const string CldSettingIsDemoModeEnabled = "IsDemoModeEnabled";
 
-       
 
+
+        public const string CldSettingGoogleDriveAPINew = "GoogleDriveAPI_NEW";
         public const string CldSettingGoogleDriveAPI = "GoogleDriveAPI";
         public const string CldSettingFilingCabinetRootFolder = "FilingCabinetRootFolder";
         public const string CldSettingFilingCabinetRootFolderId = "FilingCabinetRootFolderId";

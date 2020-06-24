@@ -138,29 +138,29 @@ namespace SimplicityOnlineWebApi.DAL
             return returnValue;
         }
 
-       
+
 
         public bool updateBySettingId(string settingName, string settingValue)
+        {
+            bool returnValue = false;
+            string qry = @"UPDATE un_cld_settings SET setting_name = '" + settingName + "'," +
+                  "  setting_value = '" + settingValue + "' " + " WHERE setting_name = '" + settingName + "'";
+            try
             {
-                bool returnValue = false;
-                try
+                using (OleDbConnection conn = this.getDbConnection())
                 {
-                    using (OleDbConnection conn = this.getDbConnection())
+                    using (OleDbCommand objCmdUpdate = new OleDbCommand(qry, conn))
                     {
-                        using (OleDbCommand objCmdUpdate =
-                            new OleDbCommand(CldSettingsQueries.update(this.DatabaseType, settingName, settingValue), conn))
-                        {
-                            objCmdUpdate.ExecuteNonQuery();
-                        }
+                        objCmdUpdate.ExecuteNonQuery();
                     }
                 }
-                catch (Exception ex)
-                {
-                    //errorMessage = "Error occured while inserting into audit downloads " + ex.Message + " " +  ex.InnerException;
-                    // Requires Logging
-                }
-                return returnValue;
             }
+            catch (Exception ex)
+            {
+                Utilities.WriteLog("Exception while updating Setting by id/name");
+            }
+            return returnValue;
+        }
         
         public bool deleteBySettingId(long settingId)
             {

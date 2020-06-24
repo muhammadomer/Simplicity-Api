@@ -53,6 +53,17 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                         _projectSetting.FilingCabinetRootFolder = cldSettings.SettingValue;
                         returnValue.ProjectSetting = _projectSetting;
                     }
+                    //---Get NEW Google Drive settings
+                    CldSettings googleDriveAPIContentNew = cldSettingsDB.SelectAllCldSettingsBySettingName(SimplicityConstants.CldSettingGoogleDriveAPINew);
+                    if (googleDriveAPIContentNew != null)
+                    {
+                        GoogleDriveAPIKeys api_list = JsonConvert.DeserializeObject<GoogleDriveAPIKeys>(googleDriveAPIContentNew.SettingValue);
+                        returnValue.GoogleDriveAPIKeyNew = api_list;
+                    }
+                    else
+                    {
+                        returnValue.Message = "Error: Google drive api setting does not exist";
+                    }
                     //---Get Google Drive settings
                     CldSettings googleDriveAPIContent = cldSettingsDB.SelectAllCldSettingsBySettingName(SimplicityConstants.CldSettingGoogleDriveAPI);
                     if (googleDriveAPIContent != null)

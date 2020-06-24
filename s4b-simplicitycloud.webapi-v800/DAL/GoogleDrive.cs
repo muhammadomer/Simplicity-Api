@@ -69,12 +69,14 @@ namespace SimplicityOnlineWebApi.DAL
         {
             if (request == null)
                 return null;
-            else if (string.IsNullOrEmpty(request.EmailAccount) || string.IsNullOrEmpty(request.KeyFilePath))
+            string errorMessage = "Exception: invalid Drive Request";
+            if (string.IsNullOrEmpty(request.EmailAccount) || string.IsNullOrEmpty(request.KeyFilePath))
                 return null;
-
+            errorMessage = "Exception: Keyfile not found on the path-" + request.KeyFilePath;
             // check the file exists
             if (!System.IO.File.Exists(request.KeyFilePath))
             {
+                Commons.Utilities.WriteLog(errorMessage);                
                 return null;
             }
 
@@ -91,6 +93,7 @@ namespace SimplicityOnlineWebApi.DAL
 
             //---- This scope is used For G-Suite Account
             string[] scopes = new string[] { DriveService.Scope.Drive };  // modify your app scripts 
+            errorMessage = "Exception: issue with certificate";
 
             var certificate = new X509Certificate2(request.KeyFilePath, "notasecret", X509KeyStorageFlags.Exportable | X509KeyStorageFlags.MachineKeySet | X509KeyStorageFlags.PersistKeySet);
             try
@@ -112,20 +115,21 @@ namespace SimplicityOnlineWebApi.DAL
                         Scopes = scopes
                     }.FromCertificate(certificate));
                 }
-
+                errorMessage = "Exception: while creating google service";
                 if (service == null) {
                     // Create the service.
                     service = new DriveService(new BaseClientService.Initializer()
                     {
                         HttpClientInitializer = credential,
-                        ApplicationName = "simplicityonlineproject"
-                    });
+                        ApplicationName = "Simplicity Cloud Project" // User defined any name can be given
+                    }) ;
                 }
                 return service;
             }
             catch (Exception ex)
             {
                 //Console.WriteLine(ex.InnerException);
+                Commons.Utilities.WriteLog(errorMessage);
                 return null;
             }
         }
@@ -302,8 +306,9 @@ namespace SimplicityOnlineWebApi.DAL
 
         private AttachmentFilesFolder CreateFolder(DriveService service, DriveRequest request)
         {
+            //service.Permissions.Create(new Permission { Role = "writer", Type = "user", EmailAddress = request.UserAccount }, "");
             File metaData = new File();
-            metaData.Name = request.Name.ToUpper();
+            metaData.Name = request.Name; //.ToUpper();
             metaData.Description = request.Description;
             metaData.MimeType = request.MimeType;
             metaData.Parents = new List<string> { request.ParentFolderId };
@@ -766,7 +771,7 @@ namespace SimplicityOnlineWebApi.DAL
             Permission userPermission = new Permission();
             userPermission.Type = PermissionType.user.ToString();
             userPermission.Role = PermissionRoles.writer.ToString();
-            userPermission.EmailAddress = driveRequest.Email;
+            userPermission.EmailAddress = driveRequest.UserAccount;
             //userPermission.DisplayName = "user a";
             var request = service.Permissions.Create(userPermission, driveRequest.FileId);
             request.Fields = "id";

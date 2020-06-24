@@ -11,9 +11,58 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
 {
     public static class SupplierInvoicesQueries
     {
-        public static string getSelectAllRossumUnfinalizedInvoices(ClientRequest clientRequest)
+        public static string getSelectAllRossumUnfinalizedInvoices(ClientRequest clientRequest, string databaseType)
         {
-            string query = @"select * from( select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
+            string query = "";
+            switch (databaseType)
+            {
+                case "MSACCESS":
+                    query = @"SELECT IIF((SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type = '021') = 'True', 'sub-contractor','contractor') AS trans_type,
+                                   inv.invoice_no, inv.sequence,
+                                   inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
+                                   rossum.file_name_cab_id,rossum_po_no,
+                                   inv.date_created,
+                                   edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
+                                   edc.entity_id, inv.itemised_date,
+                                   IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
+                                   (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
+                                   (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+
+                              FROM (un_invoice_itemised AS inv
+                              LEFT JOIN un_entity_details_core AS edc
+                                ON inv.contact_id = edc.entity_id)
+                             INNER JOIN un_rossum_files AS rossum
+                                ON inv.rossum_sequence = rossum.sequence
+
+                             WHERE inv.rossum_sequence IS NOT NULL
+                               AND inv.trans_type = 'C'
+                               AND inv.flg_invoice_created <> TRUE
+
+                            UNION
+
+                            SELECT 'supplier' AS trans_type,
+	                            inv.invoice_no, inv.sequence,
+                                    inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
+                                    rossum.file_name_cab_id,rossum_po_no,
+                                    inv.date_created,
+                                    edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
+                                    edc.entity_id, inv.itemised_date,
+                                    IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
+	                            (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
+	                            (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id  WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+
+                              FROM (un_invoice_itemised AS inv
+                              LEFT JOIN un_entity_details_core AS edc
+                                ON inv.contact_id = edc.entity_id)
+                             INNER JOIN un_rossum_files AS rossum
+                                ON inv.rossum_sequence = rossum.sequence
+
+                             WHERE inv.rossum_sequence IS NOT NULL
+                               AND inv.trans_type = 'D'
+                               AND inv.flg_invoice_created <> TRUE";
+                    break;
+                case "SQLSERVER":
+                    query = @"select * from( select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
 	                    (case when (select count(*) from 
 	                    (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1 
 	                    then 'sub-contractor' else 'contractor' end) else '' end) end trans_type, inv.invoice_no,inv.sequence, core.entity_pymt_type,core.name_short,core.name_long,core.name_sage,
@@ -34,6 +83,11 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                     left outer join un_entity_details_core core on inv.contact_id=core.entity_id 
                     inner join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence ) result
 	                where 1=1 ";
+                    break;
+                default:
+                    break;
+            }
+
             if (clientRequest.globalFilter != null && clientRequest.globalFilter != "")
             {
                 string filterValue = clientRequest.globalFilter;
@@ -49,16 +103,63 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                 query += globalFilterQuery;
             }
             dynamic filter = JsonConvert.DeserializeObject<dynamic>(clientRequest.filters.ToString());
-            if (filter.transType == "supplier" || filter.transType == "contractor"|| filter.transType == "sub-contractor")
+            if (filter.transType == "supplier" || filter.transType == "contractor" || filter.transType == "sub-contractor")
             {
-                query += " and trans_type='" + filter.transType+"'";
+                query += " and trans_type='" + filter.transType + "'";
             }
             query += " order by date_created desc";
             return query;
-        }      
-        public static string getSelectAllUnfinalizedInvoices(ClientRequest clientRequest)
+        }
+        public static string getSelectAllUnfinalizedInvoices(ClientRequest clientRequest, string databaseType)
         {
-            string query = @"select * from (select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
+            string query = "";
+            switch (databaseType)
+            {
+                case "MSACCESS":
+                    query = @"select * from(SELECT IIF((SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type = '021') = 'True', 'sub-contractor','contractor') AS trans_type,
+                                       inv.invoice_no, inv.sequence,
+                                       inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
+	                                   rossum_po_no,
+                                       inv.date_created,
+                                       edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
+                                       edc.entity_id, inv.itemised_date,
+                                       IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
+                                       (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
+                                       (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id
+                                WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+
+                                  FROM (un_invoice_itemised AS inv
+                                 INNER JOIN un_entity_details_core AS edc
+                                    ON inv.contact_id=edc.entity_id)
+
+                                 WHERE inv.rossum_sequence IS NULL
+                                   AND inv.trans_type = 'C'
+                                   AND inv.flg_invoice_created <> TRUE
+
+                                UNION
+
+                                SELECT 'supplier' AS trans_type,
+                                       inv.invoice_no, inv.sequence,
+                                       inv.sum_amt_subtotal, inv.sum_amt_vat, inv.sum_amt_total,
+	                                   rossum_po_no,
+                                       inv.date_created,
+                                       edc.entity_pymt_type, edc.name_short, edc.name_long, edc.name_sage,
+                                       edc.entity_id, inv.itemised_date,
+                                       IIF((SELECT COUNT(iii.item_type) FROM un_invoice_itemised_items AS iii GROUP BY iii.invoice_sequence, iii.item_type HAVING iii.invoice_sequence = inv.sequence AND COUNT(iii.item_type) > 0) > 0, 'Unchecked','Checked') AS approved,
+                                       (SELECT MAX(ord.job_ref) FROM (un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref) AS ord_job_reference,
+                                       (SELECT MAX(edc_f.name_short) FROM ((un_purchase_orders AS po INNER JOIN un_purchase_order_items AS poi ON po.order_id = poi.order_id) INNER JOIN un_orders AS ord ON poi.job_sequence = ord.sequence) INNER JOIN un_entity_details_core AS edc_f ON ord.job_manager = edc_f.entity_id
+                                WHERE po.order_ref = inv.rossum_po_no GROUP BY ord.job_ref, edc_f.name_short ) AS ord_job_manager_name
+
+                                  FROM (un_invoice_itemised AS inv
+                                 INNER JOIN un_entity_details_core AS edc
+                                    ON inv.contact_id=edc.entity_id)
+
+                                 WHERE inv.rossum_sequence IS  NULL
+                                   AND inv.trans_type = 'D'
+                                   AND inv.flg_invoice_created <> TRUE)result where 1=1 ";
+                    break;
+                case "SQLSERVER":
+                    query = @"select * from (select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
 	                    (case when (select count(*) from 
 	                    (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1 
 	                    then 'sub-contractor' else 'contractor' end) else '' end) end trans_type, inv.invoice_no,inv.sequence, core.entity_pymt_type,core.name_short,core.name_long,core.name_sage,
@@ -83,6 +184,10 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                             inner join un_entity_details_core core on inv.contact_id=core.entity_id 
 							) result where 1=1 and sequence not in(select inv.sequence from un_invoice_itemised inv
                         inner join un_rossum_files ross on inv.rossum_sequence = ross.sequence) ";
+                    break;
+                default:
+                    break;
+            }
             if (clientRequest.globalFilter != null && clientRequest.globalFilter != "")
             {
                 string filterValue = clientRequest.globalFilter;
@@ -91,16 +196,16 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                 //----find if word exist
                 foreach (string word in filterValue.Split(separators, StringSplitOptions.RemoveEmptyEntries))
                 {
-                    wordFilterQuery += (wordFilterQuery.Length > 0 ? "or" : "") + " invoice_no like '%" + word + "%' or  name_long like '%" + word + "%' or rossum_po_no like '%"+word+ "%' or ord_job_reference like '%" + word + "%'";
+                    wordFilterQuery += (wordFilterQuery.Length > 0 ? "or" : "") + " invoice_no like '%" + word + "%' or  name_long like '%" + word + "%' or rossum_po_no like '%" + word + "%' or ord_job_reference like '%" + word + "%'";
                 }
                 wordFilterQuery += wordFilterQuery.Length > 0 ? " or " : "";
                 string globalFilterQuery = " and ( " + wordFilterQuery + " invoice_no like '%" + filterValue + "%' or name_long like '%" + filterValue + "%' or rossum_po_no like '%" + filterValue + "%' or ord_job_reference like '%" + filterValue + "%') ";
                 query += globalFilterQuery;
             }
             dynamic filter = JsonConvert.DeserializeObject<dynamic>(clientRequest.filters.ToString());
-            if (filter.transType == "supplier" || filter.transType == "contractor"|| filter.transType == "sub-contractor")
+            if (filter.transType == "supplier" || filter.transType == "contractor" || filter.transType == "sub-contractor")
             {
-                query += " and trans_type='" + filter.transType+"'";
+                query += " and trans_type='" + filter.transType + "'";
             }
             return query;
         }
@@ -115,8 +220,8 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                     case "SQLSERVER":
                     default:
                         returnValue = "insert into un_invoice_itemised (trans_type,contact_id,invoice_no,itemised_date,sum_amt_main,sum_amt_vat,sum_amt_total) " +
-                                      "VALUES (" + invoiceItemised.TransType + ", '" + invoiceItemised.ContactId+ "', " + invoiceItemised.InvoiceNo+ ", " +
-                                      " " + Utilities.GetDateTimeForDML(databaseType, invoiceItemised.ItemisedDate,true,false)
+                                      "VALUES (" + invoiceItemised.TransType + ", '" + invoiceItemised.ContactId + "', " + invoiceItemised.InvoiceNo + ", " +
+                                      " " + Utilities.GetDateTimeForDML(databaseType, invoiceItemised.ItemisedDate, true, false)
                                       + ", '" + invoiceItemised.SumAmtMain + "'"
                                       + ", '" + invoiceItemised.SumAmtVAT
                                       + "', '" + invoiceItemised.SumAmtTotal + "')";
@@ -140,19 +245,19 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
                     case "SQLSERVER":
                     default:
                         {
-                            foreach(var item in invoiceItemised.InvoiceLines)
+                            foreach (var item in invoiceItemised.InvoiceLines)
                             {
-                                returnValue += "insert into un_invoice_itemised_items(invoice_sequence, item_date, item_quantity, item_ref, stock_code, item_desc, item_unit,"+
-                                                "item_amt, item_discount_percent,item_amt_discount,item_amt_subtotal,item_vat_percent,item_amt_vat,item_amt_total,"+
+                                returnValue += "insert into un_invoice_itemised_items(invoice_sequence, item_date, item_quantity, item_ref, stock_code, item_desc, item_unit," +
+                                                "item_amt, item_discount_percent,item_amt_discount,item_amt_subtotal,item_vat_percent,item_amt_vat,item_amt_total," +
                                                 "created_by,date_created,SSMA_TimeStamp)" +
                                               "VALUES (" + invoiceItemised.Sequence + ", '" + item.ItemDate + "', '" + item.ItemQuantity + "', '" +
                                               " '" + item.ItemRef + "', '" + item.StockCode + "', '" + item.ItemDesc + "','" + item.ItemUnit + "','" +
-                                              item.ItemAmt +"','" +item.ItemDiscountPercent + "','" + item.ItemAmtDiscount +"','" + item.ItemAmtSubTotal + "','"+ item.ItemVATPercent + "','" + item.ItemAmtVAT+
-                                              "','" + item.ItemAmtTotal + "','" + item.CreatedBy+ "','getdate()', 'SSMA_TimeStamp'";
+                                              item.ItemAmt + "','" + item.ItemDiscountPercent + "','" + item.ItemAmtDiscount + "','" + item.ItemAmtSubTotal + "','" + item.ItemVATPercent + "','" + item.ItemAmtVAT +
+                                              "','" + item.ItemAmtTotal + "','" + item.CreatedBy + "','getdate()', 'SSMA_TimeStamp'";
                             }
-                            
+
                         }
-                        
+
                         break;
                 }
             }

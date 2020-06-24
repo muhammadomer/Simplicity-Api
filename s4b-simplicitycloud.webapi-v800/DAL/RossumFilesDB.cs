@@ -8,6 +8,7 @@ using SimplicityOnlineWebApi.BLL.Entities;
 using SimplicityOnlineWebApi.Models;
 using System.Linq;
 using System.Linq.Expressions;
+using Newtonsoft.Json;
 
 namespace SimplicityOnlineWebApi.DAL
 {
@@ -47,7 +48,7 @@ namespace SimplicityOnlineWebApi.DAL
                     ", doc_type = " + rossumFile.DocType +
                     ", rossum_queue_id = " + rossumFile.RossumQueueId +
                     ", date_doc_uploaded = " + Utilities.GetDateTimeForDML(this.DatabaseType, rossumFile.DateDocUploaded, true, true) +
-                    ", rossum_document_id = " + rossumFile.RossumDocumentId +
+                    ", rossum_doc_id = " + rossumFile.RossumDocId +
                     ", rossum_annotation_id = " + rossumFile.RossumAnnotationId +
                     ", date_doc_processed = " + Utilities.GetDateTimeForDML(this.DatabaseType, rossumFile.DateDocProcessed, true, true) +
                     ", flg_failed = " + Utilities.GetBooleanForDML(this.DatabaseType, rossumFile.FlgFailed) +
@@ -273,18 +274,7 @@ namespace SimplicityOnlineWebApi.DAL
 
         internal List<RossumFile> GetAllUnConfirmed(DateTime? fromDate, DateTime? toDate)
         {
-            string qry = @"select top 100 F.*, doc_type_desc, u.user_name from un_rossum_files F " +
-                "inner join un_ref_rossum_doc_types t on f.doc_type = t.doc_type " +
-                "left outer  join un_user_details u on u.user_id = f.created_by " +
-                " where 1=1 and  (F.flg_deleted is null or F.flg_deleted=" + Utilities.GetBooleanForDML(this.DatabaseType, false) + ")";
-            if (!string.IsNullOrEmpty(fromDate.ToString()))
-                qry += " and F.date_created  >= '" + ((DateTime)fromDate).ToString("yyyy-MM-dd") + " 00:00:00'";
-            if (!string.IsNullOrEmpty(toDate.ToString()))
-                qry += " and F.date_created  <='" + ((DateTime)toDate).ToString("yyyy-MM-dd") + " 23:59:59'";
-            if (string.IsNullOrEmpty(fromDate.ToString()) && string.IsNullOrEmpty(toDate.ToString()))
-                qry += " and (F.date_doc_imported is null "+
-                    " or F.flg_failed="+ Utilities.GetBooleanForDML(this.DatabaseType, true)+")";
-            qry += " order by F.date_created desc";
+            string qry = RossumQueries.GetAllUnConfirmed(this.DatabaseType, fromDate, toDate);
             return QryToRossumFiles(qry);
         }
 
@@ -400,7 +390,7 @@ namespace SimplicityOnlineWebApi.DAL
                                     file.FileNameCabId = DBUtil.GetStringValue(dr, "file_name_cab_id");
                                     file.DocType = DBUtil.GetIntValue(dr, "doc_type");
                                     file.DocTypeDesc = DBUtil.GetStringValue(dr, "doc_type_desc");
-                                    file.RossumDocumentId = DBUtil.GetIntValue(dr, "rossum_document_id");
+                                    file.RossumDocId = DBUtil.GetIntValue(dr, "rossum_doc_id");
                                     file.RossumAnnotationId = DBUtil.GetIntValue(dr, "rossum_annotation_id");
                                     file.RossumQueueId = DBUtil.GetIntValue(dr, "rossum_queue_id");
                                     if (!string.IsNullOrEmpty(dr["date_doc_uploaded"].ToString())) 
@@ -506,7 +496,61 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return;
         }
-     }
+
+        public string GrossData(string qry, bool isUpdate)
+        {
+            string returnValue = "";
+            try
+            {
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmd = new OleDbCommand(qry, conn))
+                    {
+                        if (isUpdate)
+                        {
+                            returnValue = objCmd.ExecuteNonQuery().ToString();
+                        }
+                        else
+                        {
+                            using (OleDbDataReader dr = objCmd.ExecuteReader())
+                            {
+                                if (dr.HasRows)
+                                {
+                                    var r = Serialize(dr);
+                                    returnValue = JsonConvert.SerializeObject(r, Formatting.Indented);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return returnValue;
+        }
+
+
+        private IEnumerable<Dictionary<string, object>> Serialize(OleDbDataReader reader)
+        {
+            var results = new List<Dictionary<string, object>>();
+            var cols = new List<string>();
+            for (var i = 0; i < reader.FieldCount; i++)
+                cols.Add(reader.GetName(i));
+
+            while (reader.Read())
+            {
+                var record = new Dictionary<string, object>();
+                foreach (var col in cols)
+                    record.Add(col, reader[col]);
+                results.Add(record);
+            }
+            return results;
+        }
+    }
+
+
 }
 #region Archive
 //internal bool UpdateFileStatus(RossWebHook hook)

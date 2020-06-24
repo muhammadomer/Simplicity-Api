@@ -202,15 +202,12 @@ namespace SimplicityOnlineWebApi.DAL
         public EntityDetailsCore GetEntityByLongName(string longName)
         {
             EntityDetailsCore returnValue = null;
-            string qry = @"SELECT * FROM un_entity_details_core edc " +
-                        " left outer join un_cld_edc cld on edc.entity_id = cld.entity_id " +
-                        " WHERE Lower(name_long) = '" + longName.ToLower() +
-                        "' or Lower(cld.rossum_contact_name)='" + longName.ToLower() + "'";
             try
             {
                 using (OleDbConnection conn = this.getDbConnection())
                 {
-                    using (OleDbCommand objCmdSelect =new OleDbCommand(qry, conn))
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(Entity_Details_CoreQueries.GetEntityByLongName(this.DatabaseType,longName), conn))  
                     {
                         using (OleDbDataReader dr = objCmdSelect.ExecuteReader())
                         {
@@ -218,6 +215,7 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 dr.Read();
                                 returnValue = Load_Entity_Details_Core(dr);
+                                returnValue.TransType = DBUtil.GetStringValue(dr, "trans_type".ToString());
                             }
                         }
                     }
@@ -1200,10 +1198,9 @@ namespace SimplicityOnlineWebApi.DAL
         }
         public EntityDetailsCore GetEdcCldCloudFields(long sequence)
         {
-            string qryInvoice = @"
-                    select core.entity_id,rosum.rossum_contact_name,edc.contact_dn_cab_id,edc.contact_invoice_cab_id,edc.contact_po_cab_id from un_invoice_itemised inv
-                    left outer join un_entity_details_core core on inv.contact_id = core.entity_id
-                    left outer join un_cld_edc edc on edc.entity_id = core.entity_id
+            string qryInvoice = @"select core.entity_id,rosum.rossum_contact_name,edc.contact_dn_cab_id,edc.contact_invoice_cab_id,edc.contact_po_cab_id from ((un_invoice_itemised inv
+                    left outer join un_entity_details_core core on inv.contact_id = core.entity_id)
+                    left outer join un_cld_edc edc on edc.entity_id = core.entity_id)
                     inner join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence=" + sequence;
             return loadEdcCldFields(qryInvoice);
         }

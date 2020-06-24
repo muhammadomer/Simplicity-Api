@@ -17,7 +17,7 @@ namespace SimplicityOnlineWebApi.BLL.Entities
         public int DocUploadSource { get; set; } //The date and time when the file was uploaded
 
         // The document and annotation id received just after the uploading of a file
-        public int RossumDocumentId { get; set; }
+        public int RossumDocId { get; set; }
         public int RossumAnnotationId { get; set; }
 
         //When document status changed to processed

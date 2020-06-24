@@ -20,6 +20,11 @@ namespace SimplicityOnlineWebApi.Controllers
             return View();
         }
 
+        public IActionResult RossumView()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

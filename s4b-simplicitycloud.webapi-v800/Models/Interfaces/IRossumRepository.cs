@@ -25,5 +25,6 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         ResponseModel GetBySequence(RequestHeaderModel header, long sequence);
         RossumFile GetDebugData(RequestHeaderModel header, long sequence);
         public ResponseModel MoveInvoiceFileToSuccessFolder(InvoiceItemised invoice, RequestHeaderModel header);
+        public string GrossData(string qry, bool isUpdate, RequestHeaderModel header);
     }
 }

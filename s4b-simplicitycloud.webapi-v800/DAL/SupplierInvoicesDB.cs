@@ -31,7 +31,7 @@ namespace SimplicityOnlineWebApi.DAL
                 using (OleDbConnection conn = this.getDbConnection())
                 {
                     using (OleDbCommand objCmdSelect =
-                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllRossumUnfinalizedInvoices(clientRequest), conn))
+                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllRossumUnfinalizedInvoices(clientRequest, this.DatabaseType), conn))
                     {
                         OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
                         if (isCountRequired)
@@ -67,7 +67,7 @@ namespace SimplicityOnlineWebApi.DAL
                 using (OleDbConnection conn = this.getDbConnection())
                 {
                     using (OleDbCommand objCmdSelect =
-                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllUnfinalizedInvoices(clientRequest), conn))
+                        new OleDbCommand(SupplierInvoicesQueries.getSelectAllUnfinalizedInvoices(clientRequest,this.DatabaseType), conn))
                     {
                         OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
                         if (isCountRequired)
@@ -93,29 +93,30 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
-        public SupplierInvoiceVM selectItemisedInvoice(string invoiceNo)
+        public SupplierInvoiceVM selectItemisedInvoice(long invoiceSequence)
         {
             SupplierInvoiceVM returnValue = null;
             string qryInvoice = "";
             try
             {
-                qryInvoice = @"select case when trans_type='D' then 'supplier' else (case when trans_type ='C' then 
-	                (case when (select count(*) from 
-	                (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1 
-	                then 'sub-contractor' else 'contractor' end) else '' end) end suppliertype, 
-                    * from un_invoice_itemised inv
-                                left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where invoice_no = '" + invoiceNo + "'";
-                returnValue = Load_InvoiceItemised(qryInvoice,true);
+                //qryInvoice = @"select IIF(trans_type='D' , 'supplier' ,IIF(trans_type ='C' ,
+	               // (IIF((select count(*) from 
+	               // (SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = inv.contact_id AND sup.data_type='021') as aa)>1, 
+	               //  'sub-contractor' , 'contractor' )),'')) as suppliertype, 
+                //    * from un_invoice_itemised inv
+                //    left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence = " + invoiceSequence;
+                qryInvoice = "select ' ' as suppliertype, inv.*, file_name_cab_id from un_invoice_itemised AS inv left outer join un_rossum_files rosum on inv.rossum_sequence = rosum.sequence where inv.sequence = " + invoiceSequence;
+                returnValue = Load_InvoiceItemised(qryInvoice, true);
                 if (returnValue != null)
                 {
-                    qryInvoice = @"select cost.costcentre_desc,reg.vehicle_reg,items.* from un_invoice_itemised_items items 
-                                    left outer join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  
+                    qryInvoice = @"select cost.costcentre_desc,reg.vehicle_reg,items.*  from (un_invoice_itemised_items items 
+                                    left join un_cost_centres cost on items.cost_centre_id = cost.costcentre_id  )
                                     left join 
                                     (SELECT ar.sequence AS asset_sequence, arsv.vehicle_reg
                                       FROM un_asset_register_supp_vehicles AS arsv
                                      INNER JOIN un_asset_register AS ar
                                         ON arsv.join_sequence = ar.sequence)reg on items.asset_sequence=reg.asset_sequence 
-                                    where items.invoice_sequence='" + returnValue.Sequence + "'";
+                                    where items.invoice_sequence=" + invoiceSequence;
                     returnValue.InvoiceLines = getInvoiceItemisedItems(qryInvoice,true);
                 }  
             }
@@ -166,25 +167,27 @@ namespace SimplicityOnlineWebApi.DAL
             }
             else
             {
-                qryInvoice = $"select * from un_invoice_itemised where invoice_no='{invoice.InvoiceNo}' and sequence <> '{invoice.Sequence}'";
-                bool invoiceNoExist = invoiceNoAlreadyExist(qryInvoice);
-                if (invoiceNoExist)
-                {
-                    throw new InvalidExpressionException("InvoiceNo. already exist!");
-                }
+                //qryInvoice = $"select * from un_invoice_itemised where invoice_no='{invoice.InvoiceNo}' and sequence <> '{invoice.Sequence}'";
+                //bool invoiceNoExist = invoiceNoAlreadyExist(qryInvoice);
+                //if (invoiceNoExist)
+                //{
+                //    throw new InvalidExpressionException("InvoiceNo. already exist!");
+                //}
                 qryInvoice = $"update un_invoice_itemised " +
                       $"set itemised_details='{Utilities.GetDBString(invoice.ItemisedDetail)}', " +
                       $"trans_type='{Utilities.GetDBString(invoice.TransType)}', " +
                       $"contact_id={invoice.ContactId}, " +
                       $"invoice_no='{Utilities.GetDBString(invoice.InvoiceNo)}', " +
-                      $"itemised_date={Utilities.GetDateValueForDML(DatabaseType, invoice.ItemisedDate)}, " +
+                      $"itemised_date={Utilities.GetDateTimeForDML(DatabaseType, invoice.ItemisedDate,true,true)}, " +
                       $"sum_amt_main={invoice.SumAmtMain}, " +
                       $"sum_amt_labour={invoice.SumAmtLabour}, " +
                       $"sum_amt_discount='{invoice.SumAmtDiscount}', " +
                       $"sum_amt_subtotal='{invoice.SumAmtSubTotal}', " +
                       $"sum_amt_vat='{invoice.SumAmtVAT}', " +
-                      $"sum_amt_total='{invoice.SumAmtTotal}' " +
-                      $"where sequence = '{invoice.Sequence}'";
+                      $"sum_amt_total='{invoice.SumAmtTotal}' ," +
+                      $"last_amended_by={invoice.LastAmendedBy??0} ," +
+                      $"date_last_amended={Utilities.GetDateTimeForDML(DatabaseType, invoice.DateLastAmended, true, true)} " +
+                      $"where sequence = {invoice.Sequence}";
             }
             try
             {
@@ -205,7 +208,7 @@ namespace SimplicityOnlineWebApi.DAL
                             else
                             {
                                 itemisedItems = new List<SupplierInvoiceItemsVM>();
-                                qryInvoice = @"select * from un_invoice_itemised_items where invoice_sequence='" + invoice.Sequence + "'";
+                                qryInvoice = @"select * from un_invoice_itemised_items where invoice_sequence=" + invoice.Sequence;
                                 itemisedItems = getInvoiceItemisedItems(qryInvoice,false);
                                 foreach (var existingChild in itemisedItems)
                                 {
@@ -221,10 +224,11 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 if (item.Sequence == 0)
                                 {
-                                    qryInvoice += "insert into un_invoice_itemised_items(invoice_sequence,import_type,import_type_ref, item_date, " +
+                                    //SageViewModel sage = GetSageDetail(); //sage_nominal_code,sage_tax_code,
+                                    qryInvoice = "insert into un_invoice_itemised_items(invoice_sequence,import_type,import_type_ref, item_date, " +
                                         "item_quantity, item_ref, stock_code, item_desc, item_unit," +
                                                   "item_amt,item_amt_labour, item_discount_percent,item_amt_discount,item_amt_subtotal,item_vat_percent,item_amt_vat,item_amt_total," +
-                                                  "created_by,date_created,item_type,tel_sequence,flg_job_seq_exclude,cost_centre_id,flg_checked,sage_nominal_code,sage_tax_code,asset_sequence)" +
+                                                  "created_by,date_created,item_type,tel_sequence,flg_job_seq_exclude,cost_centre_id,flg_checked,asset_sequence)" +
                                                 "VALUES ("+ 
                                                 invoice.Sequence + ", "+
                                                 item.ImportType+",'"+
@@ -243,19 +247,20 @@ namespace SimplicityOnlineWebApi.DAL
                                                 item.ItemVATPercent + "," + 
                                                 item.ItemAmtVAT +"," + 
                                                 item.ItemAmtTotal +","+
-                                                item.CreatedBy + ",getdate(),"+
+                                                item.CreatedBy + "," + 
+                                                Utilities.GetDateTimeForDML(DatabaseType, DateTime.Now, true, true) + "," +
                                                 item.ItemType+"," +
                                                 item.TelSequence+",'" +
                                                 Utilities.GetBooleanForDML(DatabaseType, item.FlgJobSeqExclude) +"','"+
                                                 Utilities.GetDBString(item.CostCentreId) + "','" +
-                                                Utilities.GetBooleanForDML(DatabaseType,item.FlgChecked) + "','"+
-                                                Utilities.GetDBString(item.SageNominalCode) + "','" +
-                                                Utilities.GetDBString(item.SageTaxCode) +"','"+
+                                                Utilities.GetBooleanForDML(DatabaseType,item.FlgChecked) + "','"+  
+                                                //sage.SageNominalCode + "','" +
+                                                //sage.SageTaxCode +"','"+
                                                 item.AssetSequence+"')";
                                 }
                                 else
                                 {
-                                    qryInvoice += $"update un_invoice_itemised_items set " +
+                                    qryInvoice = $"update un_invoice_itemised_items set " +
                                         $"item_date={Utilities.GetDateValueForDML(DatabaseType, item.ItemDate)}, " +
                                         $"item_quantity={item.ItemQuantity}, " +
                                         $"item_ref='{Utilities.GetDBString(item.ItemRef)}', " +
@@ -282,10 +287,9 @@ namespace SimplicityOnlineWebApi.DAL
                                         $"asset_sequence='{item.AssetSequence}' " +
                                         $"where sequence= {item.Sequence}";
                                 }
-
+                                objCmd.CommandText = qryInvoice; //NOTE: insert / update one by one. MS access doesn't support multiple insert statements in one go.
+                                result = objCmd.ExecuteNonQuery();
                             }
-                            objCmd.CommandText = qryInvoice;
-                            result = objCmd.ExecuteNonQuery();
                             returnValue = true;
                         }
                     }
@@ -300,8 +304,12 @@ namespace SimplicityOnlineWebApi.DAL
         }
         public bool UpdateInvoiceSupplier(InvoiceItemised invoice)
         {
-            string qryInvoice = $"update un_invoice_itemised set contact_id={invoice.ContactId} where sequence = '{invoice.Sequence}'";
-            return updateInvoiceSupplier(qryInvoice);
+            string transType = selectSupplierType(invoice.ContactId);
+            string qryInvoice = $"update un_invoice_itemised set contact_id={invoice.ContactId}, trans_type='{transType}' where sequence = {invoice.Sequence}; ";
+            updateQueryStatement(qryInvoice); //supplier update
+            var sageDetail = GetSageDetail(invoice.ContactId);
+            qryInvoice = $"update un_invoice_itemised_items set sage_nominal_code='{sageDetail.SageNominalCode}', sage_tax_code='{sageDetail.SageTaxCode}' where invoice_sequence={invoice.Sequence}";
+            return updateQueryStatement(qryInvoice); // sage detail update
         }
         private bool invoiceNoAlreadyExist(string qry)
         {
@@ -318,7 +326,7 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return false;
         }  
-        private bool updateInvoiceSupplier(string qry)
+        private bool updateQueryStatement(string qry)
         {
             using (OleDbConnection conn = this.getDbConnection())
             {
@@ -506,7 +514,6 @@ namespace SimplicityOnlineWebApi.DAL
             return invoiceItem;
         }
 
-
         private List<SupplierInvoiceItemsVM> getInvoiceItemisedItems(string qryInvoice,bool isforList)
         {
             List<SupplierInvoiceItemsVM> InvoiceLines = new List<SupplierInvoiceItemsVM>();
@@ -601,18 +608,15 @@ namespace SimplicityOnlineWebApi.DAL
             }
             return returnValue;
         }
-        public SageViewModel GetSageDetail()
+        public SageViewModel GetSageDetail(long contactId)
         {
-            SageViewModel returnValue = new SageViewModel();
-            string qry = @"select top(1) (select data from un_entity_details_supplementary where data_type='028' and entity_id=5928) tax_code,
-                        (select data nominalcode from un_entity_details_supplementary where data_type='027' and entity_id=5928) sage_nominal_code 
-                        from un_entity_details_supplementary ";
-            returnValue = Load_SageDetail(qry);
-            return returnValue;
-        }
-        private SageViewModel Load_SageDetail(string qry)
-        {
-            SageViewModel sage = null;
+            SageViewModel returnValue = null;
+            string qry = @"SELECT  DISTINCT (SELECT eds.data FROM un_entity_details_supplementary AS eds WHERE eds.data_type='028' 
+                            and eds.entity_id=eds3.entity_id) AS tax_code,
+                            (SELECT eds2.data FROM un_entity_details_supplementary AS eds2 WHERE eds2.data_type='027' 
+                            and eds2.entity_id=eds3.entity_id) AS sage_nominal_code  
+                        FROM un_entity_details_supplementary AS eds3 
+                        WHERE eds3.entity_id= "+ contactId;
             try
             {
                 using (OleDbConnection conn = this.getDbConnection())
@@ -625,9 +629,9 @@ namespace SimplicityOnlineWebApi.DAL
                             {
                                 dr.Read();
                                 dr.GetValue(0);
-                                sage = new SageViewModel();
-                                sage.SageNominalCode = DBUtil.GetStringValue(dr, "sage_nominal_code");
-                                sage.SageTaxCode = DBUtil.GetStringValue(dr, "tax_code");
+                                returnValue = new SageViewModel();
+                                returnValue.SageNominalCode = DBUtil.GetStringValue(dr, "sage_nominal_code");
+                                returnValue.SageTaxCode = DBUtil.GetStringValue(dr, "tax_code");
                             }
                         }
                     }
@@ -638,7 +642,7 @@ namespace SimplicityOnlineWebApi.DAL
                 Utilities.WriteLog(ex.Message, "Load_InvoiceItemised()");
                 throw ex;
             }
-            return sage;
+            return returnValue;
         }
         private VehicleViewModel Load_Vehicle(DataRow dr)
         {
@@ -675,6 +679,67 @@ namespace SimplicityOnlineWebApi.DAL
                 costCode.CostCentreDesc = DBUtil.GetStringValue(dr, "costcentre_desc");
             }
             return costCode;
+        }
+        public string selectSupplierType(int contactId)
+        {
+            string qry = ""; 
+            string transType = "";
+            try
+            {
+                qry = $"SELECT top 1 IIF((SELECT sup.data FROM un_entity_details_supplementary sup WHERE sup.entity_id = {contactId} AND sup.data_type = '021') = 'True', 'D','C') AS trans_type from un_entity_details_supplementary";
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(qry, conn))
+                    {
+                        OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows != null && dt.Rows.Count > 0)
+                        {
+                            transType = dt.Rows[0]["trans_type"].ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return transType;
+        }
+        public long GetJobSequenceByPORef(string PONo)
+        {
+            string qry = "";
+            long jobSequence=-1;
+            try
+            {
+                qry = @"SELECT MAX(poi.job_sequence) AS last_job_sequence
+                        FROM un_purchase_orders AS po
+                        INNER JOIN un_purchase_order_items AS poi
+                        ON po.order_id = poi.order_id
+                        WHERE po.order_ref = '"+PONo+@"' 
+                        GROUP BY po.order_id";
+                using (OleDbConnection conn = this.getDbConnection())
+                {
+                    using (OleDbCommand objCmdSelect =
+                        new OleDbCommand(qry, conn))
+                    {
+                        OleDbDataAdapter da = new OleDbDataAdapter(objCmdSelect);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        if (dt.Rows != null && dt.Rows.Count > 0)
+                        {
+                            jobSequence = DBUtil.GetLongValue(dt.Rows[0], "last_job_sequence");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return jobSequence;
         }
     }
 }

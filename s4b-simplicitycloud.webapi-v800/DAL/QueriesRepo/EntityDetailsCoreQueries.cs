@@ -801,7 +801,6 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
             " And edc.flg_deleted <> " + Utilities.GetBooleanForDML(databaseType, true);
         }
 
-       
         internal static string UpdateClientInfo(string datebaseType, EntityDetailsCore edc, string infoType)
         {
             string returnValue = "";
@@ -855,6 +854,38 @@ namespace SimplicityOnlineWebApi.DAL.QueriesRepo
 
             return returnValue;
         }
+
+        internal static string GetEntityByLongName(string databaseType, string longName)
+        {
+            string returnValue = "";
+            try
+            {
+                switch (databaseType)
+                {
+                    case "MSACCESS":
+                        returnValue = @" SELECT * FROM (un_entity_details_core as edc
+                                inner join un_entity_details_join as edj on edc.entity_id = edj.entity_id)
+                                  left outer join un_cld_edc cld on edc.entity_id = cld.entity_id
+                                    WHERE LCase(name_long) = '" + longName.ToLower() +
+                                    "' or LCase(cld.rossum_contact_name)='" + longName.ToLower() + "' and edc.flg_deleted=false";
+                        break;
+
+                    case "SQLSERVER":
+                        returnValue = @"SELECT * FROM un_entity_details_core edc
+                                    inner join un_entity_details_join as edj on edc.entity_id = edj.entity_id
+                                     left outer join un_cld_edc cld on edc.entity_id = cld.entity_id 
+                                     WHERE Lower(name_long) = '" + longName.ToLower() +
+                                   "' or Lower(cld.rossum_contact_name)='" + longName.ToLower() + "' edc.flg_deleted = 0 ";
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            return returnValue;
+        }
+
+       
 
     }
 }
