@@ -154,6 +154,8 @@ namespace SimplicityOnlineWebApi
             services.AddScoped<IRossumRepository, RossumRepository>();
             services.AddScoped<ISupplierInvoiceRepository, SupplierInvoiceRepository>();
             services.AddScoped<ICloudStorageRepository, CloudStorageRepository>();
+            services.AddScoped<IHealthAndCheckRepository, HealthAndCheckRepository>();
+            services.AddScoped<IOrdersKpiRepository, OrdersKpiRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
