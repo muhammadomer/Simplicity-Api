@@ -160,10 +160,12 @@ namespace SimplicityOnlineWebApi.Models.Repositories
                         }
                         else
                         {
-                            if (invoiceItemised.ContactId > 0)
+                            if (invoiceItemised.ContactId > 0) 
                             {
+                                // TODO: Replace the call with GetEntityByEntityId and don't fetch all the suppliers
                                 EntityDetailsCoreMin entityDetails = EntityDetailsCoreRepository.GetAllSuppliers(header, null).Where(x => x.EntityJoinId == invoiceItemised.ContactId).FirstOrDefault();
-                                invoiceItemised.SupplierName = entityDetails.NameLong;
+                                if (entityDetails!=null)
+                                    invoiceItemised.SupplierName = entityDetails.NameLong;
                             }
                             returnValue.TheObject = invoiceItemised;
                             returnValue.IsSucessfull = true;

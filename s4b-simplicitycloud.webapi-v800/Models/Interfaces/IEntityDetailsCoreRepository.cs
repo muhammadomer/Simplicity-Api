@@ -19,6 +19,7 @@ namespace SimplicityOnlineWebApi.Models.Interfaces
         List<EntityDetailsCoreMin> GetAllSuppliers(RequestHeaderModel header,string qSearch);
         ResponseModel GetAllContacts(HttpRequest Request, ClientRequest clientRequest);
         EntityDetailsCore GetEntityByEntityId(HttpRequest Request, long? entityId);
+        EntityDetailsCore GetEntityByEntityId(RequestHeaderModel header, long? entityId);
         string GetUniqueShortName(HttpRequest request, string longName);
         ResponseModel GetEntityNotesByEntityId(HttpRequest Request, long entityId);
         bool DeleteEntityByEntityId(HttpRequest Request, long entityId);

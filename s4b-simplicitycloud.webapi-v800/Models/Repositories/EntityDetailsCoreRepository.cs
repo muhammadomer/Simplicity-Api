@@ -395,8 +395,30 @@ namespace SimplicityOnlineWebApi.Models.Repositories
 			}
             return returnValue;
         }
-       
-        
+
+        public EntityDetailsCore GetEntityByEntityId(RequestHeaderModel header, long? entityId)
+        {
+            EntityDetailsCore returnVal = new EntityDetailsCore();
+            try
+            {
+                string projectId = header.ProjectId;
+                if (!string.IsNullOrWhiteSpace(projectId))
+                {
+                    ProjectSettings settings = Configs.settings[projectId];
+                    if (settings != null)
+                    {
+                        EntityDetailsCoreDB DetailsCoreDB = new EntityDetailsCoreDB(Utilities.GetDatabaseInfoFromSettings(settings, this.IsSecondaryDatabase, this.SecondaryDatabaseId));
+                        returnVal = DetailsCoreDB.getEntityByEntityid(entityId);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                returnVal = null;
+            }
+            return returnVal;
+        }
+
         public EntityDetailsCore GetEntityByEntityId(HttpRequest Request, long? entityId)
         {
             EntityDetailsCore returnVal = new EntityDetailsCore();
